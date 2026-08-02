@@ -1,5 +1,7 @@
 # Exactly 35: Certified Solving of 3×9 Quoridor — Publication Artifacts
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21763852.svg)](https://doi.org/10.5281/zenodo.21763852)
+
 This bundle contains everything needed to **check** the results of the paper
 (`paper/main.pdf`) without trusting any solver: sources, proof journals,
 certificates, receipts, and the independent verifiers. It is a curated,

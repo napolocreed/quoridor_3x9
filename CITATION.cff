@@ -6,6 +6,10 @@ authors:
   - family-names: Napoly
     given-names: Ulysse
 repository-code: "https://github.com/napolocreed/quoridor_3x9"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21763852
+    description: "Zenodo archive of the publication artifacts and paper preprint"
 year: 2026
 date-released: 2026-08-02
 license: MIT
