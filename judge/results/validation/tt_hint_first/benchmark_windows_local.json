@@ -1,0 +1,147 @@
+{
+  "schema": "tt-hint-first-benchmark-1",
+  "date": "2026-08-02",
+  "status": "mixed-portfolio-candidate",
+  "claimScope": "experimental exact move ordering and successor materialisation; no new game-theoretic claim",
+  "machine": {
+    "cpu": "AMD Ryzen 5 220 w/ Radeon 740M Graphics",
+    "physicalCores": 6,
+    "logicalProcessors": 12,
+    "ramGiB": 15.18,
+    "os": "Microsoft Windows 11 Enterprise 10.0.26200 build 26200",
+    "compiler": "MSYS2 UCRT64 GCC 16.1.0",
+    "contention": "Claude export_all.py occupied one logical processor; wall times are exploratory"
+  },
+  "provenance": {
+    "baseCommit": "5db58024939f73a4c3adaa15cd6923a87d986401",
+    "solverSourceSha256AtMeasurement": "31e1a327e0b6d3a01150fa8d5d054677db43844e3dcfa65023af11fb90fb6227",
+    "sourceNote": "later guarded experiments and integration defaults do not alter the explicitly flagged commands recorded here",
+    "wrapperSha256": "9bc234d2fc491def30c3a5941fe412c7419c6225b29c869d8d7252f42afce343",
+    "solverBinarySha256": "f06a01b178e2d4e3cb9b30b1df20fc3527dbaff58cbebb9bed66398582e853b1",
+    "stateSolverBinarySha256": "fac060b0cddf7653bc7190ce0ff4f3d0c98256f9bb1ae3ada58f0b0452a1bf15",
+    "differentialCheckerSha256": "475eea89d1e00c78f64667f1a82b847b7f768c0c030837afa0295bd174f68e2"
+  },
+  "validation": {
+    "sampled3x3x1Requests": 2000,
+    "sampled4x3x2Requests": 2000,
+    "exhaustive3x3x1RequestsPerMode": 51408,
+    "exhaustiveModes": [
+      "raw-opponent",
+      "canonical-opponent",
+      "off"
+    ],
+    "debugKeyEquivalenceRequests": 2000,
+    "verdictDivergences": 0
+  },
+  "benchmarkMethod": {
+    "timer": "System.Diagnostics.Process.TotalProcessorTime",
+    "runsPerMode": 1,
+    "warning": "single-run local calibration under background certificate export; repeat the stable 40-branch family before promotion"
+  },
+  "benchmarks": [
+    {
+      "id": "4x7w7-p42-d18-flow1",
+      "commandCommon": [
+        "--width", "4", "--height", "7", "--walls", "7",
+        "--root-move", "P(5,2)", "--second-move", "P(1,2)",
+        "--third-move", "P(4,2)", "--target", "1",
+        "--start-depth", "18", "--max-depth", "18", "--tt-bits", "24",
+        "--transition-cache-threshold", "1", "--path-flow-weight", "1",
+        "--path-flow-cache-bits", "18", "--no-bounds", "--no-pawn-table"
+      ],
+      "runs": [
+        {
+          "mode": "off",
+          "nodes": 47214750,
+          "ttHits": 12223524,
+          "cpuSeconds": 14.03125
+        },
+        {
+          "mode": "raw-opponent",
+          "nodes": 47214750,
+          "ttHits": 12223524,
+          "cpuSeconds": 13.40625,
+          "attempts": 446287,
+          "legal": 207913,
+          "illegal": 238374,
+          "cutoffs": 199145
+        },
+        {
+          "mode": "canonical-order-only",
+          "nodes": 47003785,
+          "ttHits": 12173904,
+          "cpuSeconds": 14.03125
+        },
+        {
+          "mode": "canonical-opponent",
+          "nodes": 47003785,
+          "ttHits": 12173904,
+          "cpuSeconds": 14.546875,
+          "attempts": 445184,
+          "legal": 445184,
+          "illegal": 0,
+          "cutoffs": 434643
+        }
+      ]
+    },
+    {
+      "id": "3x9w10-v10-d31-flow1",
+      "commandCommon": [
+        "--width", "3", "--height", "9", "--walls", "10",
+        "--root-move", "P(7,1)", "--second-move", "V(1,0)",
+        "--target", "1", "--start-depth", "31", "--max-depth", "31",
+        "--tt-bits", "24", "--transition-cache-threshold", "1",
+        "--path-flow-weight", "1", "--path-flow-cache-bits", "18",
+        "--no-bounds", "--no-pawn-table"
+      ],
+      "runs": [
+        {
+          "mode": "off",
+          "nodes": 37397601,
+          "ttHits": 17004024,
+          "cpuSeconds": 8.609375
+        },
+        {
+          "mode": "raw-opponent",
+          "nodes": 37397601,
+          "ttHits": 17004024,
+          "cpuSeconds": 8.328125,
+          "attempts": 1798803,
+          "legal": 1798803,
+          "illegal": 0,
+          "cutoffs": 1331518
+        }
+      ]
+    },
+    {
+      "id": "4x7w7-h52-d24-flow1",
+      "commandCommon": [
+        "--width", "4", "--height", "7", "--walls", "7",
+        "--root-move", "P(5,2)", "--second-move", "P(1,2)",
+        "--third-move", "H(5,2)", "--target", "1",
+        "--start-depth", "24", "--max-depth", "24", "--tt-bits", "25",
+        "--transition-cache-threshold", "1", "--path-flow-weight", "1",
+        "--path-flow-cache-bits", "18", "--no-bounds", "--no-pawn-table"
+      ],
+      "runs": [
+        {
+          "mode": "raw-opponent",
+          "nodes": 124257426,
+          "ttHits": 47329550,
+          "cpuSeconds": 37.84375,
+          "attempts": 4241719,
+          "legal": 4241719,
+          "illegal": 0,
+          "cutoffs": 3365011
+        },
+        {
+          "mode": "off",
+          "nodes": 124257426,
+          "ttHits": 47329550,
+          "cpuSeconds": 35.4375
+        }
+      ]
+    }
+  ],
+  "decision": "retain raw opponent hint-first as an experimental portfolio arm; canonical transforms are not recommended; no global promotion before the stable 40-branch suite"
+}

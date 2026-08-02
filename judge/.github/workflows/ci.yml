@@ -1,0 +1,14 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make -j2
+      - run: make smoke
+      - run: python3 reference/known_outcomes.py --solver ./bin/frontier_solver
+      - run: python3 reference/differential_check.py --dump ./bin/frontier_dump --width 4 --height 3 --walls 3 --samples 250 --seed 12345
+      - run: python3 reference/differential_check.py --dump ./bin/frontier_dump --width 3 --height 5 --walls 4 --samples 250 --seed 22345
+      - run: python3 reference/proof_differential_check.py --solver ./bin/frontier_state_solve --width 3 --height 3 --walls 1 --samples 500 --max-depth 9 --seed 72026 --no-bounds --no-pawn-table
+      - run: python3 reference/symmetry_semantics_check.py --width 3 --height 3 --walls 1

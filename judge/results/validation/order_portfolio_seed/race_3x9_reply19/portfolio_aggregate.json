@@ -1,0 +1,10 @@
+{
+  "completed": 1,
+  "failed": 0,
+  "median_elapsed": 9.997077146952506,
+  "records": 1,
+  "total_elapsed": 9.997077146952506,
+  "winner_policies": {
+    "flow1": 1
+  }
+}

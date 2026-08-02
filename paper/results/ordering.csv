@@ -1,0 +1,12 @@
+item,baseline_nodes,pathflow_nodes,baseline_time_s,pathflow_time_s,source_path
+4x7x7_P42_branch,119898717,47214748,,,quoridor-frontier-research/docs/SHORTEST_PATH_FLOW_ORDERING_2026-08-01.md
+3x9x10_P71_V10_branch,79800528,37279448,15.996,9.493,quoridor-frontier-research/README.md (stable named moves)
+3x9x10_P71_V50_branch,142948371,50633369,29.857,13.173,quoridor-frontier-research/README.md
+lazy_4x7x7_H52_baseline,223188594,,47.25,,quoridor-frontier-research/docs/LAZY_ENGINE_RESULTS_2026-07-31.md
+lazy_4x7x7_H52_route_choice,,15323311,,3.71,same
+lazy_4x7x7_H52_route_choice_plus_pareto,,12875101,,3.33,same
+negative_bounded_dfpn,correct but slower than mature DFS on frontier branches,,,,quoridor-frontier-research/docs/BOUNDED_DFPN_PROTOTYPE_2026-08-01.md
+negative_decremental_distance,tripled runtime despite identical nodes,,,,quoridor-frontier-research/docs/DECREMENTAL_DISTANCE_NEGATIVE_2026-08-01.md
+negative_naive_dfs_cycle_gate,validated criterion; naive DFS deferral slower,,,,quoridor-frontier-research/docs/TOPOLOGICAL_CYCLE_GATE_2026-08-01.md
+negative_cachefirst_local_touch_gate,no K in {0;2;4;all} beats baseline after audit fixes,,,,quoridor-frontier-research/docs/LOCAL_CYCLE_GATE_2026-08-01.md
+horizon_reversal_P42,shallow-pilot winner is wrong full-depth policy,,,,quoridor-frontier-research/docs/ORDERING_PORTFOLIO.md

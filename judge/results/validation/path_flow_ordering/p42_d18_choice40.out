@@ -1,0 +1,1 @@
+width=4 height=7 walls=7 solved=0 nodes=95339253 tt_hits=25691022 cutoffs=18403133 local_hits=0 local_probes=0 local_tables=0 stalemates_seen=0 seconds=24.4784 timeout=0 cache_configs=2233360 cache_hits=7363139 cache_misses=2233360 cache_payload=436207616 cache_estimated=580474952 transition_hits=27718473 transition_builds=943183 transition_entries=9596498

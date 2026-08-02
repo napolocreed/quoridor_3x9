@@ -1,0 +1,7 @@
+width=3 height=3 walls=0 solved=1 winner=2 depth=4 nodes=2 tt_hits=0 cutoffs=0 pawn_table_hits=2 seconds=6.4006e-05 timeout=0
+python3 reference/differential_check.py --dump ./bin/frontier_dump --width 4 --height 3 --walls 3 --samples 1000 --seed 12345
+{"checked": 1000, "dump": "/mnt/data/quoridor-frontier-research/bin/frontier_dump", "height": 3, "seed": 12345, "status": "ok", "walls": 3, "width": 4}
+python3 reference/differential_check.py --dump ./bin/frontier_dump --width 3 --height 5 --walls 4 --samples 1000 --seed 22345
+{"checked": 1000, "dump": "/mnt/data/quoridor-frontier-research/bin/frontier_dump", "height": 5, "seed": 22345, "status": "ok", "walls": 4, "width": 3}
+python3 reference/differential_check.py --dump ./bin/frontier_dump --width 3 --height 9 --walls 8 --samples 500 --seed 32345
+{"checked": 500, "dump": "/mnt/data/quoridor-frontier-research/bin/frontier_dump", "height": 9, "seed": 32345, "status": "ok", "walls": 8, "width": 3}

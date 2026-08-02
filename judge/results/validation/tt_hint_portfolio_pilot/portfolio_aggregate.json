@@ -1,0 +1,19 @@
+{
+  "campaign_identity_present_and_matching": true,
+  "completed": 4,
+  "failed": 0,
+  "median_elapsed": 11.544566299999133,
+  "parser_hashes_complete_and_unique": true,
+  "records": 4,
+  "solver_hashes_complete_and_unique": true,
+  "stalemate_counters_complete_and_zero": true,
+  "summarizer_sha256": "1a3b17c21db8d3c3e82685413318a3f6215d0aacbc4d1f15ad0ec2a8771208fe",
+  "total_elapsed": 56.66401250002673,
+  "winner_policies": {
+    "baseline": 1,
+    "choice40": 1,
+    "flow1": 2
+  },
+  "worker_bundle_hashes_complete_and_unique": true,
+  "worker_hashes_complete_and_unique": true
+}

@@ -1,0 +1,278 @@
+{
+  "schema": "local-touch-cache-first-benchmark-v2",
+  "date": "2026-08-01",
+  "status": "experimental-single-position-corrected-path-flow",
+  "corrections_since_v1": [
+    "scan-current materialises a selected deferred third-move root before generation",
+    "the deferred proxy includes the exact parent path-flow term; the earlier apparent K=2 gain mixed two ordering changes and is invalid"
+  ],
+  "host": {
+    "cpu": "AMD Ryzen 5 220 w/ Radeon 740M Graphics",
+    "logical_threads": 12,
+    "os": "Microsoft Windows 11 Enterprise 10.0.26200",
+    "compiler": "g++.exe (MSYS2 Rev5) 16.1.0"
+  },
+  "source": {
+    "git_head": "a236c90ef6bb3d2ba5e44a794d9d113c731d86b8",
+    "files_sha256": {
+      "src/lazy_specialized_solver.cpp": "838b758a71efd79eec0373747ce21cf174ed36b455885cff3d9d1f1fb1f891bc",
+      "experiments/solvers/lazy_local_touch_gate_solver.cpp": "af5c7ea2a9b009aeabec7d0cc83b32d6b94d3e40c229b124f10a632c7caf58c7"
+    },
+    "source_bundle": {
+      "sha256": "22bc4125c53718c81a465863e7a8fa498a3437a8517f2eec529de84fd545e99d",
+      "construction": "raw src/lazy_specialized_solver.cpp bytes, then UTF-8 newline + --lazy-local-touch-wrapper-- + newline, then raw wrapper bytes"
+    },
+    "compile_flags": "-O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -march=native",
+    "compile_commands": {
+      "baseline": "C:/msys64/ucrt64/bin/g++.exe -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -march=native src/lazy_specialized_solver.cpp -o bin/lazy_specialized_solver_repro.exe",
+      "experimental": "C:/msys64/ucrt64/bin/g++.exe -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -march=native experiments/solvers/lazy_local_touch_gate_solver.cpp -o bin/lazy_local_touch_gate_solver.exe"
+    },
+    "benchmark_binaries": {
+      "baseline": {
+        "path": "bin/lazy_specialized_solver_repro.exe",
+        "sha256": "63718b95212da29a1210122583f23ca34d219efdb5839fc3897459c881c93ef0"
+      },
+      "experimental": {
+        "path": "bin/lazy_local_touch_gate_solver.exe",
+        "sha256": "2754d6e0dbff8b893f5415817d54c6185c0f3007d6357d83e47583f8f8e5f9a0"
+      }
+    }
+  },
+  "position": {
+    "width": 4,
+    "height": 7,
+    "walls_per_player": 7,
+    "forced_moves": ["P(5,2)", "P(1,2)", "H(5,2)"],
+    "target": 1,
+    "depth": 16
+  },
+  "common_options": [
+    "--tt-bits", "25",
+    "--transition-cache-threshold", "1",
+    "--path-flow-weight", "1",
+    "--path-flow-cache-bits", "18",
+    "--no-bounds",
+    "--no-pawn-table"
+  ],
+  "commands": {
+    "baseline": "bin/lazy_specialized_solver_repro.exe --width 4 --height 7 --walls 7 --root-move 'P(5,2)' --second-move 'P(1,2)' --third-move 'H(5,2)' --target 1 --start-depth 16 --max-depth 16 --seconds 120 --tt-bits 25 --transition-cache-threshold 1 --path-flow-weight 1 --path-flow-cache-bits 18 --no-bounds --no-pawn-table",
+    "experimental_template": "bin/lazy_local_touch_gate_solver.exe --width 4 --height 7 --walls 7 --root-move 'P(5,2)' --second-move 'P(1,2)' --third-move 'H(5,2)' --target 1 --start-depth 16 --max-depth 16 --seconds 120 --tt-bits 25 --transition-cache-threshold 1 --path-flow-weight 1 --path-flow-cache-bits 18 --no-bounds --no-pawn-table --local-touch-refine {0|2|4|all}"
+  },
+  "measurement": {
+    "repetitions": 5,
+    "timing": "median of fresh processes; all five solver and wall samples are retained below in repetition order",
+    "peak_rss": "process PeakWorkingSet64, with all five samples retained below",
+    "host_load": "Claude's independent certificate extraction jobs were active; variants followed the archived mixed order, so timings are comparative and contention-bearing",
+    "run_order_by_repetition": [
+      ["baseline", "k0", "k2", "k4", "kall"],
+      ["k2", "kall", "k0", "baseline", "k4"],
+      ["k4", "k2", "baseline", "kall", "k0"],
+      ["kall", "k4", "k2", "k0", "baseline"],
+      ["k0", "baseline", "k4", "k2", "kall"]
+    ],
+    "named_move_labels_checked": true,
+    "stalemates_seen": 0,
+    "timeout": false,
+    "bfs_passes_avoided_semantics": "raw event counter: two potential configuration-construction BFS passes per still-uncached handle skipped at a cutoff; it is not a net BFS saving because proxy setup performs two distances_from BFS passes per generation and repeated masks may be counted again"
+  },
+  "runs": [
+    {
+      "mode": "promoted-baseline",
+      "nodes": 2326659,
+      "tt_hits": 544616,
+      "cutoffs": 390465,
+      "transition_entries": 337157,
+      "transition_hits": 699356,
+      "transition_builds": 38268,
+      "solver_seconds_samples": [1.04463, 0.986718, 0.945214, 1.00247, 0.892436],
+      "median_solver_seconds": 0.986718,
+      "wall_seconds_samples": [1.2928351, 1.223323, 1.1541227, 1.210134, 1.0898792],
+      "median_wall_seconds": 1.210134,
+      "peak_rss_bytes_samples": [454533120, 454307840, 454778880, 454582272, 463667200],
+      "peak_rss_bytes_max": 463667200,
+      "cache_configs": 161170,
+      "cache_estimated_bytes": 57545112,
+      "return_codes": [0, 0, 0, 0, 0],
+      "forcing_lines": [
+        "forcing root move=P(5,2) index=0",
+        "forcing second move=P(1,2) index=0",
+        "forcing third move=H(5,2) index=1"
+      ]
+    },
+    {
+      "mode": "local-touch",
+      "k": 0,
+      "nodes": 2718848,
+      "tt_hits": 635865,
+      "cutoffs": 457097,
+      "transition_entries": 400564,
+      "transition_hits": 822666,
+      "transition_builds": 45696,
+      "solver_seconds_samples": [1.30985, 1.3061, 1.11237, 1.09308, 1.13583],
+      "median_solver_seconds": 1.13583,
+      "wall_seconds_samples": [1.5570473, 1.5211785, 1.3223501, 1.304686, 1.3579756],
+      "median_wall_seconds": 1.3579756,
+      "peak_rss_bytes_samples": [462884864, 460881920, 461062144, 461852672, 461029376],
+      "peak_rss_bytes_max": 462884864,
+      "cache_configs": 189124,
+      "cache_estimated_bytes": 60691096,
+      "return_codes": [0, 0, 0, 0, 0],
+      "forcing_lines": [
+        "forcing root move=P(5,2) index=2",
+        "forcing second move=P(1,2) index=2",
+        "forcing third move=H(5,2) index=1"
+      ],
+      "counters": {
+        "exact_hits_before_gate": 202911,
+        "local_safe_misses": 16872,
+        "fallback_misses": 180781,
+        "deferred_emitted": 35026,
+        "pending_replayed": 44333,
+        "pending_patched": 9307,
+        "deferred_resolved": 13161,
+        "resolve_hits": 4819,
+        "resolve_builds": 8342,
+        "deferred_pruned": 21758,
+        "deferred_pruned_uncached": 13477,
+        "bfs_passes_avoided": 26954,
+        "refined": 0,
+        "generations_with_order_change": 0
+      }
+    },
+    {
+      "mode": "local-touch",
+      "k": 2,
+      "nodes": 2516514,
+      "tt_hits": 584496,
+      "cutoffs": 421262,
+      "transition_entries": 360148,
+      "transition_hits": 755484,
+      "transition_builds": 40682,
+      "solver_seconds_samples": [1.25408, 1.18929, 1.17683, 1.08227, 1.22787],
+      "median_solver_seconds": 1.18929,
+      "wall_seconds_samples": [1.4855617, 1.4223487, 1.3900467, 1.2912612, 1.4410391],
+      "median_wall_seconds": 1.4223487,
+      "peak_rss_bytes_samples": [455966720, 455778304, 455757824, 455745536, 455966720],
+      "peak_rss_bytes_max": 455966720,
+      "cache_configs": 173096,
+      "cache_estimated_bytes": 57545192,
+      "return_codes": [0, 0, 0, 0, 0],
+      "forcing_lines": [
+        "forcing root move=P(5,2) index=0",
+        "forcing second move=P(1,2) index=0",
+        "forcing third move=H(5,2) index=1"
+      ],
+      "counters": {
+        "exact_hits_before_gate": 184290,
+        "local_safe_misses": 13196,
+        "fallback_misses": 162662,
+        "deferred_emitted": 15062,
+        "pending_replayed": 23147,
+        "pending_patched": 8085,
+        "deferred_resolved": 11214,
+        "resolve_hits": 781,
+        "resolve_builds": 10433,
+        "deferred_pruned": 3752,
+        "deferred_pruned_uncached": 3350,
+        "bfs_passes_avoided": 6700,
+        "refined": 10067,
+        "generations_with_order_change": 1443
+      }
+    },
+    {
+      "mode": "local-touch",
+      "k": 4,
+      "nodes": 2326336,
+      "tt_hits": 544631,
+      "cutoffs": 390414,
+      "transition_entries": 337157,
+      "transition_hits": 699254,
+      "transition_builds": 38268,
+      "solver_seconds_samples": [1.08221, 1.0201, 1.0084, 1.0029, 1.03083],
+      "median_solver_seconds": 1.0201,
+      "wall_seconds_samples": [1.3068068, 1.2393094, 1.2076917, 1.206533, 1.2397865],
+      "median_wall_seconds": 1.2393094,
+      "peak_rss_bytes_samples": [454283264, 453988352, 454455296, 453959680, 454279168],
+      "peak_rss_bytes_max": 454455296,
+      "cache_configs": 160877,
+      "cache_estimated_bytes": 57545552,
+      "return_codes": [0, 0, 0, 0, 0],
+      "forcing_lines": [
+        "forcing root move=P(5,2) index=0",
+        "forcing second move=P(1,2) index=0",
+        "forcing third move=H(5,2) index=1"
+      ],
+      "counters": {
+        "exact_hits_before_gate": 175170,
+        "local_safe_misses": 12382,
+        "fallback_misses": 149605,
+        "deferred_emitted": 13039,
+        "pending_replayed": 20914,
+        "pending_patched": 7875,
+        "deferred_resolved": 11664,
+        "resolve_hits": 393,
+        "resolve_builds": 11271,
+        "deferred_pruned": 1291,
+        "deferred_pruned_uncached": 1258,
+        "bfs_passes_avoided": 2516,
+        "refined": 11205,
+        "generations_with_order_change": 1290
+      }
+    },
+    {
+      "mode": "local-touch",
+      "k": "all",
+      "nodes": 2326659,
+      "tt_hits": 544616,
+      "cutoffs": 390465,
+      "transition_entries": 337157,
+      "transition_hits": 699356,
+      "transition_builds": 38268,
+      "solver_seconds_samples": [1.14492, 1.13445, 1.00075, 0.982739, 1.03796],
+      "median_solver_seconds": 1.03796,
+      "wall_seconds_samples": [1.3604135, 1.3414541, 1.2077225, 1.1891745, 1.2411958],
+      "median_wall_seconds": 1.2411958,
+      "peak_rss_bytes_samples": [454094848, 454320128, 454758400, 454250496, 454438912],
+      "peak_rss_bytes_max": 454758400,
+      "cache_configs": 161170,
+      "cache_estimated_bytes": 57545632,
+      "return_codes": [0, 0, 0, 0, 0],
+      "forcing_lines": [
+        "forcing root move=P(5,2) index=0",
+        "forcing second move=P(1,2) index=0",
+        "forcing third move=H(5,2) index=1"
+      ],
+      "counters": {
+        "exact_hits_before_gate": 175988,
+        "local_safe_misses": 11796,
+        "fallback_misses": 149373,
+        "deferred_emitted": 11796,
+        "pending_replayed": 19582,
+        "pending_patched": 7786,
+        "deferred_resolved": 11796,
+        "resolve_hits": 0,
+        "resolve_builds": 11796,
+        "deferred_pruned": 0,
+        "deferred_pruned_uncached": 0,
+        "bfs_passes_avoided": 0,
+        "refined": 11796,
+        "generations_with_order_change": 1234
+      }
+    }
+  ],
+  "interpretation": {
+    "k0_nodes_vs_baseline_percent": 16.856,
+    "k0_median_solver_time_vs_baseline_percent": 15.112,
+    "k2_nodes_vs_baseline_percent": 8.160,
+    "k2_median_solver_time_vs_baseline_percent": 20.530,
+    "k2_cache_configs_vs_baseline_percent": 7.400,
+    "k4_nodes_vs_baseline_percent": -0.014,
+    "k4_median_solver_time_vs_baseline_percent": 3.383,
+    "k4_cache_configs_vs_baseline_percent": -0.182,
+    "kall_nodes_vs_baseline_percent": 0.000,
+    "kall_median_solver_time_vs_baseline_percent": 5.193,
+    "kall_exact_counter_identity": "nodes, TT hits, cutoffs, configurations, transition hits/builds/entries",
+    "verdict_support": "all modes returned solved=0, timeout=0 and stalemates_seen=0; verdict agreement is also covered by the separate differential suites, while per-run benchmark stdout was not retained",
+    "promotion_decision": "negative on the first named path-flow branch: no partial K beats the baseline after restoring the exact path-flow proxy term; do not promote or launch a K=2 portfolio without a redesigned proxy"
+  }
+}

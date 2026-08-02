@@ -1,0 +1,30 @@
+{
+  "aliases": [
+    19,
+    20
+  ],
+  "child_depth": 31,
+  "cutoffs": 9521280,
+  "files": {
+    "returncode": "results/3x9_w10/branches/reply_19.rc",
+    "stderr": "results/3x9_w10/branches/reply_19.err",
+    "stdout": "results/3x9_w10/branches/reply_19.out"
+  },
+  "forced_reply": "V(1,0)",
+  "max_rss_kib": null,
+  "nodes": 41904722,
+  "pawn_table_hits": 13592,
+  "recorded_command": null,
+  "representative": 19,
+  "search_seconds": 7.88689,
+  "sha256": {
+    "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "stderr": "549a763c9a67d1d6a378538c6532857064b7b379030d0f71c91c3990a74a2668",
+    "stdout": "32d838abe7d80dea26e151569a86835054b58478d93ecd9903b4bd6ff2b42118"
+  },
+  "solved": true,
+  "timeout": false,
+  "total_depth_upper_bound": 33,
+  "tt_hits": 19340917,
+  "winner": 1
+}

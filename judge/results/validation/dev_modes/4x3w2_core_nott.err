@@ -1,0 +1,14 @@
+configs=267 enumerate=3.2068e-05s
+index=267 time=1.0555e-05s
+
+board tables time=0.000182161s
+symmetry time=2.3075e-05s
+
+transitions=816 time=1.7666e-05s
+dense_tables~34.7KiB total_precompute=0.000280688s
+TT=disabled bounds=0 pawn_table=0
+depth=2 target=2 proven=0 nodes=14 total=14 elapsed=3.1918e-05s tt_hits=0
+depth=4 target=2 proven=0 nodes=52 total=66 elapsed=4.1332e-05s tt_hits=0
+depth=6 target=2 proven=0 nodes=153 total=219 elapsed=5.4732e-05s tt_hits=0
+depth=8 target=2 proven=0 nodes=804 total=1023 elapsed=0.00011415s tt_hits=0
+depth=10 target=2 proven=1 nodes=3132 total=4155 elapsed=0.000334598s tt_hits=0

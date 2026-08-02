@@ -1,0 +1,190 @@
+configs=16368423 enumerate=2.3041s
+index_storage=384.0MiB
+index=16368423 time=0.51342s
+symmetry time=6.81345s
+  board 262144/16368423  board 524288/16368423  board 786432/16368423  board 1048576/16368423  board 1310720/16368423  board 1572864/16368423  board 1835008/16368423  board 2097152/16368423  board 2359296/16368423  board 2621440/16368423  board 2883584/16368423  board 3145728/16368423  board 3407872/16368423  board 3670016/16368423  board 3932160/16368423  board 4194304/16368423  board 4456448/16368423  board 4718592/16368423  board 4980736/16368423  board 5242880/16368423  board 5505024/16368423  board 5767168/16368423  board 6029312/16368423  board 6291456/16368423  board 6553600/16368423  board 6815744/16368423  board 7077888/16368423  board 7340032/16368423  board 7602176/16368423  board 7864320/16368423  board 8126464/16368423  board 8388608/16368423  board 8650752/16368423  board 8912896/16368423  board 9175040/16368423  board 9437184/16368423  board 9699328/16368423  board 9961472/16368423  board 10223616/16368423  board 10485760/16368423  board 10747904/16368423  board 11010048/16368423  board 11272192/16368423  board 11534336/16368423  board 11796480/16368423  board 12058624/16368423  board 12320768/16368423  board 12582912/16368423  board 12845056/16368423  board 13107200/16368423  board 13369344/16368423  board 13631488/16368423  board 13893632/16368423  board 14155776/16368423  board 14417920/16368423  board 14680064/16368423  board 14942208/16368423  board 15204352/16368423  board 15466496/16368423  board 15728640/16368423  board 15990784/16368423  board 16252928/16368423
+board tables time=3.95082s
+  trans 262144/16368423  trans 524288/16368423  trans 786432/16368423  trans 1048576/16368423  trans 1310720/16368423  trans 1572864/16368423  trans 1835008/16368423  trans 2097152/16368423  trans 2359296/16368423  trans 2621440/16368423  trans 2883584/16368423  trans 3145728/16368423  trans 3407872/16368423  trans 3670016/16368423  trans 3932160/16368423  trans 4194304/16368423  trans 4456448/16368423  trans 4718592/16368423  trans 4980736/16368423  trans 5242880/16368423  trans 5505024/16368423  trans 5767168/16368423  trans 6029312/16368423  trans 6291456/16368423  trans 6553600/16368423  trans 6815744/16368423  trans 7077888/16368423  trans 7340032/16368423  trans 7602176/16368423  trans 7864320/16368423  trans 8126464/16368423  trans 8388608/16368423  trans 8650752/16368423  trans 8912896/16368423  trans 9175040/16368423  trans 9437184/16368423  trans 9699328/16368423  trans 9961472/16368423  trans 10223616/16368423  trans 10485760/16368423  trans 10747904/16368423  trans 11010048/16368423  trans 11272192/16368423  trans 11534336/16368423  trans 11796480/16368423  trans 12058624/16368423  trans 12320768/16368423  trans 12582912/16368423  trans 12845056/16368423  trans 13107200/16368423  trans 13369344/16368423  trans 13631488/16368423  trans 13893632/16368423  trans 14155776/16368423  trans 14417920/16368423  trans 14680064/16368423  trans 14942208/16368423  trans 15204352/16368423  trans 15466496/16368423  trans 15728640/16368423  trans 15990784/16368423  trans 16252928/16368423
+transitions=155145930 time=6.33999s
+dense_tables~1.8GiB total_precompute=19.9323s
+root[0] move=P(5,2) score=123
+root[1] move=H(0,1) score=18
+root[2] move=H(0,2) score=18
+root[3] move=H(1,1) score=18
+root[4] move=H(1,2) score=18
+root[5] move=H(2,1) score=18
+root[6] move=H(2,2) score=18
+root[7] move=H(3,1) score=18
+root[8] move=H(3,2) score=18
+root[9] move=H(4,1) score=18
+root[10] move=H(4,2) score=18
+root[11] move=H(5,1) score=18
+root[12] move=H(5,2) score=18
+root[13] move=P(6,1) score=0
+root[14] move=P(6,3) score=0
+root[15] move=H(0,0) score=-7
+root[16] move=H(1,0) score=-7
+root[17] move=H(2,0) score=-7
+root[18] move=H(3,0) score=-7
+root[19] move=H(4,0) score=-7
+root[20] move=H(5,0) score=-7
+root[21] move=V(0,0) score=-7
+root[22] move=V(0,1) score=-7
+root[23] move=V(0,2) score=-7
+root[24] move=V(1,0) score=-7
+root[25] move=V(1,1) score=-7
+root[26] move=V(1,2) score=-7
+root[27] move=V(2,0) score=-7
+root[28] move=V(2,1) score=-7
+root[29] move=V(2,2) score=-7
+root[30] move=V(3,0) score=-7
+root[31] move=V(3,1) score=-7
+root[32] move=V(3,2) score=-7
+root[33] move=V(4,0) score=-7
+root[34] move=V(4,1) score=-7
+root[35] move=V(4,2) score=-7
+root[36] move=V(5,0) score=-7
+root[37] move=V(5,1) score=-7
+root[38] move=V(5,2) score=-7
+forcing root[0] move=P(5,2)
+second[0] move=P(1,2) score=0
+second[1] move=H(0,1) score=105
+second[2] move=H(0,2) score=105
+second[3] move=H(1,1) score=105
+second[4] move=H(1,2) score=105
+second[5] move=H(2,1) score=105
+second[6] move=H(2,2) score=105
+second[7] move=H(3,1) score=105
+second[8] move=H(3,2) score=105
+second[9] move=H(4,1) score=105
+second[10] move=H(4,2) score=105
+second[11] move=P(0,1) score=123
+second[12] move=P(0,3) score=123
+second[13] move=H(0,0) score=130
+second[14] move=H(1,0) score=130
+second[15] move=H(2,0) score=130
+second[16] move=H(3,0) score=130
+second[17] move=H(4,0) score=130
+second[18] move=H(5,0) score=130
+second[19] move=V(0,0) score=130
+second[20] move=V(0,1) score=130
+second[21] move=V(0,2) score=130
+second[22] move=V(1,0) score=130
+second[23] move=V(1,1) score=130
+second[24] move=V(1,2) score=130
+second[25] move=V(2,0) score=130
+second[26] move=V(2,1) score=130
+second[27] move=V(2,2) score=130
+second[28] move=V(3,0) score=130
+second[29] move=V(3,1) score=130
+second[30] move=V(3,2) score=130
+second[31] move=V(4,0) score=130
+second[32] move=V(4,1) score=130
+second[33] move=V(4,2) score=130
+second[34] move=V(5,0) score=130
+second[35] move=V(5,1) score=130
+second[36] move=V(5,2) score=130
+second[37] move=H(5,1) score=305
+second[38] move=H(5,2) score=305
+forcing second[0] move=P(1,2)
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=222310853 total=222310853 elapsed=53.3664s tt_hits=83856738
+TT=1.5GiB bounds=0 pawn_table=0
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=105641316 total=105641316 elapsed=28.1456s tt_hits=44218893
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=31456473 total=31456473 elapsed=7.86148s tt_hits=14153697
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=44255395 total=44255395 elapsed=10.8868s tt_hits=18919379
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=21129649 total=21129649 elapsed=5.07465s tt_hits=9743068
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=41457053 total=41457053 elapsed=9.873s tt_hits=16122637
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=3729954 total=3729954 elapsed=0.756556s tt_hits=1784907
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=29752415 total=29752415 elapsed=7.60487s tt_hits=12088157
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=4810966 total=4810966 elapsed=1.2356s tt_hits=2416123
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=245446106 total=245446106 elapsed=65.4483s tt_hits=104191742
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=177324991 total=177324991 elapsed=49.1294s tt_hits=70908493
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=31456473 total=31456473 elapsed=7.77583s tt_hits=14153697
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=7864105 total=7864105 elapsed=1.81828s tt_hits=3487107
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=7700837 total=7700837 elapsed=1.62012s tt_hits=3257335
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=24992274 total=24992274 elapsed=5.45377s tt_hits=9852328
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=92630618 total=92630618 elapsed=24.6197s tt_hits=37103920
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=69202873 total=69202873 elapsed=16.8225s tt_hits=28139784
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=72495375 total=72495375 elapsed=19.3812s tt_hits=29898149
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=48889850 total=48889850 elapsed=12.624s tt_hits=20684914
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=76690597 total=76690597 elapsed=22.2677s tt_hits=31882487
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=67386656 total=67386656 elapsed=15.31s tt_hits=28162044
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=120018059 total=120018059 elapsed=28.6873s tt_hits=50784224
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=55484214 total=55484214 elapsed=14.1573s tt_hits=23482794
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=58769905 total=58769905 elapsed=15.0182s tt_hits=24916865
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=168401186 total=168401186 elapsed=37.9315s tt_hits=70179126
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=63518796 total=63518796 elapsed=15.0213s tt_hits=26964232
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=58488758 total=58488758 elapsed=14.3972s tt_hits=24513182
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=71233763 total=71233763 elapsed=16.1592s tt_hits=30781265
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=74339729 total=74339729 elapsed=17.9926s tt_hits=30660042
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=47493418 total=47493418 elapsed=10.9436s tt_hits=19717616
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=3729954 total=3729954 elapsed=0.784079s tt_hits=1784907
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=16381738 total=16381738 elapsed=3.4085s tt_hits=7447668
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=191955187 total=191955187 elapsed=47.2545s tt_hits=72877992
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=95941631 total=95941631 elapsed=22.5556s tt_hits=38587718
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=8013318 total=8013318 elapsed=2.01015s tt_hits=3269576
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=141358445 total=141358445 elapsed=39.2242s tt_hits=60483235
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=45545981 total=45545981 elapsed=12.5595s tt_hits=18706924
+TT=1.5GiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=73725725 total=73725725 elapsed=20.1565s tt_hits=30327360
+Command exited with non-zero status 3
+	Command being timed: "./bin/frontier_solver --width 4 --height 7 --walls 7 --target 1 --root-index 0 --root-index2 0 --scan-current --scan-root-start 1 --scan-root-end 39 --child-depth 24 --seconds 120 --tt-bits 27 --order 1 --no-bounds --no-pawn-table"
+	User time (seconds): 827.29
+	System time (seconds): 13.09
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 14:00.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3430112
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 15993971
+	Voluntary context switches: 3
+	Involuntary context switches: 1604
+	Swaps: 0
+	File system inputs: 1608
+	File system outputs: 288
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 3

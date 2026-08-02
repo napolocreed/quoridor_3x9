@@ -1,0 +1,34 @@
+{
+  "type": "aggregate",
+  "format": "qcert-aggregate-1",
+  "claim": {
+    "width": 3,
+    "height": 4,
+    "walls": 0,
+    "target": 0,
+    "bound": 5,
+    "root": {"p1": 10, "p2": 1, "r1": 0, "r2": 0, "turn": 0, "hw": 0, "vw": 0},
+    "witness": "P:7"
+  },
+  "parts": [
+    {
+      "id": "pawn-left",
+      "path": "branch_left.jsonl",
+      "sha256": "ada39b3ac840588fd52643c7060b31e681c17164fd655fd761e56d85a2eb86b8",
+      "bound": 3,
+      "root": {"p1": 7, "p2": 0, "r1": 0, "r2": 0, "turn": 0, "hw": 0, "vw": 0}
+    },
+    {
+      "id": "pawn-center",
+      "path": "branch_center.jsonl",
+      "sha256": "17274a2f90dd4d5ba8b2da641360414d9708c4acd3f6c2ca43d835562a29fbeb",
+      "bound": 1,
+      "root": {"p1": 7, "p2": 4, "r1": 0, "r2": 0, "turn": 0, "hw": 0, "vw": 0}
+    }
+  ],
+  "replies": [
+    {"move": "P:0", "part": "pawn-left", "transform": "identity"},
+    {"move": "P:2", "part": "pawn-left", "transform": "mirror-columns"},
+    {"move": "P:4", "part": "pawn-center", "transform": "identity"}
+  ]
+}

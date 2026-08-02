@@ -1,0 +1,10 @@
+item,value,unit,source_path
+boards_swept,24 (W in {2;3;5;9} x H in {4..9}),boards,claude-help/RACE_ZUGZWANG.md (race_param.mjs)
+selftest_states_9x9,10242,race states (0 divergence vs race.js fixed-point table),claude-help/RACE_ZUGZWANG.md
+draws_found,0,drawn race states on every board swept,claude-help/RACE_ZUGZWANG.md
+9x9_decisive_split,5760 mover wins / 4482 mover losses / 0 draws,states,claude-help/RACE_ZUGZWANG.md
+mutual_zugzwang_family_9x9,36 centrally symmetric states (equal distances; same column; even gap),states,claude-help/RACE_ZUGZWANG.md
+loss_length,exactly 2d plies (d = equal row distance),plies,claude-help/RACE_ZUGZWANG.md
+distinct_columns_equal_distance,0 mover losses across all classes,states,claude-help/RACE_ZUGZWANG.md
+proof_status,COMPLETE imitation-strategy proof + independent adversarial audit (A1-A10; 3 minor gaps incl. backward-jump accounting repaired; trail preserved),status,claude-help/RACE_ZUGZWANG_PROOF.md
+independent_crosscheck,initial 9x9 case confirmed by independent alpha-beta (25/25 sign+distance),states,claude-help/NOTE_POUR_SOL.md

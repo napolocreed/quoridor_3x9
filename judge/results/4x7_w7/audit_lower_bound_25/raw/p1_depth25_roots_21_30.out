@@ -1,0 +1,11 @@
+root_scan index=21 move=V(0,0) proven=0 timeout=0 nodes=121441613 tt_hits=49818215 seconds=33.4429 child_depth=24 total_depth=25
+root_scan index=22 move=V(0,1) proven=0 timeout=0 nodes=85268927 tt_hits=36780055 seconds=23.2556 child_depth=24 total_depth=25
+root_scan index=23 move=V(0,2) proven=0 timeout=0 nodes=150321198 tt_hits=62289206 seconds=40.3502 child_depth=24 total_depth=25
+root_scan index=24 move=V(1,0) proven=0 timeout=0 nodes=130130475 tt_hits=55256634 seconds=32.5052 child_depth=24 total_depth=25
+root_scan index=25 move=V(1,1) proven=0 timeout=0 nodes=168528170 tt_hits=72471978 seconds=41.7444 child_depth=24 total_depth=25
+root_scan index=26 move=V(1,2) proven=0 timeout=0 nodes=121405418 tt_hits=49882717 seconds=30.0236 child_depth=24 total_depth=25
+root_scan index=27 move=V(2,0) proven=0 timeout=0 nodes=130744412 tt_hits=55241247 seconds=32.73 child_depth=24 total_depth=25
+root_scan index=28 move=V(2,1) proven=0 timeout=0 nodes=181232222 tt_hits=77450074 seconds=43.646 child_depth=24 total_depth=25
+root_scan index=29 move=V(2,2) proven=0 timeout=0 nodes=134614629 tt_hits=57592184 seconds=33.9223 child_depth=24 total_depth=25
+root_scan index=30 move=V(3,0) proven=0 timeout=0 nodes=124120962 tt_hits=52242078 seconds=31.4331 child_depth=24 total_depth=25
+root_scan_result proven=0 child_proved=0 child_refuted=10 child_unresolved=0 aggregate_nodes=1347808026 aggregate_seconds=343.053 total_depth=25 range=21-30

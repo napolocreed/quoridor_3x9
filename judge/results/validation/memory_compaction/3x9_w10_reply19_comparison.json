@@ -1,0 +1,40 @@
+{
+  "archived": "results/3x9_w10/audit/core_only/reply_19.json",
+  "compact_output": "results/validation/memory_compaction/3x9_w10_reply19_compact.out",
+  "compared_fields": {
+    "solved": true,
+    "winner": true,
+    "depth": true,
+    "nodes": true,
+    "tt_hits": true,
+    "cutoffs": true,
+    "pawn_table_hits": true,
+    "timeout": true
+  },
+  "all_exact_fields_match": true,
+  "archived_parsed": {
+    "cutoffs": "17198059",
+    "depth": "31",
+    "height": "9",
+    "nodes": "79766979",
+    "pawn": "0",
+    "seconds": "13.6888",
+    "solved": "1",
+    "timeout": "0",
+    "tt_hits": "36089229",
+    "walls": "10",
+    "width": "3",
+    "winner": "1"
+  },
+  "compact_parsed": {
+    "solved": "1",
+    "winner": "1",
+    "depth": "31",
+    "nodes": "79766979",
+    "tt_hits": "36089229",
+    "cutoffs": "17198059",
+    "pawn_table_hits": "0",
+    "seconds": "15.6024",
+    "timeout": "0"
+  }
+}

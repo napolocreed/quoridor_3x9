@@ -1,0 +1,1 @@
+{"mode":"branch","w":3,"h":9,"walls":10,"fixed":"H(6,0)","target":1,"proved":false,"depth":-1,"nodes":48031655,"tt_stores":15589960,"tt_hits":18861610,"dist_configs":436042,"bfs_legality":107258658,"stalemates":0,"seed_entries":162576791,"seed_probes":15589960,"seed_hits":601931,"seed_loose":743296,"timeout":false,"seconds":18.009}

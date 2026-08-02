@@ -1,0 +1,4 @@
+{"width":3,"height":2,"walls":1,"maxDepth":20,"code":{"winner":1,"depth":1,"nodes":2,"stalematesSeen":0},"doc":{"winner":1,"depth":1,"nodes":2,"stalematesSeen":0},"rootVerdictsAgree":true}
+{"width":3,"height":2,"walls":2,"maxDepth":20,"code":{"winner":1,"depth":1,"nodes":2,"stalematesSeen":0},"doc":{"winner":1,"depth":1,"nodes":2,"stalematesSeen":0},"rootVerdictsAgree":true}
+{"width":4,"height":2,"walls":1,"maxDepth":24,"code":{"winner":1,"depth":1,"nodes":2,"stalematesSeen":0},"doc":{"winner":1,"depth":1,"nodes":2,"stalematesSeen":0},"rootVerdictsAgree":true}
+{"width":4,"height":2,"walls":2,"maxDepth":24,"code":{"winner":1,"depth":1,"nodes":2,"stalematesSeen":0},"doc":{"winner":1,"depth":1,"nodes":2,"stalematesSeen":0},"rootVerdictsAgree":true}

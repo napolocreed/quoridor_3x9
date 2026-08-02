@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "variant": {
+    "width": 4,
+    "height": 7,
+    "walls_per_player": 7
+  },
+  "before": {
+    "max_rss_kib": 2953548,
+    "dense_tables_label": "2.4GiB",
+    "precompute_seconds": 21.8163,
+    "source": "results/4x7_w7/audit_lower_bound_25/raw/root_list.err"
+  },
+  "after": {
+    "max_rss_kib": 2250200,
+    "dense_tables_label": "1.8GiB",
+    "precompute_seconds": 19.8224,
+    "source": "results/validation/memory_compaction/4x7_w7_compact_precompute.err"
+  },
+  "saved_rss_kib": 703348,
+  "saved_rss_percent": 23.813664108387606,
+  "change": "Store only top-goal distances; derive bottom-goal distances by exact 180-degree rotation. Use distance 255 as reachability instead of separate masks.",
+  "generated_utc": "2026-07-30T22:49:50.054084+00:00"
+}

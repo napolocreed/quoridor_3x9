@@ -1,0 +1,470 @@
+{
+ "type": "aggregate",
+ "format": "qcert-aggregate-1",
+ "claim": {
+  "width": 3,
+  "height": 9,
+  "walls": 10,
+  "target": 0,
+  "bound": 35,
+  "root": {
+   "p1": 25,
+   "p2": 1,
+   "r1": 10,
+   "r2": 10,
+   "turn": 0,
+   "hw": 0,
+   "vw": 0
+  },
+  "witness": "P:22"
+ },
+ "parts": [
+  {
+   "id": "H00",
+   "path": "parts/H00.qcert1.jsonl.gz",
+   "sha256": "1a100c3c1ef03f682cabf2e22968d08774ea9b2c1bc7cd18f194788de86d60d6",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 1,
+    "vw": 0
+   }
+  },
+  {
+   "id": "H10",
+   "path": "parts/H10.qcert1.jsonl.gz",
+   "sha256": "d3d28f02559c20aa1fe2353760cf736f6661e0e8e9cba4e08d2362673ff77dbf",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 4,
+    "vw": 0
+   }
+  },
+  {
+   "id": "H20",
+   "path": "parts/H20.qcert1.jsonl.gz",
+   "sha256": "66aa6ef937c8b836e3743763f21e9a66bda17d9104efc2dce4e129b3645c11e6",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 16,
+    "vw": 0
+   }
+  },
+  {
+   "id": "H30",
+   "path": "parts/H30.qcert1.jsonl.gz",
+   "sha256": "629ac476e7f474708310de7581f10d9387504ad26d44362135c743c95dfdf81c",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 64,
+    "vw": 0
+   }
+  },
+  {
+   "id": "H40",
+   "path": "parts/H40.qcert1.jsonl.gz",
+   "sha256": "8fd522ea99ddd08aa1924454a8e0af28a28c9d69d251651b6960f82768304537",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 256,
+    "vw": 0
+   }
+  },
+  {
+   "id": "H50",
+   "path": "parts/H50.qcert1.jsonl.gz",
+   "sha256": "1182dc3ba55f7bf5510ffaa0fc7c02002272c18f2298ce9c8ca9cc759edfe5e6",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 1024,
+    "vw": 0
+   }
+  },
+  {
+   "id": "H60",
+   "path": "parts/H60.qcert1.jsonl.gz",
+   "sha256": "6bbf654b9b0f36eccb80a80c6fdca19e769385c8ee98333b855cbce0c41089ec",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 4096,
+    "vw": 0
+   }
+  },
+  {
+   "id": "H70",
+   "path": "parts/H70.qcert1.jsonl.gz",
+   "sha256": "0ca97369e856ce7ca5d1499a4289e403ae292bebbd8c4438cc188802cea2e9ff",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 16384,
+    "vw": 0
+   }
+  },
+  {
+   "id": "P00",
+   "path": "parts/P00.qcert1.jsonl.gz",
+   "sha256": "300ede430a5d80805ba4ba37f026def0e8c52f84bd5a77897028e7d34137e010",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 0,
+    "r1": 10,
+    "r2": 10,
+    "turn": 0,
+    "hw": 0,
+    "vw": 0
+   }
+  },
+  {
+   "id": "P11",
+   "path": "parts/P11.qcert1.jsonl.gz",
+   "sha256": "acb5112b67712df3cf3fa95cd3a8cc926d30cc0c257f57e41e73298534bda380",
+   "bound": 33,
+   "root": {
+    "p1": 22,
+    "p2": 4,
+    "r1": 10,
+    "r2": 10,
+    "turn": 0,
+    "hw": 0,
+    "vw": 0
+   }
+  },
+  {
+   "id": "V00",
+   "path": "parts/V00.qcert1.jsonl.gz",
+   "sha256": "a5ef82617ad6dd391a6cc2bc320c6bd28d998ae4e5d1dd61c6c2a1f0b1445d3b",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 0,
+    "vw": 1
+   }
+  },
+  {
+   "id": "V10",
+   "path": "parts/V10.qcert1.jsonl.gz",
+   "sha256": "6c2be2dd48a0b2f2840d89c5e78b49c3be2328c186f07148b95062d882835661",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 0,
+    "vw": 4
+   }
+  },
+  {
+   "id": "V20",
+   "path": "parts/V20.qcert1.jsonl.gz",
+   "sha256": "653301b2dedcd3de24f74498d9d68d0fe12159a399ae068c29080a2982bb14dc",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 0,
+    "vw": 16
+   }
+  },
+  {
+   "id": "V30",
+   "path": "parts/V30.qcert1.jsonl.gz",
+   "sha256": "23bd16fc6856215eeeebcd8c5d62c8529fd90bba1f4a7299e2a7a72c095a79c2",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 0,
+    "vw": 64
+   }
+  },
+  {
+   "id": "V40",
+   "path": "parts/V40.qcert1.jsonl.gz",
+   "sha256": "6c214f2e648dd3f8adeb7c1ede5f782ebbfcee859691be73ae533a350e84fb89",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 0,
+    "vw": 256
+   }
+  },
+  {
+   "id": "V50",
+   "path": "parts/V50.qcert1.jsonl.gz",
+   "sha256": "ad89e7d4160d3c2cf00891c99959b0e82357bb5f679770591a0ef2a9f44b2ad4",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 0,
+    "vw": 1024
+   }
+  },
+  {
+   "id": "V60",
+   "path": "parts/V60.qcert1.jsonl.gz",
+   "sha256": "4b731fdf3ee7ea425629f1f9b15c1ad0cce99e8c792ac47b24decf18be6ece30",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 0,
+    "vw": 4096
+   }
+  },
+  {
+   "id": "V70",
+   "path": "parts/V70.qcert1.jsonl.gz",
+   "sha256": "93dd562de24ca537677630aea41e20e036efd259eec5f388779bab5caf5e2008",
+   "bound": 31,
+   "root": {
+    "p1": 22,
+    "p2": 1,
+    "r1": 10,
+    "r2": 9,
+    "turn": 0,
+    "hw": 0,
+    "vw": 16384
+   }
+  }
+ ],
+ "replies": [
+  {
+   "move": "H:0:0",
+   "part": "H00",
+   "transform": "identity"
+  },
+  {
+   "move": "H:0:1",
+   "part": "H00",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "H:1:0",
+   "part": "H10",
+   "transform": "identity"
+  },
+  {
+   "move": "H:1:1",
+   "part": "H10",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "H:2:0",
+   "part": "H20",
+   "transform": "identity"
+  },
+  {
+   "move": "H:2:1",
+   "part": "H20",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "H:3:0",
+   "part": "H30",
+   "transform": "identity"
+  },
+  {
+   "move": "H:3:1",
+   "part": "H30",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "H:4:0",
+   "part": "H40",
+   "transform": "identity"
+  },
+  {
+   "move": "H:4:1",
+   "part": "H40",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "H:5:0",
+   "part": "H50",
+   "transform": "identity"
+  },
+  {
+   "move": "H:5:1",
+   "part": "H50",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "H:6:0",
+   "part": "H60",
+   "transform": "identity"
+  },
+  {
+   "move": "H:6:1",
+   "part": "H60",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "H:7:0",
+   "part": "H70",
+   "transform": "identity"
+  },
+  {
+   "move": "H:7:1",
+   "part": "H70",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "P:0",
+   "part": "P00",
+   "transform": "identity"
+  },
+  {
+   "move": "P:2",
+   "part": "P00",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "P:4",
+   "part": "P11",
+   "transform": "identity"
+  },
+  {
+   "move": "V:0:0",
+   "part": "V00",
+   "transform": "identity"
+  },
+  {
+   "move": "V:0:1",
+   "part": "V00",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "V:1:0",
+   "part": "V10",
+   "transform": "identity"
+  },
+  {
+   "move": "V:1:1",
+   "part": "V10",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "V:2:0",
+   "part": "V20",
+   "transform": "identity"
+  },
+  {
+   "move": "V:2:1",
+   "part": "V20",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "V:3:0",
+   "part": "V30",
+   "transform": "identity"
+  },
+  {
+   "move": "V:3:1",
+   "part": "V30",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "V:4:0",
+   "part": "V40",
+   "transform": "identity"
+  },
+  {
+   "move": "V:4:1",
+   "part": "V40",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "V:5:0",
+   "part": "V50",
+   "transform": "identity"
+  },
+  {
+   "move": "V:5:1",
+   "part": "V50",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "V:6:0",
+   "part": "V60",
+   "transform": "identity"
+  },
+  {
+   "move": "V:6:1",
+   "part": "V60",
+   "transform": "mirror-columns"
+  },
+  {
+   "move": "V:7:0",
+   "part": "V70",
+   "transform": "identity"
+  },
+  {
+   "move": "V:7:1",
+   "part": "V70",
+   "transform": "mirror-columns"
+  }
+ ]
+}

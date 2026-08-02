@@ -1,0 +1,102 @@
+{
+  "schema": "qcert-profile-move-differential-receipt-v1",
+  "date": "2026-08-01",
+  "status": "no-divergence",
+  "scope_warning": "This is a move-generation differential on one accepted branch index. It performs no proof search and does not turn the branch certificate into an initial-position aggregate proof.",
+  "command": "python reference/qcert_profile_real_db_check.py build/H10.qcert.sqlite3 ../claude-help/work/H10.qcert1.jsonl --sample-configurations 1500 --expected-database-sha256 41d3803d2a1b81ce5201784a2055b1f33cecf130c7226e4c782e4f738aabfca7 --expected-certificate-sha256 961df2b3b91ba136404f5a24fd2a98c1ed886a3443ab5cfd71f4abddbaeff1d4 --expected-verifier-sha256 d8addf93a09a7f01693ebb09490801346a1368450ddf3b15c340c9fc39bdfa93 --expected-rules-sha256 d83ac0d092ded9bb6f29bbdfca6e1c367039bc89cd2b4dfd103e65b908d3723b",
+  "artifacts": {
+    "database": {
+      "logical_name": "build/H10.qcert.sqlite3",
+      "sha256": "41d3803d2a1b81ce5201784a2055b1f33cecf130c7226e4c782e4f738aabfca7",
+      "bytes": 313151488,
+      "quick_check": "ok",
+      "hash_stable_during_run": true,
+      "sidecar_bytes_before": {"wal": 0, "shm": 32768, "journal": 0},
+      "sidecar_bytes_after": {"wal": 0, "shm": 32768, "journal": 0},
+      "nonempty_wal_or_journal_rejected": true,
+      "metadata_nodes": 9836857,
+      "metadata_verification_error_count": 0
+    },
+    "certificate": {
+      "logical_name": "H10.qcert1.jsonl",
+      "sha256": "961df2b3b91ba136404f5a24fd2a98c1ed886a3443ab5cfd71f4abddbaeff1d4",
+      "bytes": 881735925
+    },
+    "verifier_sha256": "d8addf93a09a7f01693ebb09490801346a1368450ddf3b15c340c9fc39bdfa93",
+    "rules_sha256": "d83ac0d092ded9bb6f29bbdfca6e1c367039bc89cd2b4dfd103e65b908d3723b",
+    "checker_sha256": "8c219546217f1fc3ac14f74493b1e78de2c975734eed51d8cd8cc72a921656ed",
+    "metadata_bindings_match": true,
+    "explicit_expected_hashes_match": true
+  },
+  "claim_context": {
+    "width": 3,
+    "height": 9,
+    "walls": 10,
+    "target": 0,
+    "bound": 31,
+    "root": {"p1": 22, "p2": 1, "r1": 10, "r2": 9, "turn": 0, "hw": 4, "vw": 0}
+  },
+  "sample": {
+    "seed": "qcert-H10-profile-differential-2026-08-01",
+    "configuration_algorithm": "wall-count-stratified-sha256-v1",
+    "state_algorithm": "minimum-sha256-per-configuration-v1",
+    "population_configurations": 221621,
+    "sampled_distinct_configurations": 1500,
+    "sampled_states": 1500,
+    "configuration_fraction": 0.006768311667215652,
+    "node_fraction": 0.00015248773058305107,
+    "population_by_placed_walls": {"1": 1, "2": 28, "3": 75, "4": 575, "5": 2951, "6": 11371, "7": 29405, "8": 51080, "9": 59484, "10": 44193, "11": 18352, "12": 3825, "13": 279, "14": 2},
+    "sample_by_placed_walls": {"1": 1, "2": 1, "3": 1, "4": 5, "5": 21, "6": 77, "7": 198, "8": 344, "9": 400, "10": 297, "11": 124, "12": 27, "13": 3, "14": 1}
+  },
+  "comparison": {
+    "optimized": "qcert_verify_sqlite.legal_moves_with_profile",
+    "naive": "quoridor_reference.ReferenceGame.legal_moves",
+    "equality": "exact move multiset",
+    "states_compared": 1500,
+    "legal_moves_compared": 10024,
+    "legal_move_count_range": [1, 32],
+    "move_type_counts": {"P": 2963, "H": 3175, "V": 3886},
+    "target_declared_moves": {
+      "nodes_checked": 1208,
+      "type_counts": {"P": 1052, "H": 113, "V": 43},
+      "wall_bit_tests": 156,
+      "all_matched_naive_membership": true
+    },
+    "invalid_declared_labels": {
+      "attempted": 3000,
+      "rejected": 3000,
+      "per_sampled_profile": 2,
+      "reason_counts": {"geometrically-invalid": 1567, "path-invalid": 1427, "no-mover-stock": 6},
+      "profiles_by_exercised_reason": {"geometrically-invalid": 1497, "path-invalid": 1427, "no-mover-stock": 3}
+    },
+    "connectivity_masks": {
+      "optimized": "qcert goal-connectivity bit masks",
+      "naive": "ReferenceGame.has_goal_path BFS",
+      "all_board_cells": 27,
+      "base_mask_tests": 81000,
+      "wall_candidates_checked": 11589,
+      "candidate_mask_tests": 625806,
+      "divergences": 0
+    },
+    "divergences": 0
+  },
+  "coverage": {
+    "all_gates_passed": true,
+    "turn_counts": {"P1": 1208, "P2": 292},
+    "mover_stock_range": [0, 10],
+    "mover_stock_counts": {"0": 3, "1": 20, "2": 42, "3": 76, "4": 78, "5": 75, "6": 137, "7": 243, "8": 434, "9": 285, "10": 107},
+    "unique_stock_pairs": 53,
+    "unique_p1_cells": 17,
+    "unique_p2_cells": 24,
+    "unique_pawn_pairs": 177,
+    "rank_range": [1, 29],
+    "states_per_configuration_range": [1, 556],
+    "states_with_wall_moves": 1450,
+    "states_without_mover_walls": 3
+  },
+  "environment": {
+    "python": "3.13.14",
+    "sqlite": "3.50.4",
+    "seconds": 15.377
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "campaign": {
+    "manifest_sha256": "d748235a1fff7e5aaef35678743845f083f17d903df7178aa3a370c3bc3e69b5",
+    "schema_version": 1,
+    "solver_sha256": "2575b3ad10ae5ecb51ccaf709333e483ecbee3f53b79809761d5c5cca7dde090",
+    "task_universe_sha256": "8dc5e1dbd56fc1d59676113c9529f424293e307bc71bdf20b3ad4724041b901e",
+    "worker_bundle_sha256": "ee6caf7ef8679de65226b61b2d0e43ecb6f3672ea0fd7e2d06e178444420efa4"
+  },
+  "completed_unix": 1785632050.8569286,
+  "failed": 0,
+  "parser_sha256": "5d4492114c4dc7ec8b0cfa3270b695cf3ddb40a0a3e798c038255fe20ccc32d3",
+  "solver_sha256": "2575b3ad10ae5ecb51ccaf709333e483ecbee3f53b79809761d5c5cca7dde090",
+  "task_ids": [
+    "tt-hint-portfolio-smoke"
+  ],
+  "tasks": 1,
+  "worker_bundle_sha256": "ee6caf7ef8679de65226b61b2d0e43ecb6f3672ea0fd7e2d06e178444420efa4",
+  "worker_sha256": "6baa3cd23e300a2e6beb97980f1c6d9ec3093946be905947c02c239834a33613"
+}

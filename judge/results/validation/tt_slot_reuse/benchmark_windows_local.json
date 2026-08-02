@@ -1,0 +1,182 @@
+{
+  "schema": "tt-slot-reuse-benchmark-1",
+  "date": "2026-08-02",
+  "status": "exact-mixed-performance-candidate",
+  "claimScope": "experimental fixed-address TT microoptimization; no new game-theoretic claim",
+  "machine": {
+    "cpu": "AMD Ryzen 5 220 w/ Radeon 740M Graphics",
+    "physicalCores": 6,
+    "logicalProcessors": 12,
+    "ramGiB": 15.18,
+    "os": "Microsoft Windows 11 Enterprise 10.0.26200 build 26200",
+    "compiler": "MSYS2 UCRT64 GCC 16.1.0",
+    "contention": "one long-running Claude Python process; process CPU time recorded through System.Diagnostics.Process.TotalProcessorTime"
+  },
+  "provenance": {
+    "baseCommit": "ee9e65e79fb48167ebec7251f4e8d6a111aa53f6",
+    "solverSourceSha256": "6c0bd1c59ccbd5ef81b78e0fddbf782cb1bb133c422c2154930fa1d583a6c408",
+    "baselineBinarySha256": "f913257d0b3e08ff941a43e099ea655d29df2b37adc59bc15ceb08ebadc54dfc",
+    "optimizedWrapperSha256": "6cc365269841e135d1a818649c3e8afae196ace34c58f94e6fd16fe4e850c414",
+    "optimizedBinarySha256": "21b1d31a5216c50a11ac37b6ddb274c329b49ff859dcb25ebc1649994f5941f0",
+    "profileWrapperSha256": "208647d9fa01ab7ae3967457e0e242c5327aa562f4a8183813fd8d1ea1314550",
+    "profileBinarySha256": "e790d53af47fbbfbcda9c25f632489fc8b0cf4f08a12329209d977343b30eeaf",
+    "stateSolverSourceSha256": "3f0ee2adb240847a6245b6ccedc1001e5484ecaddbf3904ae6ddd0cd5141a70a",
+    "stateSolverBinarySha256": "f8a06d75253a08ca69d20366c1b9609d2b92a227c5a146b636d4f10b992b26c3",
+    "differentialCheckerSha256": "295753201c96373c7c805850fac4e98edf564b9f03486aa8686f6d14b084e2b6",
+    "debugUnitSourceSha256": "431b2ce3e8e2f992fc03ec59df43d6af37969ce1b944de3900f6f4940cbb9569",
+    "debugUnitBinarySha256": "ef4db15a47cee0793acd1990e08f3415760791ff078cbdc37b54904794d7e485",
+    "buildFlags": "-O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -march=native -Wl,--no-insert-timestamp"
+  },
+  "validation": {
+    "debugInterleavedRecords": 8000,
+    "debugAssociativities": [2, 4],
+    "debugBoundMerge": "passed",
+    "debugOwnerGuard": "passed",
+    "sampled3x3x1Requests": 2000,
+    "sampled4x3x2Requests": 2000,
+    "exhaustive3x3x1Requests": 51408,
+    "verdictDivergences": 0
+  },
+  "profileRun": {
+    "id": "4x7w7-v00-d24",
+    "nodes": 72550877,
+    "ttHits": 29886576,
+    "cutoffs": 18528427,
+    "ttSlotReuses": 28393959,
+    "mix64CallsSavedTwoWay": 56787918,
+    "integerMultiplicationsSavedTwoWay": 113575836,
+    "stalematesSeen": 0
+  },
+  "timedRuns": [
+    {
+      "id": "4x7w7-v00-d24",
+      "commandArgs": [
+        "--width", "4", "--height", "7", "--walls", "7",
+        "--root-move", "P(5,2)", "--second-move", "P(1,2)",
+        "--third-move", "V(0,0)", "--target", "1",
+        "--start-depth", "24", "--max-depth", "24", "--seconds", "3600",
+        "--tt-bits", "26", "--tt-ways", "2", "--order", "1",
+        "--no-bounds", "--no-pawn-table", "--cache-reserve", "3000000",
+        "--transition-cache-threshold", "1"
+      ],
+      "commonExactResult": {
+        "nodes": 72550877,
+        "ttHits": 29886576,
+        "cutoffs": 18528427,
+        "cacheConfigs": 981888,
+        "cacheHits": 3194139,
+        "cacheMisses": 981888,
+        "transitionEntries": 4176026,
+        "stalematesSeen": 0,
+        "timeout": 0
+      },
+      "runsInOrder": [
+        {"kind": "baseline", "cpuSeconds": 14.734375, "solverSeconds": 14.6827, "wallSeconds": 14.8644086},
+        {"kind": "reuse", "cpuSeconds": 14.453125, "solverSeconds": 14.4627, "wallSeconds": 14.6526193},
+        {"kind": "reuse", "cpuSeconds": 14.140625, "solverSeconds": 14.1898, "wallSeconds": 14.3652842},
+        {"kind": "baseline", "cpuSeconds": 14.828125, "solverSeconds": 14.7289, "wallSeconds": 14.9008636},
+        {"kind": "baseline", "cpuSeconds": 14.546875, "solverSeconds": 14.6115, "wallSeconds": 14.7661890},
+        {"kind": "reuse", "cpuSeconds": 14.468750, "solverSeconds": 14.4650, "wallSeconds": 14.6455988},
+        {"kind": "reuse", "cpuSeconds": 14.375000, "solverSeconds": 14.4662, "wallSeconds": 14.6520628},
+        {"kind": "baseline", "cpuSeconds": 14.812500, "solverSeconds": 14.8430, "wallSeconds": 15.0188125}
+      ],
+      "summary": {
+        "baselineMedianCpuSeconds": 14.7734375,
+        "reuseMedianCpuSeconds": 14.4140625,
+        "medianCpuChangePercent": -2.433,
+        "baselineMeanCpuSeconds": 14.73046875,
+        "reuseMeanCpuSeconds": 14.359375,
+        "meanCpuChangePercent": -2.519,
+        "pairedWins": 4,
+        "pairedLosses": 0,
+        "pairedTies": 0,
+        "pairedCpuGeomeanChangePercent": -2.520
+      }
+    },
+    {
+      "id": "4x7w7-h52-d24-flow1",
+      "commandArgs": [
+        "--width", "4", "--height", "7", "--walls", "7",
+        "--root-move", "P(5,2)", "--second-move", "P(1,2)",
+        "--third-move", "H(5,2)", "--target", "1",
+        "--start-depth", "24", "--max-depth", "24", "--seconds", "3600",
+        "--tt-bits", "25", "--tt-ways", "2",
+        "--transition-cache-threshold", "1", "--path-flow-weight", "1",
+        "--path-flow-cache-bits", "18", "--no-bounds", "--no-pawn-table"
+      ],
+      "commonExactResult": {
+        "nodes": 124257426,
+        "ttHits": 47329550,
+        "cutoffs": 31717752,
+        "cacheConfigs": 1438861,
+        "cacheHits": 3163488,
+        "cacheMisses": 1438861,
+        "transitionEntries": 4602348,
+        "stalematesSeen": 0,
+        "timeout": 0
+      },
+      "runsInOrder": [
+        {"kind": "baseline", "cpuSeconds": 41.281250, "solverSeconds": 41.7861, "wallSeconds": 41.9079057},
+        {"kind": "reuse", "cpuSeconds": 39.312500, "solverSeconds": 39.8247, "wallSeconds": 39.9496586},
+        {"kind": "reuse", "cpuSeconds": 39.000000, "solverSeconds": 39.2858, "wallSeconds": 39.4048770},
+        {"kind": "baseline", "cpuSeconds": 38.750000, "solverSeconds": 39.2474, "wallSeconds": 39.3623703}
+      ],
+      "summary": {
+        "baselineMedianCpuSeconds": 40.015625,
+        "reuseMedianCpuSeconds": 39.15625,
+        "medianCpuChangePercent": -2.148,
+        "pairedWins": 1,
+        "pairedLosses": 1,
+        "pairedTies": 0,
+        "pairedCpuGeomeanChangePercent": -2.099,
+        "warning": "two pairs with strong thermal drift; descriptive secondary evidence"
+      }
+    },
+    {
+      "id": "4x7w7-h52-d16-flow1",
+      "commandArgs": [
+        "--width", "4", "--height", "7", "--walls", "7",
+        "--root-move", "P(5,2)", "--second-move", "P(1,2)",
+        "--third-move", "H(5,2)", "--target", "1",
+        "--start-depth", "16", "--max-depth", "16", "--seconds", "120",
+        "--tt-bits", "25", "--tt-ways", "2",
+        "--transition-cache-threshold", "1", "--path-flow-weight", "1",
+        "--path-flow-cache-bits", "18", "--no-bounds", "--no-pawn-table"
+      ],
+      "commonExactResult": {
+        "nodes": 2326659,
+        "ttHits": 544616,
+        "cutoffs": 390465,
+        "cacheConfigs": 161170,
+        "transitionEntries": 337157,
+        "stalematesSeen": 0,
+        "timeout": 0
+      },
+      "runsInOrder": [
+        {"kind": "baseline", "cpuSeconds": 0.734375, "solverSeconds": 0.629805, "wallSeconds": 0.7377437},
+        {"kind": "reuse", "cpuSeconds": 0.796875, "solverSeconds": 0.695842, "wallSeconds": 0.8080192},
+        {"kind": "reuse", "cpuSeconds": 0.796875, "solverSeconds": 0.703767, "wallSeconds": 0.8162173},
+        {"kind": "baseline", "cpuSeconds": 0.718750, "solverSeconds": 0.622116, "wallSeconds": 0.7245475},
+        {"kind": "baseline", "cpuSeconds": 0.718750, "solverSeconds": 0.609847, "wallSeconds": 0.7099621},
+        {"kind": "reuse", "cpuSeconds": 0.687500, "solverSeconds": 0.602173, "wallSeconds": 0.7017989},
+        {"kind": "reuse", "cpuSeconds": 0.687500, "solverSeconds": 0.589091, "wallSeconds": 0.6993511},
+        {"kind": "baseline", "cpuSeconds": 0.687500, "solverSeconds": 0.607119, "wallSeconds": 0.7047979},
+        {"kind": "baseline", "cpuSeconds": 0.734375, "solverSeconds": 0.651863, "wallSeconds": 0.7549926},
+        {"kind": "reuse", "cpuSeconds": 0.781250, "solverSeconds": 0.704941, "wallSeconds": 0.8090002},
+        {"kind": "reuse", "cpuSeconds": 0.765625, "solverSeconds": 0.679635, "wallSeconds": 0.7906548},
+        {"kind": "baseline", "cpuSeconds": 0.687500, "solverSeconds": 0.621613, "wallSeconds": 0.7222578}
+      ],
+      "summary": {
+        "baselineMedianCpuSeconds": 0.71875,
+        "reuseMedianCpuSeconds": 0.7734375,
+        "medianCpuChangePercent": 7.609,
+        "pairedWins": 1,
+        "pairedLosses": 4,
+        "pairedTies": 1,
+        "pairedCpuGeomeanChangePercent": 5.301,
+        "warning": "sub-second process CPU time is quantized in 15.625 ms increments"
+      }
+    }
+  ],
+  "decision": "retain behind the experimental macro; evaluate as a uniform binary substitution on a small stratified quiet gaming-PC sample, never as an additional ordering-policy arm"
+}

@@ -1,0 +1,13 @@
+{"pipeline": "start", "classes": ["P11", "P00", "V70"], "workers": 1}
+{"tag": "P11", "step": "branch", "skipped": true}
+{"tag": "P11", "step": "extract", "rc": 0, "out": "{\"reply\":\"P(1,1)\",\"rem\":33,\"done\":true,\"aborted\":false,\"visited\":141907777,\"oracle_calls\":6667609,\"memo\":97402125,\"stalemates\":0,\"seconds\":589.3}", "err": "dump C:\\Users\\U2380817\\Downloads\\corridor-research\\claude-help\\certparts\\P11.bin : 64513370 entrÃ©es J1", "sec": 590}
+{"tag": "P11", "step": "sort", "rc": 0, "out": "{\"sorted\":\"C:\\Users\\U2380817\\Downloads\\corridor-research\\claude-help\\certparts\\P11.bin\",\"entries\":64513370,\"dup_keys\":0}", "sec": 10}
+{"tag": "P11", "step": "verify-sample", "rc": 0, "out": "OK : 3000 parties, J1 gagne toujours en <= 35 plis (min 17, moy 26.9)", "sec": 103}
+{"tag": "P11", "step": "verify-walk", "rc": 0, "out": "OK : 200,000 Ã©tats contrÃ´lÃ©s sous P(1,1) (pli max 34), aucune violation", "sec": 63}
+{"tag": "P00", "step": "branch", "skipped": true}
+{"tag": "P00", "step": "extract", "rc": 9, "out": "", "err": "CertMap pleine", "sec": 565}
+{"tag": "V70", "step": "branch", "skipped": true}
+{"tag": "V70", "step": "extract", "skipped": true}
+{"tag": "V70", "step": "verify-sample", "rc": 0, "out": "OK : 3000 parties, J1 gagne toujours en <= 33 plis (min 19, moy 27.4)", "sec": 75}
+{"tag": "V70", "step": "verify-walk", "rc": 0, "out": "OK : 200,000 Ã©tats contrÃ´lÃ©s sous V(7,0) (pli max 32), aucune violation", "sec": 55}
+{"pipeline": "done", "errors": ["P00: extract rc=9"]}

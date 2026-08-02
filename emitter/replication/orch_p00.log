@@ -1,0 +1,7 @@
+{"pipeline": "start", "classes": ["P00"], "workers": 1}
+{"tag": "P00", "step": "branch", "skipped": true}
+{"tag": "P00", "step": "extract", "rc": 0, "out": "{\"reply\":\"P(0,0)\",\"rem\":31,\"done\":true,\"aborted\":false,\"visited\":79861436,\"oracle_calls\":4803026,\"memo\":61241077,\"stalemates\":0,\"seconds\":629.8}", "err": "dump C:\\Users\\U2380817\\Downloads\\corridor-research\\claude-help\\certparts\\P00.bin : 41012012 entrÃ©es J1", "sec": 631}
+{"tag": "P00", "step": "sort", "rc": 0, "out": "{\"sorted\":\"C:\\Users\\U2380817\\Downloads\\corridor-research\\claude-help\\certparts\\P00.bin\",\"entries\":41012012,\"dup_keys\":0}", "sec": 6}
+{"tag": "P00", "step": "verify-sample", "rc": 0, "out": "OK : 3000 parties, J1 gagne toujours en <= 33 plis (min 15, moy 26.7)", "sec": 90}
+{"tag": "P00", "step": "verify-walk", "rc": 0, "out": "OK : 200,000 Ã©tats contrÃ´lÃ©s sous P(0,0) (pli max 32), aucune violation", "sec": 51}
+{"pipeline": "done", "errors": []}

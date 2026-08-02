@@ -1,0 +1,86 @@
+[
+  {
+    "case": "h52",
+    "depth": 12,
+    "weight": 0,
+    "nodes": 1315072,
+    "seconds": 0.221654
+  },
+  {
+    "case": "h52",
+    "depth": 14,
+    "weight": 0,
+    "nodes": 3790575,
+    "seconds": 0.643974
+  },
+  {
+    "case": "h52",
+    "depth": 16,
+    "weight": 0,
+    "nodes": 8121744,
+    "seconds": 1.45201
+  },
+  {
+    "case": "h52",
+    "depth": 12,
+    "weight": 40,
+    "nodes": 608651,
+    "seconds": 0.127079
+  },
+  {
+    "case": "h52",
+    "depth": 14,
+    "weight": 40,
+    "nodes": 1765309,
+    "seconds": 0.339179
+  },
+  {
+    "case": "h52",
+    "depth": 16,
+    "weight": 40,
+    "nodes": 3897267,
+    "seconds": 0.770888
+  },
+  {
+    "case": "p42",
+    "depth": 12,
+    "weight": 0,
+    "nodes": 5945905,
+    "seconds": 1.06293
+  },
+  {
+    "case": "p42",
+    "depth": 14,
+    "weight": 0,
+    "nodes": 20277917,
+    "seconds": 3.65998
+  },
+  {
+    "case": "p42",
+    "depth": 16,
+    "weight": 0,
+    "nodes": 53232053,
+    "seconds": 10.0657
+  },
+  {
+    "case": "p42",
+    "depth": 12,
+    "weight": 40,
+    "nodes": 5180323,
+    "seconds": 1.19792
+  },
+  {
+    "case": "p42",
+    "depth": 14,
+    "weight": 40,
+    "nodes": 17217063,
+    "seconds": 3.68667
+  },
+  {
+    "case": "p42",
+    "depth": 16,
+    "weight": 40,
+    "nodes": 43261941,
+    "seconds": 9.80796
+  }
+]

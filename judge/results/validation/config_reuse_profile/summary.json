@@ -1,0 +1,59 @@
+{
+  "date": "2026-07-31",
+  "status": "exploratory instrumentation",
+  "experiments": [
+    {
+      "case": "3x9_w10_root0_reply19_depth31",
+      "nodes": 79766979,
+      "tt_hits": 36089229,
+      "global_wall_configurations": 2929319,
+      "distinct_wall_configurations_touched": 124704,
+      "fraction_touched": 0.042571,
+      "placed_wall_node_histogram": {
+        "1": 1,
+        "2": 7,
+        "3": 553,
+        "4": 13194,
+        "5": 165574,
+        "6": 1544332,
+        "7": 8607635,
+        "8": 23059090,
+        "9": 27543527,
+        "10": 14908440,
+        "11": 3617573,
+        "12": 297221,
+        "13": 9750,
+        "14": 82
+      },
+      "distinct_wall_configurations_generated": 135351,
+      "generated_fraction": 0.0462056
+    },
+    {
+      "case": "4x7_w7_root0_reply0_third8_depth24",
+      "move": "H(3,2)",
+      "nodes": 3729954,
+      "tt_hits": 1784907,
+      "global_wall_configurations": 16368423,
+      "distinct_wall_configurations_touched": 36274,
+      "fraction_touched": 0.0022161,
+      "placed_wall_node_histogram": {
+        "1": 1,
+        "2": 4,
+        "3": 35,
+        "4": 394,
+        "5": 6764,
+        "6": 59735,
+        "7": 318727,
+        "8": 958274,
+        "9": 1451804,
+        "10": 803740,
+        "11": 123268,
+        "12": 6984,
+        "13": 224
+      },
+      "distinct_wall_configurations_generated": 52004,
+      "generated_fraction": 0.00317709
+    }
+  ],
+  "interpretation": "Even counting all generated child configurations, bounded branches use only 4.62% of the 3x9 universe and 0.318% of the 4x7 universe; a demand-driven or hybrid configuration cache is the highest-priority architectural experiment."
+}

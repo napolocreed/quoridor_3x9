@@ -1,0 +1,47 @@
+configs=301 enumerate=4.3985e-05s
+index=301 time=1.2288e-05s
+
+board tables time=0.00019485s
+symmetry time=2.4747e-05s
+
+transitions=988 time=2.671e-05s
+dense_tables~39.4KiB total_precompute=0.000325214s
+configs=1880 enumerate=0.00012768s
+index=1880 time=6.0129e-05s
+
+board tables time=0.00119972s
+symmetry time=0.000205075s
+
+transitions=8108 time=0.000163614s
+dense_tables~292.4KiB total_precompute=0.00178006s
+configs=2929319 enumerate=0.349794s
+index=2929319 time=0.466318s
+  board 262144/2929319  board 524288/2929319  board 786432/2929319  board 1048576/2929319  board 1310720/2929319  board 1572864/2929319  board 1835008/2929319  board 2097152/2929319  board 2359296/2929319  board 2621440/2929319  board 2883584/2929319
+board tables time=1.84534s
+symmetry time=1.74751s
+  trans 262144/2929319  trans 524288/2929319  trans 786432/2929319  trans 1048576/2929319  trans 1310720/2929319  trans 1572864/2929319  trans 1835008/2929319  trans 2097152/2929319  trans 2359296/2929319  trans 2621440/2929319  trans 2883584/2929319
+transitions=24832956 time=1.4065s
+dense_tables~726.1MiB total_precompute=5.81555s
+	Command being timed: "make test"
+	User time (seconds): 9.12
+	System time (seconds): 0.43
+	Percent of CPU this job got: 118%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.03
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 870268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 364885
+	Voluntary context switches: 69
+	Involuntary context switches: 168
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 48
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

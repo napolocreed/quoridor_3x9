@@ -1,0 +1,7 @@
+{
+  "manifest_sha256": "d748235a1fff7e5aaef35678743845f083f17d903df7178aa3a370c3bc3e69b5",
+  "schema_version": 1,
+  "solver_sha256": "2575b3ad10ae5ecb51ccaf709333e483ecbee3f53b79809761d5c5cca7dde090",
+  "task_universe_sha256": "8dc5e1dbd56fc1d59676113c9529f424293e307bc71bdf20b3ad4724041b901e",
+  "worker_bundle_sha256": "ee6caf7ef8679de65226b61b2d0e43ecb6f3672ea0fd7e2d06e178444420efa4"
+}

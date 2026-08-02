@@ -1,0 +1,28 @@
+{
+  "all_proved": true,
+  "forced_win_upper_bound_plies_from_start": 35,
+  "no_bounds": true,
+  "no_pawn_table": true,
+  "proved": [
+    0,
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33
+  ],
+  "solver_sha256": "ff11c2530a15c534922d4348f7cf0d9e66366f7742951fb38e8550a375e5837c",
+  "unresolved": []
+}

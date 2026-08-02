@@ -1,0 +1,36 @@
+src/frontier_solver.cpp: In member function 'int qfrontier::Engine::generate(const qfrontier::State&, qfrontier::Player, Child*, bool) const':
+src/frontier_solver.cpp:210:30: warning: unused variable 'opposite' [-Wunused-variable]
+  210 |         static constexpr int opposite[4]={1,0,3,2};
+      |                              ^~~~~~~~
+In file included from reference/frontier_dump.cpp:2:
+reference/../src/frontier_solver.cpp: In member function 'int qfrontier::Engine::generate(const qfrontier::State&, qfrontier::Player, Child*, bool) const':
+reference/../src/frontier_solver.cpp:210:30: warning: unused variable 'opposite' [-Wunused-variable]
+  210 |         static constexpr int opposite[4]={1,0,3,2};
+      |                              ^~~~~~~~
+reference/../src/frontier_solver.cpp: In function 'int frontier_solver_embedded_main(int, char**)':
+reference/../src/frontier_solver.cpp:681:1: warning: control reaches end of non-void function [-Wreturn-type]
+  681 | }
+      | ^
+	Command being timed: "make -j2 all"
+	User time (seconds): 7.20
+	System time (seconds): 0.24
+	Percent of CPU this job got: 183%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.05
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 325592
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 164018
+	Voluntary context switches: 36
+	Involuntary context switches: 32
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2640
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

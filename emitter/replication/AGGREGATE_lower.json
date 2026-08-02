@@ -1,0 +1,100 @@
+{
+ "claim": "aucun premier coup de J1 ne force un gain en <= 33 plis (start-depth 32, exhaustif)",
+ "classes": 18,
+ "refuted": 18,
+ "aggregate_nodes": 2505091973,
+ "aggregate_seconds": 1171.1,
+ "stalemates_seen": 0,
+ "per_class": [
+  {
+   "fixed": "H(0,0)",
+   "nodes": 173180714,
+   "seconds": 71.2
+  },
+  {
+   "fixed": "H(1,0)",
+   "nodes": 105087458,
+   "seconds": 44.4
+  },
+  {
+   "fixed": "H(2,0)",
+   "nodes": 103073884,
+   "seconds": 44.5
+  },
+  {
+   "fixed": "H(3,0)",
+   "nodes": 41423748,
+   "seconds": 17.9
+  },
+  {
+   "fixed": "H(4,0)",
+   "nodes": 36002310,
+   "seconds": 16.1
+  },
+  {
+   "fixed": "H(5,0)",
+   "nodes": 38956127,
+   "seconds": 19.1
+  },
+  {
+   "fixed": "H(6,0)",
+   "nodes": 53285013,
+   "seconds": 25.9
+  },
+  {
+   "fixed": "H(7,0)",
+   "nodes": 69128899,
+   "seconds": 34.2
+  },
+  {
+   "fixed": "P(7,1)",
+   "nodes": 738601362,
+   "seconds": 352.9
+  },
+  {
+   "fixed": "P(8,0)",
+   "nodes": 398053205,
+   "seconds": 191.9
+  },
+  {
+   "fixed": "V(0,0)",
+   "nodes": 148474996,
+   "seconds": 71.7
+  },
+  {
+   "fixed": "V(1,0)",
+   "nodes": 181049806,
+   "seconds": 86.2
+  },
+  {
+   "fixed": "V(2,0)",
+   "nodes": 95458826,
+   "seconds": 44.5
+  },
+  {
+   "fixed": "V(3,0)",
+   "nodes": 84643761,
+   "seconds": 37.0
+  },
+  {
+   "fixed": "V(4,0)",
+   "nodes": 66430284,
+   "seconds": 28.3
+  },
+  {
+   "fixed": "V(5,0)",
+   "nodes": 59247077,
+   "seconds": 29.3
+  },
+  {
+   "fixed": "V(6,0)",
+   "nodes": 27716778,
+   "seconds": 12.4
+  },
+  {
+   "fixed": "V(7,0)",
+   "nodes": 85277725,
+   "seconds": 43.9
+  }
+ ]
+}

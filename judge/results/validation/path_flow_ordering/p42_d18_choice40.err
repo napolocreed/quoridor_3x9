@@ -1,0 +1,5 @@
+forcing root move=P(5,2) index=0
+forcing second move=P(1,2) index=0
+forcing third move=P(4,2) index=2
+TT=192.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=18 target=1 proven=0 nodes=95339253 total=95339253 elapsed=24.4784s tt_hits=25691022 cache=2233360

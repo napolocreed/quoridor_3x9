@@ -1,0 +1,10 @@
+{
+  "name": "flow1_hint_raw",
+  "args": [
+    "--path-choice-weight", "0",
+    "--path-flow-weight", "1",
+    "--path-flow-cache-bits", "18",
+    "--tt-hint-first-mode", "opponent",
+    "--no-tt-hint-transform"
+  ]
+}

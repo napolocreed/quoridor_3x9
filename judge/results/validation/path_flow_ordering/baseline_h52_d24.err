@@ -1,0 +1,4 @@
+forcing root move=P(5,2) index=0
+forcing second move=P(1,2) index=0
+forcing third move=H(5,2) index=1
+TT=768.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB

@@ -1,0 +1,219 @@
+{
+ "claim": "chaque reponse legale de J2 apres P(7,1) (18 canoniques + 17 jumelles miroir) verifiee par DFS exhaustif clean-room : J1 gagne toujours en <= 35 plis",
+ "runs": 35,
+ "ok": 35,
+ "aggregate_states": 612890536,
+ "aggregate_seconds": 1262.6,
+ "per_run": [
+  {
+   "reply": "P(1,1)",
+   "mirror": false,
+   "states": 127924662,
+   "seconds": 246.9
+  },
+  {
+   "reply": "P(0,0)",
+   "mirror": false,
+   "states": 78106434,
+   "seconds": 157.2
+  },
+  {
+   "reply": "H(0,0)",
+   "mirror": false,
+   "states": 4570156,
+   "seconds": 7.2
+  },
+  {
+   "reply": "H(1,0)",
+   "mirror": false,
+   "states": 12144948,
+   "seconds": 21.6
+  },
+  {
+   "reply": "H(2,0)",
+   "mirror": false,
+   "states": 15310898,
+   "seconds": 26.7
+  },
+  {
+   "reply": "H(3,0)",
+   "mirror": false,
+   "states": 4242123,
+   "seconds": 7.6
+  },
+  {
+   "reply": "H(4,0)",
+   "mirror": false,
+   "states": 7127525,
+   "seconds": 12.7
+  },
+  {
+   "reply": "H(5,0)",
+   "mirror": false,
+   "states": 7012068,
+   "seconds": 11.9
+  },
+  {
+   "reply": "H(6,0)",
+   "mirror": false,
+   "states": 10219818,
+   "seconds": 19.7
+  },
+  {
+   "reply": "H(7,0)",
+   "mirror": false,
+   "states": 9536836,
+   "seconds": 18.4
+  },
+  {
+   "reply": "V(0,0)",
+   "mirror": false,
+   "states": 15900509,
+   "seconds": 27.8
+  },
+  {
+   "reply": "V(1,0)",
+   "mirror": false,
+   "states": 7662938,
+   "seconds": 18.7
+  },
+  {
+   "reply": "V(2,0)",
+   "mirror": false,
+   "states": 11954541,
+   "seconds": 27.2
+  },
+  {
+   "reply": "V(3,0)",
+   "mirror": false,
+   "states": 11916221,
+   "seconds": 27.1
+  },
+  {
+   "reply": "V(4,0)",
+   "mirror": false,
+   "states": 10001204,
+   "seconds": 21.4
+  },
+  {
+   "reply": "V(5,0)",
+   "mirror": false,
+   "states": 10010155,
+   "seconds": 21.3
+  },
+  {
+   "reply": "V(6,0)",
+   "mirror": false,
+   "states": 7026724,
+   "seconds": 13.7
+  },
+  {
+   "reply": "V(7,0)",
+   "mirror": false,
+   "states": 19341491,
+   "seconds": 44.6
+  },
+  {
+   "reply": "P(0,0)",
+   "mirror": true,
+   "states": 78118130,
+   "seconds": 199.3
+  },
+  {
+   "reply": "H(0,0)",
+   "mirror": true,
+   "states": 4666082,
+   "seconds": 8.5
+  },
+  {
+   "reply": "H(1,0)",
+   "mirror": true,
+   "states": 12561281,
+   "seconds": 28.0
+  },
+  {
+   "reply": "H(2,0)",
+   "mirror": true,
+   "states": 15562672,
+   "seconds": 34.7
+  },
+  {
+   "reply": "H(3,0)",
+   "mirror": true,
+   "states": 4239830,
+   "seconds": 7.9
+  },
+  {
+   "reply": "H(4,0)",
+   "mirror": true,
+   "states": 7130080,
+   "seconds": 14.8
+  },
+  {
+   "reply": "H(5,0)",
+   "mirror": true,
+   "states": 6990490,
+   "seconds": 13.8
+  },
+  {
+   "reply": "H(6,0)",
+   "mirror": true,
+   "states": 10191148,
+   "seconds": 24.0
+  },
+  {
+   "reply": "H(7,0)",
+   "mirror": true,
+   "states": 9581317,
+   "seconds": 22.5
+  },
+  {
+   "reply": "V(0,0)",
+   "mirror": true,
+   "states": 15883153,
+   "seconds": 30.7
+  },
+  {
+   "reply": "V(1,0)",
+   "mirror": true,
+   "states": 7659104,
+   "seconds": 17.5
+  },
+  {
+   "reply": "V(2,0)",
+   "mirror": true,
+   "states": 11947944,
+   "seconds": 25.7
+  },
+  {
+   "reply": "V(3,0)",
+   "mirror": true,
+   "states": 11925626,
+   "seconds": 21.5
+  },
+  {
+   "reply": "V(4,0)",
+   "mirror": true,
+   "states": 9935663,
+   "seconds": 17.4
+  },
+  {
+   "reply": "V(5,0)",
+   "mirror": true,
+   "states": 9959820,
+   "seconds": 16.9
+  },
+  {
+   "reply": "V(6,0)",
+   "mirror": true,
+   "states": 7180903,
+   "seconds": 11.1
+  },
+  {
+   "reply": "V(7,0)",
+   "mirror": true,
+   "states": 19348042,
+   "seconds": 36.6
+  }
+ ]
+}

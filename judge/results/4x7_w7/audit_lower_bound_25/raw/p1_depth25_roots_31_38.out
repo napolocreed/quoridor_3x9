@@ -1,0 +1,9 @@
+root_scan index=31 move=V(3,1) proven=0 timeout=0 nodes=128070355 tt_hits=56050651 seconds=31.7423 child_depth=24 total_depth=25
+root_scan index=32 move=V(3,2) proven=0 timeout=0 nodes=132857317 tt_hits=55265094 seconds=32.3709 child_depth=24 total_depth=25
+root_scan index=33 move=V(4,0) proven=0 timeout=0 nodes=120012758 tt_hits=50609322 seconds=29.6993 child_depth=24 total_depth=25
+root_scan index=34 move=V(4,1) proven=0 timeout=0 nodes=80495567 tt_hits=36409721 seconds=19.1078 child_depth=24 total_depth=25
+root_scan index=35 move=V(4,2) proven=0 timeout=0 nodes=119207169 tt_hits=50709654 seconds=28.8692 child_depth=24 total_depth=25
+root_scan index=36 move=V(5,0) proven=0 timeout=0 nodes=91321810 tt_hits=35658484 seconds=22.6737 child_depth=24 total_depth=25
+root_scan index=37 move=V(5,1) proven=0 timeout=0 nodes=78813969 tt_hits=30885915 seconds=19.5619 child_depth=24 total_depth=25
+root_scan index=38 move=V(5,2) proven=0 timeout=0 nodes=8304055 tt_hits=3563113 seconds=1.89395 child_depth=24 total_depth=25
+root_scan_result proven=0 child_proved=0 child_refuted=8 child_unresolved=0 aggregate_nodes=759083000 aggregate_seconds=185.919 total_depth=25 range=31-38

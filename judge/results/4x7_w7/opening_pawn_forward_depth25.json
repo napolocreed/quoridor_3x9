@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "case": {
+    "width": 4,
+    "height": 7,
+    "walls_per_player": 7
+  },
+  "opening": {
+    "root_index": 0,
+    "move": "P(5,2)"
+  },
+  "status": "refuted_at_bound",
+  "established_fact": "The forward pawn opening P(5,2) does not let Player 1 force a win within 25 plies from the initial position",
+  "child_completed_depth": 24,
+  "initial_total_depth": 25,
+  "proven": false,
+  "nodes": 1232686204,
+  "seconds": 327.958,
+  "tt_hits": 484844538,
+  "distance_bound_enabled": false,
+  "pawn_only_table_enabled": false,
+  "transposition_table_bytes": 805306368,
+  "source_commit": "fe6d621",
+  "raw_log": "runlogs/4x7_w7/p1_central_child_d24_tt26_1800s.err"
+}

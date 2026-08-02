@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "checks": [
+    "make lazy-smoke",
+    "1000 random 4x3x3 move comparisons",
+    "1000 random 3x5x4 move comparisons",
+    "500 random 3x9x8 move comparisons",
+    "500 random 3x3x1 bounded-proof comparisons"
+  ],
+  "stable_named_moves": true,
+  "path_choice_weight_default": 0
+}

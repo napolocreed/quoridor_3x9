@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "Solving 3x9 Quoridor with Independently Verifiable Strategy Certificates - artifacts"
+message: "Please cite this repository if you use the certificates, verifiers, or solvers."
+type: software
+authors:
+  - family-names: Napoly
+    given-names: Ulysse
+repository-code: "https://github.com/napolocreed/quoridor_3x9"
+year: 2026
+date-released: 2026-08-02
+license: MIT
+abstract: >-
+  Publication artifacts for the paper "Solving 3x9 Quoridor with Independently
+  Verifiable Strategy Certificates": two independently developed solver and
+  verifier trees (emitter/judge), qcert-1 certificate pipeline and manifests,
+  acceptance receipts, proof journals, and the compiled paper. The 3x9 board
+  is a first-player win at 9 and 10 walls per player; at 10 walls the forcing
+  horizon is exactly 35 plies, certified end to end.

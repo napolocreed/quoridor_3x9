@@ -1,0 +1,6 @@
+{"expected_winner": 2, "height": 3, "ok": true, "returncode": 0, "stdout": "width=3 height=3 walls=0 solved=1 winner=2 depth=4 nodes=2 tt_hits=0 cutoffs=0 pawn_table_hits=2 seconds=5.8927e-05 timeout=0", "walls": 0, "width": 3}
+{"expected_winner": 2, "height": 3, "ok": true, "returncode": 0, "stdout": "width=4 height=3 walls=2 solved=1 winner=2 depth=10 nodes=1629 tt_hits=167 cutoffs=630 pawn_table_hits=49 seconds=0.00108878 timeout=0", "walls": 2, "width": 4}
+{"expected_winner": 1, "height": 3, "ok": true, "returncode": 0, "stdout": "width=4 height=3 walls=3 solved=1 winner=1 depth=13 nodes=3975 tt_hits=503 cutoffs=1555 pawn_table_hits=27 seconds=0.00176435 timeout=0", "walls": 3, "width": 4}
+{"expected_winner": 1, "height": 5, "ok": true, "returncode": 0, "stdout": "width=3 height=5 walls=3 solved=1 winner=1 depth=19 nodes=85788 tt_hits=20733 cutoffs=25954 pawn_table_hits=172 seconds=0.0174876 timeout=0", "walls": 3, "width": 3}
+{"expected_winner": 2, "height": 5, "ok": true, "returncode": 0, "stdout": "width=3 height=5 walls=4 solved=1 winner=2 depth=22 nodes=104165 tt_hits=29844 cutoffs=33489 pawn_table_hits=329 seconds=0.0198897 timeout=0", "walls": 4, "width": 3}
+{"cases": 5, "status": "ok"}

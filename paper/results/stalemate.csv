@@ -1,0 +1,15 @@
+item,value,unit,source_path
+reachable_scan_variants,15,variants (H>=3),claude-help/STALEMATE_THEOREM.md verification summary
+reachable_scan_states,1900000 (approx),states,claude-help/results-stalemate/
+reachable_invariant_violations,0,violations,claude-help/results-stalemate/
+legal_superset_scan_variants,8,variants (H>=3),claude-help/STALEMATE_THEOREM.md
+legal_superset_states,3400000 (approx),states,claude-help/results-stalemate/
+legal_4x3x3_count_reproduced,63184,legal non-terminal states,claude-help/STALEMATE_THEOREM.md (matches archived C++ count)
+legal_unreachable_gap_4x3x3,452,states (63184-62732),claude-help/STALEMATE_THEOREM.md
+adversarial_hunt_states,17800000 (approx),states over degenerate topologies,claude-help/STALEMATE_THEOREM.md
+pawn_moveless_states_H3plus,0,states,claude-help/results-stalemate/
+h2_first_stalemate_ply,2,plies (2x3 board; V(0;0) then V(0;1)),claude-help/STALEMATE_THEOREM.md
+h2_diverging_verdicts_3x2x1,7,state-target verdicts,claude-help/STALEMATE_THEOREM.md (qscan diff-states)
+h2_diverging_verdicts_3x2x2,12,state-target verdicts,same
+h2_diverging_verdicts_4x2x2,42,state-target verdicts,same
+audit_stalemate_counter,0 in every replication run,stalemates_seen,claude-help/NOTE_POUR_SOL.md

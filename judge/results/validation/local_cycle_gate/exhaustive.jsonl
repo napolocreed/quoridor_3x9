@@ -1,0 +1,6 @@
+{"status":"ok","width":4,"height":3,"walls":3,"cap":6,"configs":301,"candidates":988,"dsu_safe":238,"local_safe":216,"local_fraction":0.21862348178137653,"dsu_safe_captured":0.907563025210084,"false_safe":0}
+{"status":"ok","width":4,"height":4,"walls":3,"cap":6,"configs":4259,"candidates":22460,"dsu_safe":5590,"local_safe":4734,"local_fraction":0.2107747105966162,"dsu_safe_captured":0.8468694096601074,"false_safe":0}
+{"status":"ok","width":3,"height":5,"walls":4,"cap":8,"configs":1880,"candidates":8108,"dsu_safe":1980,"local_safe":1788,"local_fraction":0.22052294030587075,"dsu_safe_captured":0.9030303030303031,"false_safe":0}
+{"status":"ok","width":5,"height":3,"walls":3,"cap":6,"configs":1838,"candidates":8092,"dsu_safe":1980,"local_safe":1788,"local_fraction":0.22095897182402371,"dsu_safe_captured":0.9030303030303031,"false_safe":0}
+{"status":"ok","width":2,"height":4,"walls":2,"cap":4,"configs":22,"candidates":41,"dsu_safe":7,"local_safe":7,"local_fraction":0.17073170731707318,"dsu_safe_captured":1.0,"false_safe":0}
+{"status":"ok","width":2,"height":2,"walls":1,"cap":2,"configs":3,"candidates":2,"dsu_safe":0,"local_safe":0,"local_fraction":0.0,"dsu_safe_captured":1.0,"false_safe":0}

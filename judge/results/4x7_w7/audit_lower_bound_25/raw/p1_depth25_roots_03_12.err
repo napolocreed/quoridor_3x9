@@ -1,0 +1,53 @@
+configs=16368423 enumerate=2.38927s
+index_storage=384.0MiB
+index=16368423 time=0.529267s
+  board 262144/16368423  board 524288/16368423  board 786432/16368423  board 1048576/16368423  board 1310720/16368423  board 1572864/16368423  board 1835008/16368423  board 2097152/16368423  board 2359296/16368423  board 2621440/16368423  board 2883584/16368423  board 3145728/16368423  board 3407872/16368423  board 3670016/16368423  board 3932160/16368423  board 4194304/16368423  board 4456448/16368423  board 4718592/16368423  board 4980736/16368423  board 5242880/16368423  board 5505024/16368423  board 5767168/16368423  board 6029312/16368423  board 6291456/16368423  board 6553600/16368423  board 6815744/16368423  board 7077888/16368423  board 7340032/16368423  board 7602176/16368423  board 7864320/16368423  board 8126464/16368423  board 8388608/16368423  board 8650752/16368423  board 8912896/16368423  board 9175040/16368423  board 9437184/16368423  board 9699328/16368423  board 9961472/16368423  board 10223616/16368423  board 10485760/16368423  board 10747904/16368423  board 11010048/16368423  board 11272192/16368423  board 11534336/16368423  board 11796480/16368423  board 12058624/16368423  board 12320768/16368423  board 12582912/16368423  board 12845056/16368423  board 13107200/16368423  board 13369344/16368423  board 13631488/16368423  board 13893632/16368423  board 14155776/16368423  board 14417920/16368423  board 14680064/16368423  board 14942208/16368423  board 15204352/16368423  board 15466496/16368423  board 15728640/16368423  board 15990784/16368423  board 16252928/16368423
+board tables time=5.74632s
+symmetry time=6.89687s
+  trans 262144/16368423  trans 524288/16368423  trans 786432/16368423  trans 1048576/16368423  trans 1310720/16368423  trans 1572864/16368423  trans 1835008/16368423  trans 2097152/16368423  trans 2359296/16368423  trans 2621440/16368423  trans 2883584/16368423  trans 3145728/16368423  trans 3407872/16368423  trans 3670016/16368423  trans 3932160/16368423  trans 4194304/16368423  trans 4456448/16368423  trans 4718592/16368423  trans 4980736/16368423  trans 5242880/16368423  trans 5505024/16368423  trans 5767168/16368423  trans 6029312/16368423  trans 6291456/16368423  trans 6553600/16368423  trans 6815744/16368423  trans 7077888/16368423  trans 7340032/16368423  trans 7602176/16368423  trans 7864320/16368423  trans 8126464/16368423  trans 8388608/16368423  trans 8650752/16368423  trans 8912896/16368423  trans 9175040/16368423  trans 9437184/16368423  trans 9699328/16368423  trans 9961472/16368423  trans 10223616/16368423  trans 10485760/16368423  trans 10747904/16368423  trans 11010048/16368423  trans 11272192/16368423  trans 11534336/16368423  trans 11796480/16368423  trans 12058624/16368423  trans 12320768/16368423  trans 12582912/16368423  trans 12845056/16368423  trans 13107200/16368423  trans 13369344/16368423  trans 13631488/16368423  trans 13893632/16368423  trans 14155776/16368423  trans 14417920/16368423  trans 14680064/16368423  trans 14942208/16368423  trans 15204352/16368423  trans 15466496/16368423  trans 15728640/16368423  trans 15990784/16368423  trans 16252928/16368423
+transitions=155145930 time=6.22401s
+dense_tables~2.4GiB total_precompute=21.7976s
+TT=768.0MiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=148363551 total=148363551 elapsed=39.782s tt_hits=62529912
+TT=768.0MiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=27705211 total=27705211 elapsed=6.81927s tt_hits=12306016
+TT=768.0MiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=97463867 total=97463867 elapsed=24.8289s tt_hits=42182757
+TT=768.0MiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=24476441 total=24476441 elapsed=5.98127s tt_hits=11194538
+TT=768.0MiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=79110601 total=79110601 elapsed=19.4197s tt_hits=35244574
+TT=768.0MiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=21050085 total=21050085 elapsed=4.97764s tt_hits=9486948
+TT=768.0MiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=8304055 total=8304055 elapsed=1.75562s tt_hits=3563113
+TT=768.0MiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=21441724 total=21441724 elapsed=5.26543s tt_hits=9342378
+TT=768.0MiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=15104624 total=15104624 elapsed=3.61281s tt_hits=5756092
+TT=768.0MiB bounds=0 pawn_table=0
+depth=24 target=1 proven=0 nodes=33625712 total=33625712 elapsed=8.76082s tt_hits=13831006
+Command exited with non-zero status 1
+	Command being timed: "./bin/frontier_solver --width 4 --height 7 --walls 7 --target 1 --scan-roots --scan-root-start 3 --scan-root-end 12 --child-depth 24 --seconds 600 --tt-bits 26 --order 1 --no-bounds --no-pawn-table"
+	User time (seconds): 142.65
+	System time (seconds): 2.39
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:25.05
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3346820
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2800400
+	Voluntary context switches: 2
+	Involuntary context switches: 284
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 184
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

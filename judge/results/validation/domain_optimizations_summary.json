@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "same_position_only": true,
+  "rows": [
+    {
+      "label": "4x7 H(5,2), baseline ordering",
+      "path": "results/validation/lazy_specialized_v2/hard_tt26.out",
+      "nodes": 223188594,
+      "seconds": 47.2514,
+      "solved": 0,
+      "winner": null,
+      "depth": null
+    },
+    {
+      "label": "4x7 H(5,2), path-choice weight 40",
+      "path": "results/validation/lazy_specialized_v3/h52_named_w40.out",
+      "nodes": 15323311,
+      "seconds": 3.70795,
+      "solved": 0,
+      "winner": null,
+      "depth": null
+    },
+    {
+      "label": "4x7 H(5,2), weight 40 + Pareto TT22",
+      "path": "results/validation/lazy_domain_v1/hard_samepos_w40_d22.out",
+      "nodes": 12875101,
+      "seconds": 3.3346,
+      "solved": 0,
+      "winner": null,
+      "depth": null
+    },
+    {
+      "label": "4x7 H(5,2), baseline ordering + Pareto TT24",
+      "path": "results/validation/lazy_pareto_v1/hard_current_d24.out",
+      "nodes": 175336410,
+      "seconds": 42.8385,
+      "solved": 0,
+      "winner": null,
+      "depth": null
+    },
+    {
+      "label": "3x9 V(1,0), baseline ordering",
+      "path": "results/validation/lazy_specialized_v1/3x9_reply19_spec.out",
+      "nodes": 79800528,
+      "seconds": 15.7534,
+      "solved": 1,
+      "winner": 1,
+      "depth": 31
+    },
+    {
+      "label": "3x9 V(1,0), baseline ordering + Pareto TT24",
+      "path": "results/validation/lazy_pareto_v1/3x9_reply19_d24.out",
+      "nodes": 56275250,
+      "seconds": 11.884,
+      "solved": 1,
+      "winner": 1,
+      "depth": 31
+    },
+    {
+      "label": "3x9 V(1,0), path-choice weight 40",
+      "path": "results/validation/lazy_pathshape_v1/3x9_reply_v10_w40.out",
+      "nodes": 79495380,
+      "seconds": 16.6007,
+      "solved": 1,
+      "winner": 1,
+      "depth": 31
+    }
+  ],
+  "notes": [
+    "Named moves are required for ordering comparisons.",
+    "Ordering changes cost only; proof semantics are unchanged."
+  ]
+}

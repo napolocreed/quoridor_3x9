@@ -1,0 +1,19 @@
+child_rep=0 aliases=0 ok=1 proven=0 timeout=0 nodes=1 seconds=2.2023e-05
+child_rep=1 aliases=1,2 ok=1 proven=0 timeout=0 nodes=1 seconds=2.5909e-05
+child_rep=3 aliases=3,4 ok=1 proven=0 timeout=0 nodes=1 seconds=2.0871e-05
+child_rep=5 aliases=5,6 ok=1 proven=0 timeout=0 nodes=1 seconds=1.4721e-05
+child_rep=7 aliases=7,8 ok=1 proven=0 timeout=0 nodes=1 seconds=1.5073e-05
+child_rep=9 aliases=9,10 ok=1 proven=0 timeout=0 nodes=1 seconds=1.2949e-05
+child_rep=11 aliases=11,12 ok=1 proven=0 timeout=0 nodes=1 seconds=1.1367e-05
+child_rep=13 aliases=13,14 ok=1 proven=0 timeout=0 nodes=1 seconds=1.2809e-05
+child_rep=15 aliases=15,16 ok=1 proven=0 timeout=0 nodes=1 seconds=1.1637e-05
+child_rep=17 aliases=17,18 ok=1 proven=0 timeout=0 nodes=1 seconds=1.7296e-05
+child_rep=19 aliases=19,20 ok=1 proven=0 timeout=0 nodes=1 seconds=1.6735e-05
+child_rep=21 aliases=21,22 ok=1 proven=0 timeout=0 nodes=1 seconds=1.2989e-05
+child_rep=23 aliases=23,24 ok=1 proven=0 timeout=0 nodes=1 seconds=1.2439e-05
+child_rep=25 aliases=25,26 ok=1 proven=0 timeout=0 nodes=1 seconds=1.2609e-05
+child_rep=27 aliases=27,28 ok=1 proven=0 timeout=0 nodes=1 seconds=1.2749e-05
+child_rep=29 aliases=29,30 ok=1 proven=0 timeout=0 nodes=1 seconds=1.5874e-05
+child_rep=31 aliases=31,32 ok=1 proven=0 timeout=0 nodes=1 seconds=1.2619e-05
+child_rep=33 aliases=33,34 ok=1 proven=0 timeout=0 nodes=1 seconds=3.3279e-05
+parallel_result proven=0 disproven=1 unresolved=0 total_depth=3

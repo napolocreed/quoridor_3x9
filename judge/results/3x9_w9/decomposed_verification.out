@@ -1,0 +1,19 @@
+child_rep=3 aliases=3,4 ok=1 proven=1 timeout=0 nodes=110454842 seconds=21.9773
+child_rep=5 aliases=5,6 ok=1 proven=1 timeout=0 nodes=235344184 seconds=49.6968
+child_rep=1 aliases=1,2 ok=1 proven=1 timeout=0 nodes=581488662 seconds=123.18
+child_rep=7 aliases=7,8 ok=1 proven=1 timeout=0 nodes=342081572 seconds=70.7194
+child_rep=11 aliases=11,12 ok=1 proven=1 timeout=0 nodes=114049256 seconds=23.1026
+child_rep=9 aliases=9,10 ok=1 proven=1 timeout=0 nodes=260766317 seconds=51.6075
+child_rep=13 aliases=13,14 ok=1 proven=1 timeout=0 nodes=99908107 seconds=20.9277
+child_rep=17 aliases=17,18 ok=1 proven=1 timeout=0 nodes=165932536 seconds=33.0395
+child_rep=19 aliases=19,20 ok=1 proven=1 timeout=0 nodes=41788755 seconds=8.42937
+child_rep=21 aliases=21,22 ok=1 proven=1 timeout=0 nodes=158944835 seconds=32.9186
+child_rep=23 aliases=23,24 ok=1 proven=1 timeout=0 nodes=83358565 seconds=17.4021
+child_rep=25 aliases=25,26 ok=1 proven=1 timeout=0 nodes=105273418 seconds=21.5933
+child_rep=27 aliases=27,28 ok=1 proven=1 timeout=0 nodes=80690196 seconds=16.4214
+child_rep=29 aliases=29,30 ok=1 proven=1 timeout=0 nodes=104582954 seconds=22.3605
+child_rep=0 aliases=0 ok=1 proven=1 timeout=0 nodes=1751846141 seconds=369.011
+child_rep=31 aliases=31,32 ok=1 proven=1 timeout=0 nodes=217146861 seconds=46.1411
+child_rep=33 aliases=33,34 ok=1 proven=1 timeout=0 nodes=331119142 seconds=69.8149
+child_rep=15 aliases=15,16 ok=1 proven=1 timeout=0 nodes=2514031626 seconds=523.305
+parallel_result proven=1 disproven=0 unresolved=0 total_depth=35

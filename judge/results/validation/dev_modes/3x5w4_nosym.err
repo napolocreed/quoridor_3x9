@@ -1,0 +1,20 @@
+configs=1880 enumerate=0.000125156s
+index=1880 time=6.046e-05s
+
+board tables time=0.00117686s
+symmetry time=0.000175511s
+
+transitions=8108 time=0.000162151s
+dense_tables~292.4KiB total_precompute=0.00172974s
+TT=16.0MiB bounds=0 pawn_table=0
+depth=2 target=2 proven=0 nodes=21 total=21 elapsed=4.4135e-05s tt_hits=0
+depth=4 target=2 proven=0 nodes=237 total=258 elapsed=7.5722e-05s tt_hits=2
+depth=6 target=2 proven=0 nodes=1178 total=1436 elapsed=0.000187689s tt_hits=76
+depth=8 target=2 proven=0 nodes=4450 total=5886 elapsed=0.000548116s tt_hits=405
+depth=10 target=2 proven=0 nodes=9973 total=15859 elapsed=0.00140087s tt_hits=1900
+depth=12 target=2 proven=0 nodes=14791 total=30650 elapsed=0.00275137s tt_hits=5433
+depth=14 target=2 proven=0 nodes=18071 total=48721 elapsed=0.00432982s tt_hits=10498
+depth=16 target=2 proven=0 nodes=19858 total=68579 elapsed=0.00599749s tt_hits=16570
+depth=18 target=2 proven=0 nodes=21308 total=89887 elapsed=0.00787877s tt_hits=23319
+depth=20 target=2 proven=0 nodes=58591 total=148478 elapsed=0.014s tt_hits=39611
+depth=22 target=2 proven=1 nodes=107684 total=256162 elapsed=0.0247642s tt_hits=78374

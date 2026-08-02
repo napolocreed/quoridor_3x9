@@ -1,0 +1,59 @@
+forcing root[0] move=P(5,2)
+forcing second[0] move=P(1,2)
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=6183349 total=6183349 elapsed=1.12035s tt_hits=1024890 cache=317743
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=3792027 total=3792027 elapsed=0.619167s tt_hits=711708 cache=581128
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=20504964 total=20504964 elapsed=3.53671s tt_hits=3118815 cache=1384730
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=8006549 total=8006549 elapsed=1.40362s tt_hits=1592034 cache=1843460
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=3757511 total=3757511 elapsed=0.686449s tt_hits=759426 cache=2125862
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=4996169 total=4996169 elapsed=0.825145s tt_hits=941954 cache=2404820
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=3226362 total=3226362 elapsed=0.537454s tt_hits=696111 cache=2614805
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=3173587 total=3173587 elapsed=0.53287s tt_hits=590929 cache=2802222
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=720612 total=720612 elapsed=0.11409s tt_hits=187453 cache=2854549
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=3074153 total=3074153 elapsed=0.570796s tt_hits=549644 cache=3007592
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=848333 total=848333 elapsed=0.133035s tt_hits=221619 cache=3054515
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=19489505 total=19489505 elapsed=3.56342s tt_hits=3304242 cache=3882917
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=13228790 total=13228790 elapsed=2.73792s tt_hits=2242578 cache=4296233
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=3757511 total=3757511 elapsed=0.529456s tt_hits=759426 cache=4296233
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=1105210 total=1105210 elapsed=0.171162s tt_hits=247135 cache=4336335
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=883744 total=883744 elapsed=0.127319s tt_hits=215952 cache=4356547
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=1740353 total=1740353 elapsed=0.256109s tt_hits=402475 cache=4393824
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=5413250 total=5413250 elapsed=0.912991s tt_hits=1095834 cache=4458607
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=5796970 total=5796970 elapsed=0.989079s tt_hits=1148703 cache=4526371
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=9561123 total=9561123 elapsed=1.59015s tt_hits=1707305 cache=4587346
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=7280983 total=7280983 elapsed=1.23689s tt_hits=1379599 cache=4677917
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=9884481 total=9884481 elapsed=1.59429s tt_hits=1773343 cache=4724085
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=5615445 total=5615445 elapsed=0.881063s tt_hits=1033397 cache=4754009
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=7034541 total=7034541 elapsed=1.05057s tt_hits=1355197 cache=4786749
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=4870239 total=4870239 elapsed=0.739621s tt_hits=898699 cache=4797204
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=7181877 total=7181877 elapsed=1.10438s tt_hits=1286509 cache=4807822
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=5440113 total=5440113 elapsed=0.761097s tt_hits=1056238 cache=4821325
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=14 target=1 proven=0 nodes=6880044 total=6880044 elapsed=1.03292s tt_hits=1281701 cache=4824643
+TT=48.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB

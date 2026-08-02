@@ -1,0 +1,19 @@
+{
+  "files": [
+    {
+      "path": "raw/p2_d24_to26_tt26_1800s.err",
+      "bytes": 4485,
+      "sha256": "117494b21b7ee4b51d085b48242e5811bf91a5ec0c2cd5b1512c2e8f0b9dabe2"
+    },
+    {
+      "path": "raw/p2_d24_to26_tt26_1800s.out",
+      "bytes": 130,
+      "sha256": "4eb903cbc66e463978297c2b9d1c922eb81350cf9d76b7e87789ee89fdfe5580"
+    },
+    {
+      "path": "raw/p2_d24_to26_tt26_1800s.rc",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    }
+  ]
+}

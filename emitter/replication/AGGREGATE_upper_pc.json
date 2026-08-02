@@ -1,0 +1,217 @@
+{
+ "claim": "J1 gagne 3x9x10 en <= 35 plis : temoin P(7,1), 17 classes prouvees ici + H00 heritee du chat, TT par classe (contrairement au run partage du chat)",
+ "branch_proofs": 17,
+ "aggregate_nodes": 5402042173,
+ "aggregate_seconds": 2527.5,
+ "extractions": 17,
+ "certified_states_sum": 284207012,
+ "stalemates_seen": 0,
+ "per_class": [
+  {
+   "fixed": "P(7,1),H(1,0)",
+   "depth": 31,
+   "nodes": 129322076,
+   "seconds": 38.2
+  },
+  {
+   "fixed": "P(7,1),H(2,0)",
+   "depth": 31,
+   "nodes": 259492453,
+   "seconds": 123.4
+  },
+  {
+   "fixed": "P(7,1),H(3,0)",
+   "depth": 31,
+   "nodes": 357335265,
+   "seconds": 171.6
+  },
+  {
+   "fixed": "P(7,1),H(4,0)",
+   "depth": 31,
+   "nodes": 279424093,
+   "seconds": 133.1
+  },
+  {
+   "fixed": "P(7,1),H(5,0)",
+   "depth": 31,
+   "nodes": 142219503,
+   "seconds": 71.1
+  },
+  {
+   "fixed": "P(7,1),H(6,0)",
+   "depth": 31,
+   "nodes": 119016881,
+   "seconds": 58.9
+  },
+  {
+   "fixed": "P(7,1),H(7,0)",
+   "depth": 31,
+   "nodes": 369055460,
+   "seconds": 160.3
+  },
+  {
+   "fixed": "P(7,1),P(0,0)",
+   "depth": 31,
+   "nodes": 1911358034,
+   "seconds": 946.4
+  },
+  {
+   "fixed": "P(7,1),P(1,1)",
+   "depth": 33,
+   "nodes": 763234131,
+   "seconds": 359.3
+  },
+  {
+   "fixed": "P(7,1),V(0,0)",
+   "depth": 31,
+   "nodes": 188474900,
+   "seconds": 78.4
+  },
+  {
+   "fixed": "P(7,1),V(1,0)",
+   "depth": 31,
+   "nodes": 50408881,
+   "seconds": 20.2
+  },
+  {
+   "fixed": "P(7,1),V(2,0)",
+   "depth": 31,
+   "nodes": 180973160,
+   "seconds": 78.3
+  },
+  {
+   "fixed": "P(7,1),V(3,0)",
+   "depth": 31,
+   "nodes": 99486836,
+   "seconds": 44.7
+  },
+  {
+   "fixed": "P(7,1),V(4,0)",
+   "depth": 31,
+   "nodes": 124221951,
+   "seconds": 53.8
+  },
+  {
+   "fixed": "P(7,1),V(5,0)",
+   "depth": 31,
+   "nodes": 96385827,
+   "seconds": 39.4
+  },
+  {
+   "fixed": "P(7,1),V(6,0)",
+   "depth": 31,
+   "nodes": 124728804,
+   "seconds": 60.6
+  },
+  {
+   "fixed": "P(7,1),V(7,0)",
+   "depth": 31,
+   "nodes": 206903918,
+   "seconds": 89.8
+  }
+ ],
+ "per_extraction": [
+  {
+   "reply": "H(1,0)",
+   "rem": 31,
+   "memo": 9836857,
+   "seconds": 13.2
+  },
+  {
+   "reply": "H(2,0)",
+   "rem": 31,
+   "memo": 12135701,
+   "seconds": 30.6
+  },
+  {
+   "reply": "H(3,0)",
+   "rem": 31,
+   "memo": 3497458,
+   "seconds": 6.9
+  },
+  {
+   "reply": "H(4,0)",
+   "rem": 31,
+   "memo": 5836521,
+   "seconds": 12.6
+  },
+  {
+   "reply": "H(5,0)",
+   "rem": 31,
+   "memo": 5970552,
+   "seconds": 13.9
+  },
+  {
+   "reply": "H(6,0)",
+   "rem": 31,
+   "memo": 8144951,
+   "seconds": 17.3
+  },
+  {
+   "reply": "H(7,0)",
+   "rem": 31,
+   "memo": 7650234,
+   "seconds": 16.0
+  },
+  {
+   "reply": "P(0,0)",
+   "rem": 31,
+   "memo": 61241077,
+   "seconds": 629.8
+  },
+  {
+   "reply": "P(1,1)",
+   "rem": 33,
+   "memo": 97402125,
+   "seconds": 589.3
+  },
+  {
+   "reply": "V(0,0)",
+   "rem": 31,
+   "memo": 12303137,
+   "seconds": 24.1
+  },
+  {
+   "reply": "V(1,0)",
+   "rem": 31,
+   "memo": 5807870,
+   "seconds": 8.9
+  },
+  {
+   "reply": "V(2,0)",
+   "rem": 31,
+   "memo": 9235040,
+   "seconds": 20.4
+  },
+  {
+   "reply": "V(3,0)",
+   "rem": 31,
+   "memo": 8872647,
+   "seconds": 16.3
+  },
+  {
+   "reply": "V(4,0)",
+   "rem": 31,
+   "memo": 8195496,
+   "seconds": 16.0
+  },
+  {
+   "reply": "V(5,0)",
+   "rem": 31,
+   "memo": 7923823,
+   "seconds": 13.9
+  },
+  {
+   "reply": "V(6,0)",
+   "rem": 31,
+   "memo": 5717236,
+   "seconds": 9.6
+  },
+  {
+   "reply": "V(7,0)",
+   "rem": 31,
+   "memo": 14436287,
+   "seconds": 34.1
+  }
+ ]
+}

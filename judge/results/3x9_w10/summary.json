@@ -1,0 +1,669 @@
+{
+  "aggregate": {
+    "all_classes_proved": true,
+    "depth_counts": {
+      "31": 17,
+      "33": 1
+    },
+    "max_branch_nodes": 964808063,
+    "max_branch_search_seconds": 228.248,
+    "pawn_table_hits_total": 832537,
+    "total_nodes_across_representatives": 4260347144,
+    "total_search_seconds_sequential_sum": 960.08429
+  },
+  "branches": [
+    {
+      "aliases": [
+        0
+      ],
+      "child_depth": 33,
+      "cutoffs": 176318863,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_00.rc",
+        "stderr": "results/3x9_w10/branches/reply_00.err",
+        "stdout": "results/3x9_w10/branches/reply_00.out"
+      },
+      "forced_reply": "P(1,1)",
+      "max_rss_kib": 1887428,
+      "nodes": 781540088,
+      "pawn_table_hits": 165579,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 0 --target 1 --start-depth 31 --max-depth 35 --seconds 1200 --tt-bits 26 --order 1",
+      "representative": 0,
+      "search_seconds": 179.548,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "26a54bf6616d8e7f7afadf29291c82dcedaa5a0ddcb5340ee0a0a7e68ea5fe6a",
+        "stdout": "a07771fc8f8841be7aa6eed0b395a1e26cf0c527f9a289a30fb4ef8eaa85cadc"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 35,
+      "tt_hits": 358759766,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        1,
+        2
+      ],
+      "child_depth": 31,
+      "cutoffs": 83336502,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_01.rc",
+        "stderr": "results/3x9_w10/branches/reply_01.err",
+        "stdout": "results/3x9_w10/branches/reply_01.out"
+      },
+      "forced_reply": "H(0,0)",
+      "max_rss_kib": 1887348,
+      "nodes": 388884472,
+      "pawn_table_hits": 73967,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 1 --target 1 --start-depth 31 --max-depth 35 --seconds 1200 --tt-bits 26 --order 1",
+      "representative": 1,
+      "search_seconds": 90.045,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "e401b92d14eb08633e8d6790118808559988f6366f0ff3bdf65a120f87331434",
+        "stdout": "66a4ef404f7f0394432bcd84a4b4bcd4f4418d24942914a1126d62367fb86583"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 180858522,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        3,
+        4
+      ],
+      "child_depth": 31,
+      "cutoffs": 24641294,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_03.rc",
+        "stderr": "results/3x9_w10/branches/reply_03.err",
+        "stdout": "results/3x9_w10/branches/reply_03.out"
+      },
+      "forced_reply": "H(1,0)",
+      "max_rss_kib": null,
+      "nodes": 110791871,
+      "pawn_table_hits": 31788,
+      "recorded_command": null,
+      "representative": 3,
+      "search_seconds": 23.3763,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "d5e372f911dac200417443743b1a39c62950f6df3848770580d1a440c1b97780",
+        "stdout": "f49c803ad0904f1fa5e62b50db1dd5089327ce3976c7b7933170a56be83b2a0e"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 51476029,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        5,
+        6
+      ],
+      "child_depth": 31,
+      "cutoffs": 41298927,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_05.rc",
+        "stderr": "results/3x9_w10/branches/reply_05.err",
+        "stdout": "results/3x9_w10/branches/reply_05.out"
+      },
+      "forced_reply": "H(2,0)",
+      "max_rss_kib": 1887384,
+      "nodes": 196600639,
+      "pawn_table_hits": 38099,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 5 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 5,
+      "search_seconds": 43.196,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "b49749b9607b7eb009684f52ba215fd230bd73f7c556005e12e8c02ac0f9c185",
+        "stdout": "f4415778df297a2e0646101f36cb81269e0608669bb339600c2e6b3aa0f32ce5"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 92331173,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        7,
+        8
+      ],
+      "child_depth": 31,
+      "cutoffs": 54632249,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_07.rc",
+        "stderr": "results/3x9_w10/branches/reply_07.err",
+        "stdout": "results/3x9_w10/branches/reply_07.out"
+      },
+      "forced_reply": "H(3,0)",
+      "max_rss_kib": 1887288,
+      "nodes": 258108979,
+      "pawn_table_hits": 52986,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 7 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 7,
+      "search_seconds": 58.5093,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "6fb76d0304bd0c8125936504c8ae54e3322762e590199fc6695b5c91ad1e296a",
+        "stdout": "418dbe842ffac682d1ef61be05cdfbfaa45070284d2ca11e5e2e044772688dbb"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 119045510,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        9,
+        10
+      ],
+      "child_depth": 31,
+      "cutoffs": 45205893,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_09.rc",
+        "stderr": "results/3x9_w10/branches/reply_09.err",
+        "stdout": "results/3x9_w10/branches/reply_09.out"
+      },
+      "forced_reply": "H(4,0)",
+      "max_rss_kib": 1887432,
+      "nodes": 211777059,
+      "pawn_table_hits": 38266,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 9 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 9,
+      "search_seconds": 46.6154,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "fa04ad4c805179fee128ecfdb9c4699dd2065ea0bf8777b578505afae3d4da58",
+        "stdout": "9d02a64faeaf275c409099a7a31d71f8d8c23d7d36b45419c26f0efabf92ef78"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 97443309,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        11,
+        12
+      ],
+      "child_depth": 31,
+      "cutoffs": 23916474,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_11.rc",
+        "stderr": "results/3x9_w10/branches/reply_11.err",
+        "stdout": "results/3x9_w10/branches/reply_11.out"
+      },
+      "forced_reply": "H(5,0)",
+      "max_rss_kib": 1887348,
+      "nodes": 111140125,
+      "pawn_table_hits": 24472,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 11 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 11,
+      "search_seconds": 24.2002,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "524df821a91f9f8a5c709722511eed7501a578be1529e57771033084e7fed2b3",
+        "stdout": "37cfe3cb08293242cc83410f378150d74053874d82fba48f97c1f1009dfaf526"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 50244964,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        13,
+        14
+      ],
+      "child_depth": 31,
+      "cutoffs": 20691158,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_13.rc",
+        "stderr": "results/3x9_w10/branches/reply_13.err",
+        "stdout": "results/3x9_w10/branches/reply_13.out"
+      },
+      "forced_reply": "H(6,0)",
+      "max_rss_kib": 1887432,
+      "nodes": 93259258,
+      "pawn_table_hits": 62,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 13 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 13,
+      "search_seconds": 21.5199,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "21005f7b01b908af3938835646b6ae928c246f3f6140596d178232c6298cd61f",
+        "stdout": "4df681ecf7cb6c151f772205ea0cb220ef32915e98b8b8960bc594546776378c"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 43773419,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        15,
+        16
+      ],
+      "child_depth": 31,
+      "cutoffs": 207534710,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_15.rc",
+        "stderr": "results/3x9_w10/branches/reply_15.err",
+        "stdout": "results/3x9_w10/branches/reply_15.out"
+      },
+      "forced_reply": "P(0,0)",
+      "max_rss_kib": 1887428,
+      "nodes": 964808063,
+      "pawn_table_hits": 154906,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 15 --target 1 --start-depth 31 --max-depth 35 --seconds 1200 --tt-bits 26 --order 1",
+      "representative": 15,
+      "search_seconds": 228.248,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "069d79663eba8b606fc49bde14a2461fa465ca86e445d7241a94d41b1f261085",
+        "stdout": "95d28364508a75b5dfd457b4dd7b8f794ab6ddd994c90c749cc1ad701163ba76"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 443415013,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        17,
+        18
+      ],
+      "child_depth": 31,
+      "cutoffs": 35700084,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_17.rc",
+        "stderr": "results/3x9_w10/branches/reply_17.err",
+        "stdout": "results/3x9_w10/branches/reply_17.out"
+      },
+      "forced_reply": "V(0,0)",
+      "max_rss_kib": 1887360,
+      "nodes": 154455837,
+      "pawn_table_hits": 44394,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 17 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 17,
+      "search_seconds": 32.6837,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "9452ede5b5fef6490ae1de1b1452911b978383474da73aea5ed816eceef3e874",
+        "stdout": "0736d3d04f6d507d87403e6998de7f064ee2bfd37af3def96400b2d8c1191363"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 69944273,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        19,
+        20
+      ],
+      "child_depth": 31,
+      "cutoffs": 9521280,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_19.rc",
+        "stderr": "results/3x9_w10/branches/reply_19.err",
+        "stdout": "results/3x9_w10/branches/reply_19.out"
+      },
+      "forced_reply": "V(1,0)",
+      "max_rss_kib": null,
+      "nodes": 41904722,
+      "pawn_table_hits": 13592,
+      "recorded_command": null,
+      "representative": 19,
+      "search_seconds": 7.88689,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "549a763c9a67d1d6a378538c6532857064b7b379030d0f71c91c3990a74a2668",
+        "stdout": "32d838abe7d80dea26e151569a86835054b58478d93ecd9903b4bd6ff2b42118"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 19340917,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        21,
+        22
+      ],
+      "child_depth": 31,
+      "cutoffs": 32084030,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_21.rc",
+        "stderr": "results/3x9_w10/branches/reply_21.err",
+        "stdout": "results/3x9_w10/branches/reply_21.out"
+      },
+      "forced_reply": "V(2,0)",
+      "max_rss_kib": 1887348,
+      "nodes": 145819818,
+      "pawn_table_hits": 24543,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 21 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 21,
+      "search_seconds": 31.4759,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "64e2e73b23fdd7bd536e64a81121e92443ccb52b39e053c6572438b01739e70b",
+        "stdout": "8ae3324067de701e460d47d4ac89ecc1aecde22d31899b897057a5e30ff5e4a7"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 68305800,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        23,
+        24
+      ],
+      "child_depth": 31,
+      "cutoffs": 17877378,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_23.rc",
+        "stderr": "results/3x9_w10/branches/reply_23.err",
+        "stdout": "results/3x9_w10/branches/reply_23.out"
+      },
+      "forced_reply": "V(3,0)",
+      "max_rss_kib": 1887380,
+      "nodes": 80652667,
+      "pawn_table_hits": 23116,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 23 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 23,
+      "search_seconds": 17.5633,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "1da523eaaa053fe87eb28d3d22eb5e6172b64034fcc4d7e726a0fe345b81cb6b",
+        "stdout": "d19be803ad8cecbe3ef54eed893b2110da4db4b63c37b30b6225586abc94f9ef"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 37570930,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        25,
+        26
+      ],
+      "child_depth": 31,
+      "cutoffs": 21827698,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_25.rc",
+        "stderr": "results/3x9_w10/branches/reply_25.err",
+        "stdout": "results/3x9_w10/branches/reply_25.out"
+      },
+      "forced_reply": "V(4,0)",
+      "max_rss_kib": 1887432,
+      "nodes": 99053712,
+      "pawn_table_hits": 24270,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 25 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 25,
+      "search_seconds": 20.713,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "8ac9b92a0be8ca98a6895c24487f698e1f30accc9b85f0c5e90753fbdb98ad53",
+        "stdout": "522168eae88d1b653e3175f31853bca207aacb066c00202ee677cc4241c12ebd"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 45382490,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        27,
+        28
+      ],
+      "child_depth": 31,
+      "cutoffs": 18618982,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_27.rc",
+        "stderr": "results/3x9_w10/branches/reply_27.err",
+        "stdout": "results/3x9_w10/branches/reply_27.out"
+      },
+      "forced_reply": "V(5,0)",
+      "max_rss_kib": null,
+      "nodes": 80847868,
+      "pawn_table_hits": 8493,
+      "recorded_command": null,
+      "representative": 27,
+      "search_seconds": 15.6989,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "2538034d69e465715af15c525503cc99e390ecb3226a97079d27d916d8f9ce4c",
+        "stdout": "0d59d22a22393010432c8b83c8d4bf48af90fa1fed1ed2392de0841174a12265"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 36733160,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        29,
+        30
+      ],
+      "child_depth": 31,
+      "cutoffs": 23208218,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_29.rc",
+        "stderr": "results/3x9_w10/branches/reply_29.err",
+        "stdout": "results/3x9_w10/branches/reply_29.out"
+      },
+      "forced_reply": "V(6,0)",
+      "max_rss_kib": 1887428,
+      "nodes": 102201210,
+      "pawn_table_hits": 33733,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 29 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 29,
+      "search_seconds": 22.0324,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "c84df1fca838e508cf050589380c3003b1014a4fb39d046b25481e656f9133d1",
+        "stdout": "3f96cf5c0c607d3f46e5105c0ac758d9e70e94bf3671548caea90fb6a8f91589"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 46615432,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        31,
+        32
+      ],
+      "child_depth": 31,
+      "cutoffs": 36003665,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_31.rc",
+        "stderr": "results/3x9_w10/branches/reply_31.err",
+        "stdout": "results/3x9_w10/branches/reply_31.out"
+      },
+      "forced_reply": "V(7,0)",
+      "max_rss_kib": 1887432,
+      "nodes": 161216501,
+      "pawn_table_hits": 40377,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 31 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 31,
+      "search_seconds": 34.93,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "d72902fa9786114ad2251ffc4a4011f0e9b7188f0965fe9ac817ad6af65a9f4c",
+        "stdout": "efa662968fb655d9465513e547cc565ff5644c1c3fdfd7115187b837f018d68c"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 74944767,
+      "winner": 1
+    },
+    {
+      "aliases": [
+        33,
+        34
+      ],
+      "child_depth": 31,
+      "cutoffs": 59591583,
+      "files": {
+        "returncode": "results/3x9_w10/branches/reply_33.rc",
+        "stderr": "results/3x9_w10/branches/reply_33.err",
+        "stdout": "results/3x9_w10/branches/reply_33.out"
+      },
+      "forced_reply": "H(7,0)",
+      "max_rss_kib": 1887428,
+      "nodes": 277284255,
+      "pawn_table_hits": 39894,
+      "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 33 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+      "representative": 33,
+      "search_seconds": 61.8421,
+      "sha256": {
+        "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "stderr": "4444dd7f9b14dbf031776f886c4e062498738ffe899c60b39db276f10c0f30e0",
+        "stdout": "b898578352c9b6f004887f403546e17f1b5e7377987a815813892e149f4c0fd4"
+      },
+      "solved": true,
+      "timeout": false,
+      "total_depth_upper_bound": 33,
+      "tt_hits": 129849539,
+      "winner": 1
+    }
+  ],
+  "claim": {
+    "board_height": 9,
+    "board_width": 3,
+    "forced_win_upper_bound_plies_from_start": 35,
+    "minimality_claimed": false,
+    "proof_scope": "All legal Player-2 replies after the witness opening are proved winning for Player 1.",
+    "starting_position_winner": 1,
+    "walls_per_player": 10,
+    "witness_opening": {
+      "description": "central pawn advance from (8,1) to (7,1)",
+      "index": 0,
+      "move": "P(7,1)"
+    }
+  },
+  "decomposition": {
+    "canonical_reply_classes": 18,
+    "covered_reply_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "fresh_process_and_transposition_table_per_representative": true,
+    "raw_legal_replies": 35,
+    "representatives": [
+      0,
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33
+    ],
+    "symmetries": "horizontal reflection of post-reply states, via exact packed canonical keys"
+  },
+  "proof_executable": {
+    "build": "g++ -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic",
+    "path": "results/3x9_w10/proof_solver",
+    "sha256": "bafcc4b52be1722e3aad6123a475792e9d7893b50f71f5f41a39bd4fd4a5e572",
+    "source_path": "results/3x9_w10/proof_solver.cpp",
+    "source_sha256": "ce2c073cb13cfa866727af8d3dfb41face334df49c1a8f59501aff8691a16dd6"
+  },
+  "schema_version": 1,
+  "validation": {
+    "differential_move_generation": [
+      {
+        "divergences": 0,
+        "height": 3,
+        "positions": 1000,
+        "seed": 12345,
+        "walls": 3,
+        "width": 4
+      },
+      {
+        "divergences": 0,
+        "height": 5,
+        "positions": 1000,
+        "seed": 22345,
+        "walls": 4,
+        "width": 3
+      },
+      {
+        "divergences": 0,
+        "height": 9,
+        "positions": 500,
+        "seed": 32345,
+        "walls": 8,
+        "width": 3
+      }
+    ],
+    "status": "internally replicated computational result; independent external reproduction still required"
+  }
+}

@@ -1,0 +1,1 @@
+width=3 height=9 walls=10 solved=1 winner=1 depth=31 nodes=79495380 tt_hits=35991571 cutoffs=17191983 local_hits=0 local_probes=0 local_tables=0 stalemates_seen=0 seconds=17.6837 timeout=0 cache_configs=166894 cache_hits=698731 cache_misses=166894 cache_payload=31200000 cache_estimated=52844536 transition_hits=28920071 transition_builds=120565 transition_entries=865624

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "case": {
+    "width": 4,
+    "height": 7,
+    "walls_per_player": 7
+  },
+  "status": "unresolved",
+  "established_fact": "Player 1 cannot force a win within 23 plies",
+  "target": "Player1",
+  "completed_depth": 23,
+  "proven": false,
+  "nodes_at_depth": 1321648823,
+  "total_nodes": 1321648823,
+  "search_seconds_to_completed_depth": 375.143,
+  "tt_hits": 509808206,
+  "configuration_count": 16368423,
+  "wall_transition_count": 155145930,
+  "transposition_table_bytes": 805306368,
+  "distance_bound_enabled": false,
+  "pawn_only_table_enabled": false,
+  "termination": "manually stopped after the completed depth-23 result before starting the dual Player-2 search",
+  "source_commit": "fe6d621",
+  "raw_log": "runlogs/4x7_w7/p1_d23_tt26_packed_1800s.err"
+}

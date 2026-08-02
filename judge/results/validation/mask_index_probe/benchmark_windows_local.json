@@ -1,0 +1,102 @@
+{
+  "schema": "mask-index-probe-benchmark-1",
+  "date": "2026-08-02",
+  "status": "exact-timing-inconclusive",
+  "claimScope": "experimental wall-configuration cache microoptimization; no game-theoretic claim",
+  "machine": {
+    "cpu": "AMD Ryzen 5 220 w/ Radeon 740M Graphics",
+    "physicalCores": 6,
+    "logicalProcessors": 12,
+    "ramGiB": 15.18,
+    "os": "Microsoft Windows 11 Enterprise 10.0.26200 build 26200",
+    "compiler": "MSYS2 UCRT64 GCC 16.1.0",
+    "contention": "one long-running Claude Python process; process CPU time recorded through GetProcessTimes"
+  },
+  "provenance": {
+    "baseCommit": "819435f741610b50ec6dcb44deac47a03d56bf6e",
+    "solverSourceSha256": "34142b4965cbfe888d4a4fe36e8c39156ac59352c29cb24341fbf2969542836d",
+    "baselineBinarySha256": "f913257d0b3e08ff941a43e099ea655d29df2b37adc59bc15ceb08ebadc54dfc",
+    "optimizedWrapperSha256": "064a8c18e1ed8f0095e8db101cbac91fbba84e9b7cbff155939a5311efb46c8e",
+    "optimizedBinarySha256": "819613d0bbfd25372a87ffdecdaf10d297ddcfed147b8427faaae128268b6e30",
+    "profileWrapperSha256": "7cd8bcce5de85e31bad3ddc57f5cf176706808374d0c7571773a2b771a300b1e",
+    "profileBinarySha256": "761d73eb33e26dc8d67e327cc1a13c45458d2059858ea47b5437b03cd546592f",
+    "stateSolverSourceSha256": "3f0ee2adb240847a6245b6ccedc1001e5484ecaddbf3904ae6ddd0cd5141a70a",
+    "stateSolverBinarySha256": "05f8914b5e0cd1d415fc1dd2e6195b03d22c06f60593db72a2c96d5f9b069203",
+    "differentialCheckerSha256": "295753201c96373c7c805850fac4e98edf564b9f03486aa8686f6d14b084e2b6",
+    "debugUnitSourceSha256": "67777c6b82b29f1c46c80e77059dc4fc2dc9e34351b68e6ec616b802a4489f14",
+    "debugUnitBinarySha256": "147fab030b9a73cd97e724b4a4cfc72ccf0dfdaaff923890947bc87b7a63af3e",
+    "buildFlags": "-O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -march=native -Wl,--no-insert-timestamp"
+  },
+  "validation": {
+    "debugUnitTest": "passed",
+    "sampled3x3x1Requests": 2000,
+    "sampled4x3x2RequestsWithReserve16": 2000,
+    "exhaustive3x3x1RequestsWithReserve16": 51408,
+    "verdictDivergences": 0
+  },
+  "profileRuns": [
+    {
+      "id": "4x7w7-h52-d16-flow1",
+      "nodes": 2326659,
+      "cacheMisses": 161170,
+      "reusedMissSlots": 161169,
+      "rehashFallbacks": 1,
+      "slotReadsSaved": 371897
+    },
+    {
+      "id": "4x7w7-v00-d24-production-reserve",
+      "nodes": 72550877,
+      "ttHits": 29886576,
+      "cutoffs": 18528427,
+      "cacheMisses": 981888,
+      "reusedMissSlots": 981888,
+      "rehashFallbacks": 0,
+      "slotReadsSaved": 1046462
+    }
+  ],
+  "timedRun": {
+    "id": "4x7w7-v00-d24-production-reserve",
+    "commandArgs": [
+      "--width", "4", "--height", "7", "--walls", "7",
+      "--root-move", "P(5,2)", "--second-move", "P(1,2)",
+      "--third-move", "V(0,0)", "--target", "1",
+      "--start-depth", "24", "--max-depth", "24", "--seconds", "3600",
+      "--tt-bits", "26", "--tt-ways", "2", "--order", "1",
+      "--no-bounds", "--no-pawn-table", "--cache-reserve", "3000000",
+      "--transition-cache-threshold", "1"
+    ],
+    "commonExactResult": {
+      "nodes": 72550877,
+      "ttHits": 29886576,
+      "cutoffs": 18528427,
+      "cacheConfigs": 981888,
+      "cacheHits": 3194139,
+      "cacheMisses": 981888,
+      "transitionEntries": 4176026,
+      "stalematesSeen": 0,
+      "timeout": 0
+    },
+    "runsInOrder": [
+      {"kind": "baseline", "cpuSeconds": 16.53125, "solverSeconds": 16.5189, "wallSeconds": 16.701942100015003},
+      {"kind": "probe", "cpuSeconds": 16.578125, "solverSeconds": 16.6058, "wallSeconds": 16.786247199983336},
+      {"kind": "probe", "cpuSeconds": 16.625, "solverSeconds": 16.6249, "wallSeconds": 16.796142700011842},
+      {"kind": "baseline", "cpuSeconds": 17.84375, "solverSeconds": 18.1334, "wallSeconds": 18.310136899992358},
+      {"kind": "baseline", "cpuSeconds": 18.5, "solverSeconds": 18.6765, "wallSeconds": 18.868902000016533},
+      {"kind": "probe", "cpuSeconds": 17.25, "solverSeconds": 17.3237, "wallSeconds": 17.49894119997043},
+      {"kind": "probe", "cpuSeconds": 17.5, "solverSeconds": 17.5192, "wallSeconds": 17.69050430000061},
+      {"kind": "baseline", "cpuSeconds": 16.703125, "solverSeconds": 16.7614, "wallSeconds": 16.955129400012083}
+    ],
+    "summary": {
+      "baselineMedianCpuSeconds": 17.2734375,
+      "probeMedianCpuSeconds": 16.9375,
+      "medianCpuChangePercent": -1.944,
+      "baselineMeanCpuSeconds": 17.39453125,
+      "probeMeanCpuSeconds": 16.98828125,
+      "meanCpuChangePercent": -2.336,
+      "pairedWins": 2,
+      "pairedLosses": 2,
+      "warning": "large within-series thermal variance makes the apparent aggregate gain non-promotional"
+    }
+  },
+  "decision": "retain behind the experimental macro; require a quiet affinity-controlled gaming-PC A/B before promotion"
+}

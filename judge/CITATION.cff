@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "Quoridor frontier research"
+message: "Please cite this repository if you use the solver or the 3x9 frontier results."
+type: software
+authors:
+  - family-names: Napoly
+    given-names: Ulysse
+version: 0.3.0
+date-released: 2026-07-27
+year: 2026
+license: MIT
+abstract: >-
+  Reproducible computational proof searches reporting first-player wins for
+  3x9 Quoridor with 9 and 10 walls per player. Matching conservative upper-
+  and lower-bound audits establish an exact 35-ply minimax forcing horizon
+  for the 10-wall case, with reference move-generation and bounded-search
+  differential tests and archived raw logs.

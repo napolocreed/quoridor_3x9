@@ -1,0 +1,434 @@
+{
+  "schema_version": 1,
+  "case": {
+    "width": 4,
+    "height": 7,
+    "walls_per_player": 7
+  },
+  "claim": "Player 1 cannot force a win within 25 plies",
+  "status": "proved_bounded_negative",
+  "target": "Player1",
+  "total_depth": 25,
+  "root_child_depth": 24,
+  "legal_first_moves": 39,
+  "root_moves_refuted": 39,
+  "root_moves_proved": 0,
+  "timeouts": 0,
+  "aggregate_nodes": 4888712130,
+  "aggregate_tt_hits": 2020924136,
+  "aggregate_search_seconds": 1270.72258,
+  "search_configuration": {
+    "distance_bound_enabled": false,
+    "pawn_only_table_enabled": false,
+    "tt_bits": 26,
+    "tt_bytes": 805306368,
+    "fresh_transposition_table_per_first_move": true,
+    "full_64_bit_key_comparison": true
+  },
+  "precompute": {
+    "wall_configurations": 16368423,
+    "one_wall_transitions": 155145930
+  },
+  "root_move_crosscheck": {
+    "reference_engine": "reference/quoridor_reference.py",
+    "reference_move_count": 39,
+    "cpp_move_count": 39,
+    "action_sets_equal": true
+  },
+  "source_commits": [
+    "fe6d621",
+    "14e0299"
+  ],
+  "records": [
+    {
+      "index": 0,
+      "move": "P(5,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 1232686204,
+      "tt_hits": 484844538,
+      "seconds": 327.958,
+      "source_log": "raw/p1_central_child_d24_tt26_1800s.err"
+    },
+    {
+      "index": 1,
+      "move": "H(0,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 206247940,
+      "tt_hits": 81509019,
+      "seconds": 58.9224,
+      "source_log": "raw/p1_root1_H01_child_d24_tt26_1200s.err"
+    },
+    {
+      "index": 2,
+      "move": "H(0,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 171753792,
+      "tt_hits": 72447599,
+      "seconds": 48.5869,
+      "source_log": "raw/p1_root2_H02_child_d24_tt26_900s.err"
+    },
+    {
+      "index": 3,
+      "move": "H(1,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 148363551,
+      "tt_hits": 62529912,
+      "seconds": 39.782,
+      "source_log": "raw/p1_depth25_roots_03_12.out"
+    },
+    {
+      "index": 4,
+      "move": "H(1,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 27705211,
+      "tt_hits": 12306016,
+      "seconds": 6.81928,
+      "source_log": "raw/p1_depth25_roots_03_12.out"
+    },
+    {
+      "index": 5,
+      "move": "H(2,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 97463867,
+      "tt_hits": 42182757,
+      "seconds": 24.8289,
+      "source_log": "raw/p1_depth25_roots_03_12.out"
+    },
+    {
+      "index": 6,
+      "move": "H(2,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 24476441,
+      "tt_hits": 11194538,
+      "seconds": 5.98129,
+      "source_log": "raw/p1_depth25_roots_03_12.out"
+    },
+    {
+      "index": 7,
+      "move": "H(3,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 79110601,
+      "tt_hits": 35244574,
+      "seconds": 19.4197,
+      "source_log": "raw/p1_depth25_roots_03_12.out"
+    },
+    {
+      "index": 8,
+      "move": "H(3,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 21050085,
+      "tt_hits": 9486948,
+      "seconds": 4.97774,
+      "source_log": "raw/p1_depth25_roots_03_12.out"
+    },
+    {
+      "index": 9,
+      "move": "H(4,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 8304055,
+      "tt_hits": 3563113,
+      "seconds": 1.75563,
+      "source_log": "raw/p1_depth25_roots_03_12.out"
+    },
+    {
+      "index": 10,
+      "move": "H(4,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 21441724,
+      "tt_hits": 9342378,
+      "seconds": 5.26545,
+      "source_log": "raw/p1_depth25_roots_03_12.out"
+    },
+    {
+      "index": 11,
+      "move": "H(5,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 15104624,
+      "tt_hits": 5756092,
+      "seconds": 3.61283,
+      "source_log": "raw/p1_depth25_roots_03_12.out"
+    },
+    {
+      "index": 12,
+      "move": "H(5,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 33625712,
+      "tt_hits": 13831006,
+      "seconds": 8.76083,
+      "source_log": "raw/p1_depth25_roots_03_12.out"
+    },
+    {
+      "index": 13,
+      "move": "P(6,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 233770100,
+      "tt_hits": 99387798,
+      "seconds": 63.42,
+      "source_log": "raw/p1_depth25_roots_13_20.out"
+    },
+    {
+      "index": 14,
+      "move": "P(6,3)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 280990236,
+      "tt_hits": 114495314,
+      "seconds": 78.1712,
+      "source_log": "raw/p1_depth25_roots_13_20.out"
+    },
+    {
+      "index": 15,
+      "move": "H(0,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 27705211,
+      "tt_hits": 12306016,
+      "seconds": 7.19489,
+      "source_log": "raw/p1_depth25_roots_13_20.out"
+    },
+    {
+      "index": 16,
+      "move": "H(1,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 14617651,
+      "tt_hits": 6397083,
+      "seconds": 3.33653,
+      "source_log": "raw/p1_depth25_roots_13_20.out"
+    },
+    {
+      "index": 17,
+      "move": "H(2,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 10170944,
+      "tt_hits": 4307366,
+      "seconds": 2.06442,
+      "source_log": "raw/p1_depth25_roots_13_20.out"
+    },
+    {
+      "index": 18,
+      "move": "H(3,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 15000085,
+      "tt_hits": 6091099,
+      "seconds": 3.18395,
+      "source_log": "raw/p1_depth25_roots_13_20.out"
+    },
+    {
+      "index": 19,
+      "move": "H(4,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 16443311,
+      "tt_hits": 6729286,
+      "seconds": 3.60089,
+      "source_log": "raw/p1_depth25_roots_13_20.out"
+    },
+    {
+      "index": 20,
+      "move": "H(5,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 95789759,
+      "tt_hits": 38795342,
+      "seconds": 24.1074,
+      "source_log": "raw/p1_depth25_roots_13_20.out"
+    },
+    {
+      "index": 21,
+      "move": "V(0,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 121441613,
+      "tt_hits": 49818215,
+      "seconds": 33.4429,
+      "source_log": "raw/p1_depth25_roots_21_30.out"
+    },
+    {
+      "index": 22,
+      "move": "V(0,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 85268927,
+      "tt_hits": 36780055,
+      "seconds": 23.2556,
+      "source_log": "raw/p1_depth25_roots_21_30.out"
+    },
+    {
+      "index": 23,
+      "move": "V(0,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 150321198,
+      "tt_hits": 62289206,
+      "seconds": 40.3502,
+      "source_log": "raw/p1_depth25_roots_21_30.out"
+    },
+    {
+      "index": 24,
+      "move": "V(1,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 130130475,
+      "tt_hits": 55256634,
+      "seconds": 32.5052,
+      "source_log": "raw/p1_depth25_roots_21_30.out"
+    },
+    {
+      "index": 25,
+      "move": "V(1,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 168528170,
+      "tt_hits": 72471978,
+      "seconds": 41.7444,
+      "source_log": "raw/p1_depth25_roots_21_30.out"
+    },
+    {
+      "index": 26,
+      "move": "V(1,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 121405418,
+      "tt_hits": 49882717,
+      "seconds": 30.0236,
+      "source_log": "raw/p1_depth25_roots_21_30.out"
+    },
+    {
+      "index": 27,
+      "move": "V(2,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 130744412,
+      "tt_hits": 55241247,
+      "seconds": 32.73,
+      "source_log": "raw/p1_depth25_roots_21_30.out"
+    },
+    {
+      "index": 28,
+      "move": "V(2,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 181232222,
+      "tt_hits": 77450074,
+      "seconds": 43.646,
+      "source_log": "raw/p1_depth25_roots_21_30.out"
+    },
+    {
+      "index": 29,
+      "move": "V(2,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 134614629,
+      "tt_hits": 57592184,
+      "seconds": 33.9223,
+      "source_log": "raw/p1_depth25_roots_21_30.out"
+    },
+    {
+      "index": 30,
+      "move": "V(3,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 124120962,
+      "tt_hits": 52242078,
+      "seconds": 31.4331,
+      "source_log": "raw/p1_depth25_roots_21_30.out"
+    },
+    {
+      "index": 31,
+      "move": "V(3,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 128070355,
+      "tt_hits": 56050651,
+      "seconds": 31.7423,
+      "source_log": "raw/p1_depth25_roots_31_38.out"
+    },
+    {
+      "index": 32,
+      "move": "V(3,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 132857317,
+      "tt_hits": 55265094,
+      "seconds": 32.3709,
+      "source_log": "raw/p1_depth25_roots_31_38.out"
+    },
+    {
+      "index": 33,
+      "move": "V(4,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 120012758,
+      "tt_hits": 50609322,
+      "seconds": 29.6993,
+      "source_log": "raw/p1_depth25_roots_31_38.out"
+    },
+    {
+      "index": 34,
+      "move": "V(4,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 80495567,
+      "tt_hits": 36409721,
+      "seconds": 19.1078,
+      "source_log": "raw/p1_depth25_roots_31_38.out"
+    },
+    {
+      "index": 35,
+      "move": "V(4,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 119207169,
+      "tt_hits": 50709654,
+      "seconds": 28.8692,
+      "source_log": "raw/p1_depth25_roots_31_38.out"
+    },
+    {
+      "index": 36,
+      "move": "V(5,0)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 91321810,
+      "tt_hits": 35658484,
+      "seconds": 22.6737,
+      "source_log": "raw/p1_depth25_roots_31_38.out"
+    },
+    {
+      "index": 37,
+      "move": "V(5,1)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 78813969,
+      "tt_hits": 30885915,
+      "seconds": 19.5619,
+      "source_log": "raw/p1_depth25_roots_31_38.out"
+    },
+    {
+      "index": 38,
+      "move": "V(5,2)",
+      "proven": false,
+      "timeout": false,
+      "nodes": 8304055,
+      "tt_hits": 3563113,
+      "seconds": 1.89395,
+      "source_log": "raw/p1_depth25_roots_31_38.out"
+    }
+  ]
+}

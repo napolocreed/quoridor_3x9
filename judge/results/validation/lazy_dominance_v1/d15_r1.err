@@ -1,0 +1,4 @@
+forcing root[0] move=P(7,1)
+forcing second[19] move=V(1,0)
+TT=192.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=689.1KiB
+depth=15 target=1 proven=0 nodes=18689571 total=18689571 elapsed=3.81465s tt_hits=5161932 cache=388041

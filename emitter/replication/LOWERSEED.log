@@ -1,0 +1,19 @@
+{"root": "P(7,1)", "nodes": 507422604, "base": 738601362, "dnodes_pct": 31.3, "dsec_pct": 44.9, "seed_hits": 13520748, "seed_loose": 13242596}
+{"root": "H(0,0)", "nodes": 152346206, "base": 173180714, "dnodes_pct": 12.0, "dsec_pct": 20.2, "seed_hits": 2512258, "seed_loose": 2046807}
+{"root": "H(1,0)", "nodes": 94251151, "base": 105087458, "dnodes_pct": 10.3, "dsec_pct": 20.7, "seed_hits": 1227856, "seed_loose": 795796}
+{"root": "H(2,0)", "nodes": 83332692, "base": 103073884, "dnodes_pct": 19.2, "dsec_pct": 31.5, "seed_hits": 1593270, "seed_loose": 1473382}
+{"root": "H(3,0)", "nodes": 37136669, "base": 41423748, "dnodes_pct": 10.3, "dsec_pct": 20.5, "seed_hits": 424743, "seed_loose": 269783}
+{"root": "H(4,0)", "nodes": 33810142, "base": 36002310, "dnodes_pct": 6.1, "dsec_pct": 21.1, "seed_hits": 244497, "seed_loose": 211166}
+{"root": "H(5,0)", "nodes": 37564736, "base": 38956127, "dnodes_pct": 3.6, "dsec_pct": 26.1, "seed_hits": 228453, "seed_loose": 184515}
+{"root": "H(6,0)", "nodes": 48031655, "base": 53285013, "dnodes_pct": 9.9, "dsec_pct": 30.4, "seed_hits": 601931, "seed_loose": 743296}
+{"root": "H(7,0)", "nodes": 62314093, "base": 69128899, "dnodes_pct": 9.9, "dsec_pct": 31.1, "seed_hits": 895873, "seed_loose": 1103011}
+{"root": "P(8,0)", "nodes": 302384454, "base": 398053205, "dnodes_pct": 24.0, "dsec_pct": 40.2, "seed_hits": 8569627, "seed_loose": 10425880}
+{"root": "V(0,0)", "nodes": 134022290, "base": 148474996, "dnodes_pct": 9.7, "dsec_pct": 26.2, "seed_hits": 1852271, "seed_loose": 1851790}
+{"root": "V(1,0)", "nodes": 139961187, "base": 181049806, "dnodes_pct": 22.7, "dsec_pct": 36.3, "seed_hits": 3410142, "seed_loose": 2937241}
+{"root": "V(2,0)", "nodes": 81621069, "base": 95458826, "dnodes_pct": 14.5, "dsec_pct": 28.3, "seed_hits": 1409356, "seed_loose": 1403677}
+{"root": "V(3,0)", "nodes": 73589663, "base": 84643761, "dnodes_pct": 13.1, "dsec_pct": 18.2, "seed_hits": 1221568, "seed_loose": 1236741}
+{"root": "V(4,0)", "nodes": 59330850, "base": 66430284, "dnodes_pct": 10.7, "dsec_pct": 22.4, "seed_hits": 791304, "seed_loose": 645191}
+{"root": "V(5,0)", "nodes": 55883688, "base": 59247077, "dnodes_pct": 5.7, "dsec_pct": 27.0, "seed_hits": 527137, "seed_loose": 516072}
+{"root": "V(6,0)", "nodes": 27502311, "base": 27716778, "dnodes_pct": 0.8, "dsec_pct": 16.2, "seed_hits": 57473, "seed_loose": 74606}
+{"root": "V(7,0)", "nodes": 76231286, "base": 85277725, "dnodes_pct": 10.6, "dsec_pct": 31.8, "seed_hits": 1032124, "seed_loose": 795352}
+{"TOTAL": {"nodes": 2006736746, "base": 2505091973, "dnodes_pct": 19.9, "sec": 768.1, "base_sec": 1171.1, "errors": []}}

@@ -1,0 +1,5 @@
+{"type":"header","format":"qcert-1","width":3,"height":4,"walls":0,"target":0,"bound":3,"root":{"p1":7,"p2":0,"r1":0,"r2":0,"turn":0,"hw":0,"vw":0}}
+{"type":"node","p1":7,"p2":0,"r1":0,"r2":0,"turn":0,"hw":0,"vw":0,"d":3,"move":"P:4"}
+{"type":"node","p1":4,"p2":0,"r1":0,"r2":0,"turn":1,"hw":0,"vw":0,"d":2}
+{"type":"node","p1":4,"p2":1,"r1":0,"r2":0,"turn":0,"hw":0,"vw":0,"d":1,"move":"P:0"}
+{"type":"node","p1":4,"p2":3,"r1":0,"r2":0,"turn":0,"hw":0,"vw":0,"d":1,"move":"P:0"}

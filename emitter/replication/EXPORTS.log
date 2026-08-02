@@ -1,0 +1,19 @@
+{"tag": "P11", "ok": true, "bound": 33, "bytes_gz": 1166090586, "sec": 1191.2}
+{"tag": "P00", "ok": true, "bound": 31, "bytes_gz": 727118679, "sec": 789.4}
+{"tag": "H00", "ok": true, "bound": 31, "bytes_gz": 38900945, "sec": 39.4}
+{"tag": "H10", "ok": true, "bound": 31, "bytes_gz": 112778232, "sec": 101.4}
+{"tag": "H20", "ok": true, "bound": 31, "bytes_gz": 141119160, "sec": 215.2}
+{"tag": "H30", "ok": true, "bound": 31, "bytes_gz": 38814327, "sec": 39.4}
+{"tag": "H40", "ok": true, "bound": 31, "bytes_gz": 62816254, "sec": 86.5}
+{"tag": "H50", "ok": true, "bound": 31, "bytes_gz": 64898926, "sec": 93.6}
+{"tag": "H60", "ok": true, "bound": 31, "bytes_gz": 85355693, "sec": 198.6}
+{"tag": "H70", "ok": true, "bound": 31, "bytes_gz": 80666984, "sec": 89.0}
+{"tag": "V00", "ok": true, "bound": 31, "bytes_gz": 139322806, "sec": 135.3}
+{"tag": "V10", "ok": true, "bound": 31, "bytes_gz": 63646848, "sec": 64.5}
+{"tag": "V20", "ok": true, "bound": 31, "bytes_gz": 102782108, "sec": 106.7}
+{"tag": "V30", "ok": true, "bound": 31, "bytes_gz": 98441875, "sec": 104.9}
+{"tag": "V40", "ok": true, "bound": 31, "bytes_gz": 89696943, "sec": 99.2}
+{"tag": "V50", "ok": true, "bound": 31, "bytes_gz": 86241735, "sec": 96.9}
+{"tag": "V60", "ok": true, "bound": 31, "bytes_gz": 61610005, "sec": 68.0}
+{"tag": "V70", "ok": true, "bound": 31, "bytes_gz": 162698765, "sec": 173.0}
+{"exports": "done"}

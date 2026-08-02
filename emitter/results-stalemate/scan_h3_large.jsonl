@@ -1,0 +1,4 @@
+{"width":4,"height":4,"walls":1,"reachableStates":56900,"terminalStates":12460,"invariantViolations":0,"zeroPawnMoveNonTerminal":0,"fullStalemates":0,"firstStalematePly":-1,"stalemateExamples":[],"maxPlyDepth":15,"seconds":0.24}
+{"width":4,"height":4,"walls":2,"reachableStates":685416,"terminalStates":144156,"invariantViolations":0,"zeroPawnMoveNonTerminal":0,"fullStalemates":0,"firstStalematePly":-1,"stalemateExamples":[],"maxPlyDepth":15,"seconds":4.4}
+{"width":3,"height":5,"walls":1,"reachableStates":43244,"terminalStates":7538,"invariantViolations":0,"zeroPawnMoveNonTerminal":0,"fullStalemates":0,"firstStalematePly":-1,"stalemateExamples":[],"maxPlyDepth":14,"seconds":0.2}
+{"width":3,"height":5,"walls":2,"reachableStates":392624,"terminalStates":66556,"invariantViolations":0,"zeroPawnMoveNonTerminal":0,"fullStalemates":0,"firstStalematePly":-1,"stalemateExamples":[],"maxPlyDepth":16,"seconds":2.51}

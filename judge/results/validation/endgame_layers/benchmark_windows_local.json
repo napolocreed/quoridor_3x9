@@ -1,0 +1,68 @@
+{
+  "schema": "remaining-wall-layer-profile-1",
+  "date": "2026-08-02",
+  "status": "one-wall-tablebase-rejected",
+  "claimScope": "instrumentation-only profile of nonterminal positive-depth proof calls",
+  "machine": {
+    "cpu": "AMD Ryzen 5 220 w/ Radeon 740M Graphics",
+    "physicalCores": 6,
+    "logicalProcessors": 12,
+    "ramGiB": 15.18,
+    "os": "Microsoft Windows 11 Enterprise 10.0.26200 build 26200",
+    "compiler": "MSYS2 UCRT64 GCC 16.1.0"
+  },
+  "provenance": {
+    "baseCommit": "f92513d0c1192da906a1cd54478697feacbd45a6",
+    "solverSourceSha256AtMeasurement": "f1d3260f71800ec684a3ae87de24db5fa3c7c4e832de0049cbed3f54855eef21",
+    "sourceNote": "later TT-only guarded changes and integration defaults do not alter this instrumentation or the recorded explicit commands",
+    "solverBinarySha256": "92a2932a7f91a8256a46f2e691f36c45d193c92aa79f01239b699917d357c1b0",
+    "stateSolverBinarySha256": "9112c3a1b2703ef62d84b8fcb18b4ca3f14348c569ca2d7677a3d49b137799ae"
+  },
+  "method": {
+    "zeroWallTablebaseThreshold": 0,
+    "nodeDefinition": "calls after terminal and depth base cases",
+    "ttMissDefinition": "global TT probe did not return a bounded verdict",
+    "distinctConfigDefinition": "distinct lazy cfg_id observed within the stock layer",
+    "validation": "500 sampled 3x3x1 bounded-proof requests, zero divergences; named nodes and verdicts unchanged"
+  },
+  "profiles": [
+    {
+      "id": "4x7w7-p42-d18-flow1",
+      "nodes": 47214750,
+      "ttHits": 12223524,
+      "layers": {
+        "0": {"nodes": 0, "ttMisses": 0, "distinctConfigs": 0},
+        "1": {"nodes": 1351, "ttMisses": 756, "distinctConfigs": 286},
+        "2": {"nodes": 106877, "ttMisses": 51820, "distinctConfigs": 8381}
+      }
+    },
+    {
+      "id": "3x9w10-v10-d31-flow1",
+      "nodes": 37397601,
+      "ttHits": 17004024,
+      "layers": {
+        "0": {"nodes": 0, "ttMisses": 0, "distinctConfigs": 0},
+        "1": {"nodes": 0, "ttMisses": 0, "distinctConfigs": 0},
+        "2": {"nodes": 0, "ttMisses": 0, "distinctConfigs": 0}
+      }
+    },
+    {
+      "id": "4x7w7-h52-d24-flow1",
+      "nodes": 124257426,
+      "ttHits": 47329550,
+      "layers": {
+        "0": {"nodes": 11148, "ttMisses": 5357, "distinctConfigs": 1163},
+        "1": {"nodes": 375925, "ttMisses": 162244, "distinctConfigs": 12881},
+        "2": {"nodes": 4185842, "ttMisses": 1775674, "distinctConfigs": 53847}
+      },
+      "oneWallMissConcentration": {
+        "maximumPerConfig": 528,
+        "configsAtLeast16": 2353,
+        "configsAtLeast64": 512,
+        "configsAtLeast256": 31,
+        "configsAtLeast1024": 0
+      }
+    }
+  ],
+  "decision": "do not implement a full one-remaining-wall attractor per configuration; even the hottest configuration has only 528 unresolved TT probes, far below the thousands to tens of thousands of states such a table must construct"
+}

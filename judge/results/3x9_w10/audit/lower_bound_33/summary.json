@@ -1,0 +1,32 @@
+{
+  "aggregate_nodes": 3553060577,
+  "aggregate_search_seconds": 716.47244,
+  "all_refuted": true,
+  "first_player_not_forced_within_plies_from_start": 33,
+  "mirror_only": false,
+  "no_bounds": true,
+  "no_pawn_table": true,
+  "no_symmetry": false,
+  "refuted_representatives": [
+    0,
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33
+  ],
+  "solver_sha256": "ff11c2530a15c534922d4348f7cf0d9e66366f7742951fb38e8550a375e5837c",
+  "unresolved": []
+}

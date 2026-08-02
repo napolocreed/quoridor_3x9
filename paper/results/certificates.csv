@@ -1,0 +1,31 @@
+item,value,unit,source_path
+parts,18,certificate parts,claude-help/PAQUET.md
+strategy_pairs_total,191173124,state-move pairs,claude-help/PAQUET.md (qmerge --mode check: zero order faults)
+parts_bytes_total,1529384992,bytes,quoridor-frontier-research/CLAUDE_COORDINATION.md (independent qmerge check)
+certmap_states_total,287795827,states,claude-help/PAQUET.md (284207012 original 17 memos + 3588815 regenerated H00)
+per_part_sample_games,3000,random adversary games per part,claude-help/PAQUET.md
+per_part_walk_states,200000,bounded DFS walk states per part,claude-help/PAQUET.md
+exhaustive_responses_verified,35 of 35,second-player replies (18 canonical + 17 mirrors),claude-help/replication/AGGREGATE_exhaustive.json
+exhaustive_dfs_expansions,612890536,verification expansions,claude-help/replication/AGGREGATE_exhaustive.json
+exhaustive_time,1262.6,seconds,claude-help/replication/AGGREGATE_exhaustive.json (aggregate_seconds)
+exhaustive_violations,0,violations,claude-help/replication/AGGREGATE_exhaustive.json
+h10_export_bytes,881735925,bytes,quoridor-frontier-research/CLAUDE_COORDINATION.md (SHA 961df2b3...)
+h10_nodes,9836857,certificate nodes,quoridor-frontier-research/results/validation/qcert/H10_sqlite_verification_2026-08-01.json
+h10_edges_regenerated,25175363,edges,same receipt
+h10_root_budget,31,plies,same receipt
+h10_errors,0,errors,same receipt
+h10_verify_time,1239.327,seconds,same receipt
+h10_profile_configs,1500,wall configurations,quoridor-frontier-research/results/validation/qcert/H10_profile_move_differential_2026-08-01.json
+h10_profile_moves,10024,exact legal moves compared,same receipt
+h10_profile_connectivity_checks,706806,all-cell goal-connectivity comparisons,same receipt
+h10_profile_divergences,0,divergences,same receipt
+corruption_families_rejected_js,10,adversarial corruption families,quoridor-frontier-research/CLAUDE_COORDINATION.md
+corruption_families_rejected_aggregate,33,adversarial corruption families,quoridor-frontier-research/CLAUDE_COORDINATION.md
+aggregate_18part_acceptance,ACCEPTED (ok=true),receipt,claude-help/aggregate/AGGREGATE_VERIFY_RECEIPT.json (sha256 7a4668a8...)
+aggregate_derived_bound,35 (= 2 + 33),plies,"same receipt (prefixPlies=2, suffixBound=33)"
+aggregate_nodes_total,287795827,certificate nodes across 18 parts (equals CertMap state total),same receipt (sum of parts[].nodes)
+aggregate_edges_total,749603013,regenerated edge obligations,same receipt (sum of parts[].edgesChecked)
+aggregate_replies_regenerated,35,second-player replies matched to 18 orbits,same receipt
+aggregate_transforms,identity + mirror-columns,verified transforms per part,same receipt
+aggregate_verify_time,30232.08,seconds (SHA-frozen verifier d8addf93...),same receipt
+aggregate_h00_note,regenerated H00 strategy (3588815 nodes) distinct from archived binary part (2398814 pairs); cardinals not summable,note,claude-help/NOTE_DU_REDACTEUR.md

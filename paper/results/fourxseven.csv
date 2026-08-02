@@ -1,0 +1,13 @@
+item,value,unit,source_path
+p1_root_moves_refuted_at_25,39 of 39,first moves,quoridor-frontier-research/results/4x7_w7/audit_lower_bound_25/summary.json
+p1_root_audit_nodes,4888712130,nodes,same
+p1_root_audit_time,1270.723,seconds,same
+p2_depth26_nodes,492564493,nodes at depth 26,quoridor-frontier-research/results/4x7_w7/audit_p2_lower_bound_26/summary.json
+p2_cumulative_nodes,901837164,nodes,same
+central_third_moves_refuted,40 of 40,third moves at remaining 24-ply bound,quoridor-frontier-research/results/4x7_w7/depth27_central_reply0_scan/summary.json
+central_depth27_nodes,3591324070,nodes,same
+central_depth27_tt_hits,1464909655,TT hits,quoridor-frontier-research/RESULTS.md
+central_depth27_time,920.522,seconds,same
+wall_configs_4x7x7,16368423,configurations,quoridor-frontier-research/RESULTS.md
+wall_transitions_4x7x7,155145930,transitions,quoridor-frontier-research/RESULTS.md
+precompute_rss_reduction,2.95 to 2.15,GiB,quoridor-frontier-research/RESULTS.md (symmetric distance-table derivation)

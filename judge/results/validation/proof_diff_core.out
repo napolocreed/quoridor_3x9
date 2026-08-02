@@ -1,0 +1,1 @@
+{'status': 'ok', 'requests': 3000, 'reachable_states': 2856, 'width': 3, 'height': 3, 'walls': 1, 'no_bounds': True, 'no_pawn_table': True, 'python_cache': {'hits': 5188, 'misses': 13765, 'maxsize': None, 'currsize': 13765}}

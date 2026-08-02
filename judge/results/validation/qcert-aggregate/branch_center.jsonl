@@ -1,0 +1,2 @@
+{"type":"header","format":"qcert-1","width":3,"height":4,"walls":0,"target":0,"bound":1,"root":{"p1":7,"p2":4,"r1":0,"r2":0,"turn":0,"hw":0,"vw":0}}
+{"type":"node","p1":7,"p2":4,"r1":0,"r2":0,"turn":0,"hw":0,"vw":0,"d":1,"move":"P:1"}

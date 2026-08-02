@@ -1,0 +1,24 @@
+configs=301 enumerate=6.691e-05s
+index=301 time=1.2128e-05s
+
+board tables time=0.000198506s
+symmetry time=2.646e-05s
+
+transitions=988 time=2.2594e-05s
+dense_tables~39.4KiB total_precompute=0.000350161s
+configs=1880 enumerate=0.000138175s
+index=1880 time=6.0991e-05s
+
+board tables time=0.00110994s
+symmetry time=0.0001748s
+
+transitions=8108 time=0.000160639s
+dense_tables~292.4KiB total_precompute=0.00166765s
+configs=2929319 enumerate=0.350641s
+index=2929319 time=0.523234s
+  board 262144/2929319  board 524288/2929319  board 786432/2929319  board 1048576/2929319  board 1310720/2929319  board 1572864/2929319  board 1835008/2929319  board 2097152/2929319  board 2359296/2929319  board 2621440/2929319  board 2883584/2929319
+board tables time=1.91802s
+symmetry time=1.91175s
+  trans 262144/2929319  trans 524288/2929319  trans 786432/2929319  trans 1048576/2929319  trans 1310720/2929319  trans 1572864/2929319  trans 1835008/2929319  trans 2097152/2929319  trans 2359296/2929319  trans 2621440/2929319  trans 2883584/2929319
+transitions=24832956 time=1.40125s
+dense_tables~726.1MiB total_precompute=6.10498s

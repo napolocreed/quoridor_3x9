@@ -1,0 +1,10 @@
+{"type":"header","format":"qcert-1","width":3,"height":3,"walls":0,"target":1,"bound":4,"root":{"p1":7,"p2":1,"r1":0,"r2":0,"turn":0,"hw":0,"vw":0}}
+{"type":"node","p1":7,"p2":1,"r1":0,"r2":0,"turn":0,"hw":0,"vw":0,"d":4}
+{"type":"node","p1":4,"p2":1,"r1":0,"r2":0,"turn":1,"hw":0,"vw":0,"d":1,"move":"P:7"}
+{"type":"node","p1":6,"p2":1,"r1":0,"r2":0,"turn":1,"hw":0,"vw":0,"d":3,"move":"P:4"}
+{"type":"node","p1":6,"p2":4,"r1":0,"r2":0,"turn":0,"hw":0,"vw":0,"d":2}
+{"type":"node","p1":3,"p2":4,"r1":0,"r2":0,"turn":1,"hw":0,"vw":0,"d":1,"move":"P:7"}
+{"type":"node","p1":7,"p2":4,"r1":0,"r2":0,"turn":1,"hw":0,"vw":0,"d":1,"move":"P:8"}
+{"type":"node","p1":8,"p2":1,"r1":0,"r2":0,"turn":1,"hw":0,"vw":0,"d":3,"move":"P:4"}
+{"type":"node","p1":8,"p2":4,"r1":0,"r2":0,"turn":0,"hw":0,"vw":0,"d":2}
+{"type":"node","p1":5,"p2":4,"r1":0,"r2":0,"turn":1,"hw":0,"vw":0,"d":1,"move":"P:7"}

@@ -1,0 +1,116 @@
+{
+  "schema": "zero-wall-tablebase-benchmark-1",
+  "date": "2026-08-01",
+  "status": "negative",
+  "claimScope": "experimental exact bounded-proof optimization; no game-theoretic claim",
+  "machine": {
+    "cpu": "AMD Ryzen 5 220 w/ Radeon 740M Graphics",
+    "physicalCores": 6,
+    "logicalProcessors": 12,
+    "ramGiB": 15.18,
+    "os": "Microsoft Windows 11 Enterprise 10.0.26200 build 26200",
+    "compiler": "MSYS2 UCRT64 GCC 16.1.0"
+  },
+  "provenance": {
+    "baseCommit": "5db58024939f73a4c3adaa15cd6923a87d986401",
+    "solverSourceSha256AtMeasurement": "2135e8cf056f06779a88aff2c3053257247a4ca8c7c8ebe506a79fe7203cde76",
+    "sourceNote": "later separately guarded experiments and integration defaults leave this measured implementation and its recorded commands unchanged",
+    "wrapperSha256": "83037970164476746a428c5588328ddefd40ea8c22e8551d42b2ef1b0e76ad60",
+    "solverBinarySha256": "3ef4f4acd7c8f7fb6f835d13e1c37d20dbd990c6574cf14db612929e76260afc",
+    "stateSolverBinarySha256": "1ae3349115ba87fc98bde264c8b3eb548b213805441ba54c59dd986ec6301f43"
+  },
+  "validation": {
+    "sampled3x3x1Requests": 2000,
+    "sampled4x3x2Requests": 2000,
+    "exhaustive3x3x1RequestsPerMode": 51408,
+    "exhaustiveModes": [
+      {"threshold": 1, "maxTables": 4096},
+      {"threshold": 3, "maxTables": 1}
+    ],
+    "exhaustive3x2x1Requests": 1988,
+    "verdictDivergences": 0,
+    "debugBellmanValidation": "passed on 4x7x0"
+  },
+  "benchmarks": [
+    {
+      "id": "4x7w7-h52-d16-flow1",
+      "position": ["P(5,2)", "P(1,2)", "H(5,2)"],
+      "target": 1,
+      "remainingDepth": 16,
+      "ttBits": 25,
+      "pathFlowWeight": 1,
+      "baselineNodes": 2326659,
+      "eligibleZeroWallQueries": 0,
+      "conclusion": "mechanism cannot activate at this horizon"
+    },
+    {
+      "id": "4x7w7-p42-d18-flow1",
+      "position": ["P(5,2)", "P(1,2)", "P(4,2)"],
+      "target": 1,
+      "remainingDepth": 18,
+      "ttBits": 24,
+      "pathFlowWeight": 1,
+      "baselineNodes": 47214750,
+      "eligibleZeroWallQueries": 0,
+      "conclusion": "mechanism does not activate on the searched proof tree"
+    },
+    {
+      "id": "4x7w7-h52-d24-flow1",
+      "position": ["P(5,2)", "P(1,2)", "H(5,2)"],
+      "target": 1,
+      "remainingDepth": 24,
+      "ttBits": 25,
+      "pathFlowWeight": 1,
+      "runs": [
+        {
+          "threshold": 0,
+          "nodes": 124257426,
+          "seconds": 49.5131,
+          "eligibleQueries": 11148,
+          "ttMisses": 5357,
+          "tables": 0
+        },
+        {
+          "threshold": 2,
+          "nodes": 124251895,
+          "seconds": 49.7186,
+          "eligibleQueries": 8750,
+          "readyReturns": 6985,
+          "ttMisses": 1844,
+          "tables": 681,
+          "buildEdges": 910053,
+          "buildSeconds": 0.138004,
+          "tableBytes": 4314816,
+          "nodeReduction": 5531,
+          "nodeReductionPercent": 0.004451
+        },
+        {
+          "threshold": 1,
+          "nodes": 124250623,
+          "seconds": 51.1329,
+          "eligibleQueries": 8598,
+          "readyReturns": 8598,
+          "ttMisses": 1163,
+          "tables": 1163,
+          "buildEdges": 1549325,
+          "buildSeconds": 0.22519,
+          "tableBytes": 7368768,
+          "nodeReduction": 6803,
+          "nodeReductionPercent": 0.005475
+        }
+      ]
+    },
+    {
+      "id": "3x9w10-v10-d31-flow1",
+      "position": ["P(7,1)", "V(1,0)"],
+      "target": 1,
+      "remainingDepth": 31,
+      "ttBits": 26,
+      "pathFlowWeight": 1,
+      "baselineNodes": 37279448,
+      "eligibleZeroWallQueries": 0,
+      "conclusion": "mechanism does not activate on this certified branch"
+    }
+  ],
+  "decision": "retain as an audited experimental negative; do not promote or add to portfolios"
+}

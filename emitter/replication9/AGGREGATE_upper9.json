@@ -1,0 +1,117 @@
+{
+ "claim": "J1 gagne 3x9x9 en <= 35 plis : temoin P(7,1), 18/18 classes de reponses prouvees (P(1,1) a 33, les autres a 31)",
+ "branch_proofs": 18,
+ "aggregate_nodes": 6577365458,
+ "aggregate_seconds": 2848.5,
+ "stalemates_seen": 0,
+ "per_class": [
+  {
+   "fixed": "P(7,1),H(0,0)",
+   "depth": 31,
+   "nodes": 581494984,
+   "seconds": 286.5
+  },
+  {
+   "fixed": "P(7,1),H(1,0)",
+   "depth": 31,
+   "nodes": 128953439,
+   "seconds": 58.2
+  },
+  {
+   "fixed": "P(7,1),H(2,0)",
+   "depth": 31,
+   "nodes": 258709845,
+   "seconds": 117.9
+  },
+  {
+   "fixed": "P(7,1),H(3,0)",
+   "depth": 31,
+   "nodes": 356486339,
+   "seconds": 165.0
+  },
+  {
+   "fixed": "P(7,1),H(4,0)",
+   "depth": 31,
+   "nodes": 278726430,
+   "seconds": 126.2
+  },
+  {
+   "fixed": "P(7,1),H(5,0)",
+   "depth": 31,
+   "nodes": 141867630,
+   "seconds": 55.4
+  },
+  {
+   "fixed": "P(7,1),H(6,0)",
+   "depth": 31,
+   "nodes": 118893712,
+   "seconds": 49.2
+  },
+  {
+   "fixed": "P(7,1),H(7,0)",
+   "depth": 31,
+   "nodes": 368465116,
+   "seconds": 149.2
+  },
+  {
+   "fixed": "P(7,1),P(0,0)",
+   "depth": 31,
+   "nodes": 1922413271,
+   "seconds": 860.5
+  },
+  {
+   "fixed": "P(7,1),P(1,1)",
+   "depth": 33,
+   "nodes": 1353761826,
+   "seconds": 581.0
+  },
+  {
+   "fixed": "P(7,1),V(0,0)",
+   "depth": 31,
+   "nodes": 187824841,
+   "seconds": 74.1
+  },
+  {
+   "fixed": "P(7,1),V(1,0)",
+   "depth": 31,
+   "nodes": 50286694,
+   "seconds": 17.9
+  },
+  {
+   "fixed": "P(7,1),V(2,0)",
+   "depth": 31,
+   "nodes": 180304491,
+   "seconds": 68.6
+  },
+  {
+   "fixed": "P(7,1),V(3,0)",
+   "depth": 31,
+   "nodes": 99228905,
+   "seconds": 36.8
+  },
+  {
+   "fixed": "P(7,1),V(4,0)",
+   "depth": 31,
+   "nodes": 123726053,
+   "seconds": 45.6
+  },
+  {
+   "fixed": "P(7,1),V(5,0)",
+   "depth": 31,
+   "nodes": 96166487,
+   "seconds": 36.7
+  },
+  {
+   "fixed": "P(7,1),V(6,0)",
+   "depth": 31,
+   "nodes": 124305973,
+   "seconds": 47.2
+  },
+  {
+   "fixed": "P(7,1),V(7,0)",
+   "depth": 31,
+   "nodes": 205749422,
+   "seconds": 72.8
+  }
+ ]
+}

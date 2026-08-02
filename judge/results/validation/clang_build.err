@@ -1,0 +1,7 @@
+results/3x9_w10/proof_solver.cpp:210:30: warning: unused variable 'opposite' [-Wunused-variable]
+  210 |         static constexpr int opposite[4]={1,0,3,2};
+      |                              ^~~~~~~~
+results/3x9_w10/proof_solver.cpp:434:9: warning: private field 'max_children' is not used [-Wunused-private-field]
+  434 |     int max_children=192;
+      |         ^
+2 warnings generated.

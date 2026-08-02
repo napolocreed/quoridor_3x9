@@ -1,0 +1,26 @@
+item,value,unit,source_path
+upper_bound_plies_3x9x10,35,plies,quoridor-frontier-research/results/3x9_w10/final_result.json
+upper_reply_classes_proved,18 of 18,classes,quoridor-frontier-research/results/3x9_w10/audit/core_only/summary.json
+upper_legal_replies_covered,35 of 35,replies,quoridor-frontier-research/results/3x9_w10/audit/core_only/summary.json
+upper_nodes_conservative,9309248724,nodes,quoridor-frontier-research/results/3x9_w10/audit/core_only/summary.json
+upper_time_conservative,1805.559,seconds,quoridor-frontier-research/results/3x9_w10/audit/core_only/summary.json
+upper_solver_sha256,ff11c2530a15c534922d4348f7cf0d9e66366f7742951fb38e8550a375e5837c,hash,quoridor-frontier-research/RESULTS.md
+lower_bound_no_win_through,33,plies,quoridor-frontier-research/results/3x9_w10/audit/lower_bound_33/summary.json
+lower_first_move_classes_refuted,18 of 18,classes,quoridor-frontier-research/results/3x9_w10/audit/lower_bound_33/summary.json
+lower_nodes,3553060577,nodes,quoridor-frontier-research/results/3x9_w10/audit/lower_bound_33/summary.json
+lower_time,716.472,seconds,quoridor-frontier-research/results/3x9_w10/audit/lower_bound_33/summary.json
+monolithic_3x9x9_nodes,1909467037,nodes,quoridor-frontier-research/RESULTS.md
+monolithic_3x9x9_time,452.349,seconds,quoridor-frontier-research/RESULTS.md
+replication_upper_classes,18 of 18,classes,claude-help/replication/AGGREGATE_upper_pc.json
+replication_upper_nodes_perclass_tt,5402042173,nodes,claude-help/replication/AGGREGATE_upper_pc.json
+replication_upper_nodes_shared_tt,1560000000 (approx; laptop run),nodes,claude-help/replication/AGGREGATE_upper.json
+replication_lower_refutations,18 of 18,classes,claude-help/replication/AGGREGATE_lower.json
+replication_lower_nodes,2505091973,nodes,claude-help/replication/AGGREGATE_lower.json
+replication_lower_time,1171,seconds,claude-help/replication/AGGREGATE_lower.json
+replication_3x9x9_classes,18 of 18,classes,claude-help/replication9/AGGREGATE_upper9.json
+replication_3x9x9_nodes,6577365458,nodes,claude-help/replication9/AGGREGATE_upper9.json
+determinism_reply19_nodes,79766979,nodes,claude-help/REVIEW-sol.md section 2.3
+determinism_reply27_nodes,142908257,nodes,claude-help/REVIEW-sol.md section 2.3
+determinism_root31_nodes,44048383,nodes,claude-help/REVIEW-sol.md section 2.3
+wall_configs_3x9x10,2929319,configurations,quoridor-frontier-research/RESULTS.md (two independent counts)
+wall_transitions_3x9x10,24832956,transitions,quoridor-frontier-research/RESULTS.md (two independent counts)

@@ -1,0 +1,74 @@
+{
+  "schema": "qcert-production-verification-receipt-v1",
+  "date": "2026-08-01",
+  "status": "accepted-branch-only",
+  "scope_warning": "This receipt verifies one qcert-1 branch rooted after P:22,H:1:0. It is not the 18-part initial-position aggregate certificate.",
+  "certificate": {
+    "logical_name": "H10.qcert1.jsonl",
+    "sha256": "961df2b3b91ba136404f5a24fd2a98c1ed886a3443ab5cfd71f4abddbaeff1d4",
+    "bytes": 881735925,
+    "compression": "none",
+    "hash_recomputed_after_run": true
+  },
+  "claim": {
+    "scope": "branch-position",
+    "width": 3,
+    "height": 9,
+    "walls": 10,
+    "winner": 1,
+    "bound": 31,
+    "root": {"p1":22,"p2":1,"r1":10,"r2":9,"turn":0,"hw":4,"vw":0},
+    "unverified_prefix_context": ["P:22", "H:1:0"]
+  },
+  "verifier": {
+    "command": "python reference/qcert_verify_sqlite.py ../claude-help/work/H10.qcert1.jsonl --database build/H10.qcert.sqlite3 --progress-every 250000",
+    "exit_code": 0,
+    "source_sha256": "d8addf93a09a7f01693ebb09490801346a1368450ddf3b15c340c9fc39bdfa93",
+    "rules_sha256": "d83ac0d092ded9bb6f29bbdfca6e1c367039bc89cd2b4dfd103e65b908d3723b",
+    "python": "3.13.14",
+    "sqlite": "3.50.4",
+    "started_local": "2026-08-01T22:17:09+02:00",
+    "finished_local": "2026-08-01T22:37:49+02:00"
+  },
+  "result": {
+    "ok": true,
+    "error_count": 0,
+    "verified_transforms": ["identity"],
+    "root_is_initial_position": false,
+    "root_budget": 31,
+    "root_declared_move": "P:19",
+    "root_node_line": 8224360,
+    "nodes": 9836857,
+    "target_nodes": 6465147,
+    "opponent_nodes": 3371710,
+    "edges_checked": 25175363,
+    "configuration_profiles": 221621,
+    "wall_candidate_profiles": 163295,
+    "profile_wall_candidates": 1317208,
+    "wall_candidates_checked": 26334246,
+    "ingest_seconds": 833.402,
+    "verify_seconds": 405.834,
+    "total_seconds": 1239.327
+  },
+  "persistent_index": {
+    "bytes": 313151488,
+    "sha256": "41d3803d2a1b81ce5201784a2055b1f33cecf130c7226e4c782e4f738aabfca7",
+    "sqlite_quick_check": "ok",
+    "row_count": 9836857,
+    "metadata_error_count": 0,
+    "metadata_hashes_match_receipt": true
+  },
+  "raw_run_outputs": {
+    "stdout": {
+      "sha256": "491f973b19162e2bf639380e76448e50b50e11c125c35eb9a9c20dcb687a1335",
+      "bytes": 2256,
+      "encoding": "UTF-16LE with BOM (Windows PowerShell redirection)"
+    },
+    "stderr": {
+      "sha256": "db6a29b67cd25ba5d1366d2a3b59922a150a14ad0138fb59f92865726c1a45ba",
+      "bytes": 8276,
+      "encoding": "UTF-16LE with BOM (Windows PowerShell redirection)"
+    },
+    "location": "ignored build/ directory; hashes retained here"
+  }
+}

@@ -1,0 +1,8 @@
+[1/18] rep 0: running
+[1/18] rep 0: proved width=3 height=9 walls=10 solved=1 winner=1 depth=33 nodes=781910388 tt_hits=358921507 cutoffs=176495521 pawn_table_hits=0 seconds=182.243 timeout=0
+[2/18] rep 1: running
+[2/18] rep 1: proved width=3 height=9 walls=10 solved=1 winner=1 depth=31 nodes=389037657 tt_hits=180919961 cutoffs=83416270 pawn_table_hits=0 seconds=91.199 timeout=0
+[3/18] rep 3: running
+[3/18] rep 3: proved width=3 height=9 walls=10 solved=1 winner=1 depth=31 nodes=104526068 tt_hits=49085559 cutoffs=22790882 pawn_table_hits=0 seconds=21.9765 timeout=0
+[4/18] rep 5: running
+[4/18] rep 5: unresolved 

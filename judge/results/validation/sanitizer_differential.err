@@ -1,0 +1,8 @@
+configs=301 enumerate=0.000491071s
+index=301 time=0.000164144s
+
+board tables time=0.000519693s
+symmetry time=0.00017433s
+
+transitions=988 time=0.000204034s
+dense_tables~39.4KiB total_precompute=0.00160985s

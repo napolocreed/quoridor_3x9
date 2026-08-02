@@ -1,0 +1,8 @@
+/bin/
+/build/
+/runlogs/
+*.tmp
+*.swp
+
+__pycache__/
+*.pyc

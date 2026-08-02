@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+python3 "$ROOT/scripts/verify_replies.py" \
+  --solver "$ROOT/bin/frontier_solver" \
+  --width 3 --height 9 --walls 10 \
+  --root-index 0 --target 1 \
+  --start-depth 31 --max-depth 35 \
+  --seconds "${SECONDS_PER_BRANCH:-1200}" \
+  --tt-bits "${TT_BITS:-26}" --order 1 \
+  --no-pawn-table \
+  --jobs "${JOBS:-1}" \
+  --outdir "${OUTDIR:-$ROOT/runlogs/3x9_w10_d35_no_pawn_table}"

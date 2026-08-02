@@ -1,0 +1,13 @@
+item,value,unit,source_path
+verdicts_preserved,18 of 18,first-move refutation classes,claude-help/replication/LOWERSEED.log + lowerseed_*.json
+baseline_nodes,2505091973,nodes,claude-help/replication/AGGREGATE_lower.json
+seeded_nodes,2006736746,nodes (-19.9 pct),claude-help/replication/lowerseed_*.json
+baseline_time,1171,seconds,claude-help/replication/AGGREGATE_lower.json
+seeded_time,768,seconds (-34.4 pct),claude-help/replication/LOWERSEED.log
+central_pawn_class_gain,-31.3 pct nodes / -44.9 pct time,largest class (P71),claude-help/IDEES_SWEEP.md P2
+merged_unique_states,162.6M unique of 287.8M certified (43 pct shared across reply branches),states,claude-help/IDEES_SWEEP.md P2
+v1_multi_table_negative,16 sequential per-reply tables lose node gains to memory traffic (2.4x wall time),negative sub-result,claude-help/IDEES_SWEEP.md P2 (v1 probed 16 tables; corrected from 18 during fact-check)
+no_seed_inertia,node-exact reproduction of archived runs,control,claude-help/replication/LOWERSEED.log
+mlp_probe_states,5.4M (300k x 18 classes; 2 classes fully held out),labeled states,claude-help/EXPERIENCE_DATASET.md
+mlp_probe_top3,97 pct global; 86-87 pct on wall moves; no holdout degradation (0.878 vs 0.877 top-1),accuracy (lower bounds; single optimal move labeled),claude-help/EXPERIENCE_DATASET.md
+mlp_probe_cost,~90k parameters; minutes of CPU training; ~10 us/state inference,cost,claude-help/EXPERIENCE_DATASET.md

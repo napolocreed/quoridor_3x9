@@ -1,0 +1,5 @@
+forcing root[0] move=P(5,2)
+forcing second[0] move=P(1,2)
+forcing third[1] move=H(5,2)
+TT=768.0MiB ways=2 lazy_cache stock_cap=0 local_threshold=0 local_max=0 local_table=392.0KiB
+depth=24 target=1 proven=0 nodes=188871962 total=188871962 elapsed=44.4301s tt_hits=65757748 cache=1732117

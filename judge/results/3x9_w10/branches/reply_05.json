@@ -1,0 +1,30 @@
+{
+  "aliases": [
+    5,
+    6
+  ],
+  "child_depth": 31,
+  "cutoffs": 41298927,
+  "files": {
+    "returncode": "results/3x9_w10/branches/reply_05.rc",
+    "stderr": "results/3x9_w10/branches/reply_05.err",
+    "stdout": "results/3x9_w10/branches/reply_05.out"
+  },
+  "forced_reply": "H(2,0)",
+  "max_rss_kib": 1887384,
+  "nodes": 196600639,
+  "pawn_table_hits": 38099,
+  "recorded_command": "/mnt/data/quoridor-frontier-research/bin/frontier_solver --width 3 --height 9 --walls 10 --root-index 0 --root-index2 5 --target 1 --start-depth 31 --max-depth 33 --seconds 300 --tt-bits 26 --order 1",
+  "representative": 5,
+  "search_seconds": 43.196,
+  "sha256": {
+    "returncode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "stderr": "b49749b9607b7eb009684f52ba215fd230bd73f7c556005e12e8c02ac0f9c185",
+    "stdout": "f4415778df297a2e0646101f36cb81269e0608669bb339600c2e6b3aa0f32ce5"
+  },
+  "solved": true,
+  "timeout": false,
+  "total_depth_upper_bound": 33,
+  "tt_hits": 92331173,
+  "winner": 1
+}

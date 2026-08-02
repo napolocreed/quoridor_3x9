@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "case": {
+    "width": 4,
+    "height": 7,
+    "walls_per_player": 7
+  },
+  "claim": "Player 2 cannot force a win within 26 plies",
+  "status": "proved_bounded_negative",
+  "target": "Player2",
+  "completed_depth": 26,
+  "total_nodes": 901837164,
+  "total_seconds": 239.141,
+  "timeouts": 0,
+  "search_configuration": {
+    "distance_bound_enabled": false,
+    "pawn_only_table_enabled": false,
+    "tt_bits": 26,
+    "tt_bytes": 805306368,
+    "full_64_bit_key_comparison": true
+  },
+  "precompute": {
+    "wall_configurations": 16368423,
+    "one_wall_transitions": 155145930
+  },
+  "iterations": [
+    {
+      "depth": 24,
+      "proven": false,
+      "iteration_nodes": 409272671,
+      "cumulative_nodes": 409272671,
+      "elapsed_seconds": 107.243,
+      "tt_hits": 167841035
+    },
+    {
+      "depth": 26,
+      "proven": false,
+      "iteration_nodes": 492564493,
+      "cumulative_nodes": 901837164,
+      "elapsed_seconds": 239.141,
+      "tt_hits": 376812110
+    }
+  ],
+  "source_commit": "b8c96e7"
+}

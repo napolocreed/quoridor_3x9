@@ -1,0 +1,11 @@
+configs=1 enumerate=1.9199e-05s
+index=1 time=2.654e-06s
+
+board tables time=2.914e-06s
+symmetry time=8.51e-07s
+
+transitions=0 time=1.872e-06s
+dense_tables~104B total_precompute=4.1792e-05s
+TT=disabled bounds=0 pawn_table=0
+depth=2 target=2 proven=0 nodes=7 total=7 elapsed=1.7927e-05s tt_hits=0
+depth=4 target=2 proven=1 nodes=15 total=22 elapsed=2.4106e-05s tt_hits=0

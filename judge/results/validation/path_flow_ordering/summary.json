@@ -1,0 +1,113 @@
+{
+  "cache_sizing": {
+    "bits16": {
+      "bytes": 5767168,
+      "hits": 25820000,
+      "misses": 3220000,
+      "seconds": 9.94
+    },
+    "bits18": {
+      "bytes": 23068672,
+      "hits": 26840000,
+      "misses": 2200000,
+      "seconds": 9.57
+    },
+    "bits20": {
+      "bytes": 92274688,
+      "hits": 27450000,
+      "misses": 1590000,
+      "seconds": 9.48
+    },
+    "decision": "18 bits remains the compute-node default; 20 bits buys little for about 69 MiB extra per process.",
+    "depth": 31,
+    "position": [
+      "P(7,1)",
+      "V(1,0)"
+    ]
+  },
+  "date": "2026-08-01",
+  "decision": "promote as an optional exact portfolio policy; retain baseline as control and choice40 as a complementary specialist",
+  "feature": "whole shortest-path DAG wall-flow ordering",
+  "portfolio_policy": {
+    "args": [
+      "--path-choice-weight",
+      "0",
+      "--path-flow-weight",
+      "1",
+      "--path-flow-cache-bits",
+      "18"
+    ],
+    "name": "flow1"
+  },
+  "proof_semantics": "ordering only; no pruning",
+  "reconstruction": [
+    {
+      "archived_nodes": 2326659,
+      "archived_tt_hits": 544616,
+      "current_nodes": 2326659,
+      "current_tt_hits": 544616,
+      "depth": 16,
+      "position": [
+        "P(5,2)",
+        "P(1,2)",
+        "H(5,2)"
+      ]
+    },
+    {
+      "archived_nodes": 47214748,
+      "archived_tt_hits": 12223522,
+      "current_nodes": 47214748,
+      "current_tt_hits": 12223522,
+      "depth": 18,
+      "position": [
+        "P(5,2)",
+        "P(1,2)",
+        "P(4,2)"
+      ]
+    }
+  ],
+  "scale": 1000,
+  "stable_3x9_results": [
+    {
+      "baseline_nodes": 79800528,
+      "baseline_seconds": 15.9958,
+      "choice40_nodes": 79495380,
+      "choice40_seconds": 17.6837,
+      "depth": 31,
+      "flow1_nodes": 37279448,
+      "flow1_seconds": 9.49306,
+      "flow1_tt_hits": 17006228,
+      "position": [
+        "P(7,1)",
+        "V(1,0)"
+      ]
+    },
+    {
+      "comparison_note": "No baseline timing is claimed from interrupted exploratory runs.",
+      "depth": 31,
+      "flow1_nodes": 89887471,
+      "flow1_seconds": 23.235,
+      "flow1_tt_hits": 41918146,
+      "position": [
+        "P(7,1)",
+        "H(1,0)"
+      ]
+    },
+    {
+      "baseline_nodes": 142948371,
+      "baseline_seconds": 29.8567,
+      "depth": 31,
+      "flow1_nodes": 50633369,
+      "flow1_seconds": 13.1725,
+      "flow1_tt_hits": 22596147,
+      "position": [
+        "P(7,1)",
+        "V(5,0)"
+      ]
+    }
+  ],
+  "supported_flags": [
+    "--path-flow-weight",
+    "--path-flow-cache-bits"
+  ]
+}
