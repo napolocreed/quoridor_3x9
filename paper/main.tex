@@ -65,8 +65,8 @@ For narrow Quoridor boards a public frontier table~\cite{slatton2026solving} rec
 \item \textbf{C1.} An independently checkable certificate stack (\textsf{qcert-1} parts, \textsf{qcert-aggregate-1} composition): 18 parts verified exhaustively by a clean-room verifier (zero violations over all 35 replies), and an accepted cross-architecture aggregate binding all 18 parts to the initial-position claim.
 \item \textbf{C2.} A no-stalemate theorem for boards of height $\geq 3$ with a sharp height-2 counterexample, turning a documented semantics/code divergence into proved dead code for all published claims.
 \item \textbf{C3.} A replication methodology---conservative audits, node-exact cross-toolchain determinism spot checks, differential validation against clean-room rule engines---reusable as an evidence standard for computational game solving.
-\item \textbf{C4.} Exact partial bounds for the next open cell, \varSpec{4}{7}{7}: neither player forces a win within 26 plies; the central opening forces no first-player win within 27.
-\item \textbf{C5.} Measured move-ordering effects on certified branches (2--13$\times$ node reductions), a horizon-reversal caution against shallow pilot benchmarks, and four audited negative results.
+\item \textbf{C4.} Exact partial bounds for the next open cell, \varSpec{4}{7}{7}: neither player forces a win within 26 plies; the central opening forces no first-player win within 27 (Appendix~\ref{sec:fourseven}).
+\item \textbf{C5.} Measured move-ordering effects on certified branches (2--13$\times$ node reductions), a horizon-reversal caution against shallow pilot benchmarks, and four audited negative results (Appendix~\ref{sec:ordering}).
 \end{itemize}
 
 \begin{figure}[t]
@@ -119,7 +119,9 @@ For board games the natural certificate is the same object---a winning strategy 
 
 \subsection{Bounded proof semantics}
 
-All solvers in this paper decide the bounded predicate $\mathrm{Win}(s,T,d)$: from state $s$, can player $T$ force a win within $d$ plies? The recursion is existential at $T$'s turns and universal at the opponent's, with terminal wins checked at entry and depth measured in plies. Transposition entries store monotone facts (``$T$ wins within $d_1$'', ``$T$ does not win within $d_2$'')~\cite{zobrist1970new,knuth1975analysis}; keeping the remaining depth in the state avoids the graph-history-interaction pathology~\cite{kishimoto2004general}. Because a first-player win can end only on an odd ply, exact horizons follow from an upper bound at $d$ and an exhaustive refutation at $d-2$.
+All solvers in this paper decide the bounded predicate $\mathrm{Win}(s,T,d)$: from state $s$, can player $T$ force a win within $d$ plies? The recursion is existential at $T$'s turns and universal at the opponent's, with terminal wins checked at entry and depth measured in plies (pseudocode in Appendix~\ref{app:pseudo}). Transposition entries store monotone facts (``$T$ wins within $d_1$'', ``$T$ does not win within $d_2$'')~\cite{zobrist1970new,knuth1975analysis}; keeping the remaining depth in the state avoids the graph-history-interaction pathology~\cite{kishimoto2004general}. Because a first-player win can end only on an odd ply, exact horizons follow from an upper bound at $d$ and an exhaustive refutation at $d-2$.
+
+A note on draws and repetitions. The bounded predicate needs no repetition rule and no draw adjudication: $\mathrm{Win}(s,T,d)$ quantifies over \emph{all} continuations of at most $d$ plies, cyclic ones included---a line that revisits a position simply burns budget, which only hurts the attacker. Consequently the published claims are statements about $\mathrm{Win}$, not about any unbounded game value under a particular repetition or draw convention: ``first-player win in exactly 35 plies'' means $\mathrm{Win}(s_0,P_1,35)$ holds and $\mathrm{Win}(s_0,P_1,33)$ fails. Under any full-game semantics in which unbounded play without a win is not a win for Player~1 (draw or loss alike), these bounded facts transfer to ``Player~1 wins, and needs 35 plies against best defense''; the semantic boundary is stated here so that no such convention is smuggled in implicitly.
 
 One documented divergence existed between the semantics document and the implementations: the value of a universal node with \emph{zero legal moves} (a stalemate). The mathematical convention (empty conjunction) makes it a win for $T$; the code returns \texttt{false} for both targets. If stalemates were reachable, bounded verdicts could depend on the convention. We close this loophole with a theorem rather than an assumption.
 
@@ -140,7 +142,7 @@ On any board with $H\geq 3$, any width and any wall stocks, every legal non-term
 Suppose the mover $A$ at cell $p$ has no pawn move. Since the state is non-terminal and legal, $p$'s component contains a goal-row cell other than $p$, so $p$ has an unblocked neighbor; if that neighbor were empty it would be a legal step, so $p$'s \emph{only} unblocked neighbor is the opponent's cell $n$. The failed jump and both failed diagonals then force every edge at $n$ other than $n$--$p$ to be blocked or out of bounds, so the component of $p$ is exactly $\{p,n\}$. Applying legality \emph{twice}---once per pawn---this two-cell prison must contain a cell of row $0$ and a cell of row $H-1$; adjacency gives $H\leq 2$. \qedhere
 \end{proof}
 
-Two features of the proof matter. First, it needs \emph{both} pawns' connectivity: the mover-only argument (``the first vertex of the mover's shortest path is free, jumpable, or bypassable'') is irreparable, because the mover's path may legitimately run through the opponent's cell. Second, it never uses the geometric wall-placement rules, only connectivity, so it covers the audits' enumeration domain a fortiori. The full one-page proof, including the jump/diagonal edge case analysis, is archived with the artifacts.
+Two features of the proof matter. First, it needs \emph{both} pawns' connectivity: the mover-only argument (``the first vertex of the mover's shortest path is free, jumpable, or bypassable'') is irreparable, because the mover's path may legitimately run through the opponent's cell. Second, it never uses the geometric wall-placement rules, only connectivity, so it covers the audits' enumeration domain a fortiori. The full proof, including the jump/diagonal edge case analysis, is given in Appendix~\ref{app:stalemateproof}.
 
 \begin{figure}[t]
 \centering
@@ -214,7 +216,7 @@ Two exact solvers of deliberately different architecture, three clean-room rule 
 
 \subsection{Engine A: eager enumeration}
 
-The primary solver pre-enumerates all legal wall configurations of the variant (2{,}929{,}319 for \varSpec{3}{9}{10}; 16{,}368{,}423 for \varSpec{4}{7}{7}) and stores, per configuration, goal reachability, distances, movement edges, legal wall additions, and symmetry transforms. Search is the bounded existential/universal recursion---AND/OR proof search in the tradition of~\cite{allis1994proof,allis1994searching}---with iterative deepening, horizontal-mirror and 180$^\circ$ player-swap symmetry, depth-parity normalization, and a two-slot transposition table with full-key equality. Move ordering affects performance only; verdicts are ordering-invariant, a property the portfolio harness enforces by construction (Section~\ref{sec:ordering}).
+The primary solver pre-enumerates all legal wall configurations of the variant (2{,}929{,}319 for \varSpec{3}{9}{10}; 16{,}368{,}423 for \varSpec{4}{7}{7}) and stores, per configuration, goal reachability, distances, movement edges, legal wall additions, and symmetry transforms. Search is the bounded existential/universal recursion---AND/OR proof search in the tradition of~\cite{allis1994proof,allis1994searching}---with iterative deepening, horizontal-mirror and 180$^\circ$ player-swap symmetry, depth-parity normalization, and a two-slot transposition table with full-key equality. Move ordering affects performance only; verdicts are ordering-invariant, a property the portfolio harness enforces by construction (Appendix~\ref{sec:ordering}).
 
 \subsection{Engine B: lazy replication solver}
 
@@ -248,6 +250,13 @@ Union-find gate vs.\ BFS (Engine B) & 121{,}418 verdicts \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\subsection{Measurement conventions and environments}
+\label{sec:measurement}
+
+Throughout the paper, one \emph{node} is one entry into the bounded recursion $\mathrm{Win}(s,T,d)$---counted at function entry, before terminal, transposition, and pruning checks resolve the call---in both engines. The two engines' node counts are \emph{not} directly comparable: they differ in symmetry normalization, transposition policy, and move ordering, so cross-engine ratios measure architecture, not difficulty. For the verifiers, one \emph{expansion} (exhaustive C++ verifier) is one state whose local obligations are actually checked---states already verified at an equal or smaller remaining budget are memoized and not recounted---and one \emph{regenerated edge obligation} (streaming aggregate verifier) is one legal move regenerated from the independent rules engine and checked against the certificate's local obligations.
+
+Principal environments, archived with the artifacts: the Engine~A conservative audits ran in a Debian container (g++ 14.2.0, \texttt{-O3 -DNDEBUG -std=c++20 -march=native}) on an AMD EPYC 9V74 slice (5 vCPU, 4~GiB cgroup memory limit); Engine~B production runs, the certificate pipeline, and the aggregate verification ran on a 12-core Windows~11 machine under MSYS2 g++ 16.1; the cross-toolchain reproduction machine ran Ubuntu 24.04 with g++ 13.3. The frozen specification documents are pinned by SHA-256 in the bundle manifest: \texttt{RULES.md} at \texttt{0f9a91d1a126fbd2$\ldots$} and \texttt{PROOF\_SEMANTICS.md} at \texttt{7f70c21e4f861edd$\ldots$} (full hashes in \texttt{MANIFEST.sha256} at the archived commit).
 
 \subsection{Determinism as a reproducibility fingerprint}
 
@@ -299,7 +308,7 @@ Replication still asks a skeptic to trust two searches. The certificate layer re
 
 \subsection{Format}
 
-A \textsf{qcert-1} certificate is a JSONL strategy DAG for a claim ``player $T$ wins from root $r$ within $d$ plies.'' Each line is one deduplicated state with its certified rank; at states where $T$ moves it declares the strategy move. The verifier's obligations are purely local: the root is present at rank $\leq d$; at every $T$-node the declared move is legal and leads to a node of strictly smaller rank (or an immediate terminal win); at every opponent node \emph{all} legal replies are covered by nodes of strictly smaller rank; terminal states are wins for $T$. Rank strict decrease makes well-foundedness a syntactic property---no cycle can certify---and the ply bound becomes arithmetic on ranks. The format stores certified ranks rather than exact distances-to-mate: any consistent decreasing assignment is sound, which keeps emission cheap. A hardened lexical layer (UTF-8 without BOM, safe-integer grammar, gzip integrity binding) is shared by all verifiers; adversarial corpora of 10, 20, and 33 corruption families are rejected by the in-memory, streaming, and aggregate verifiers respectively. The local-obligation design deliberately mirrors clausal proof checking in SAT~\cite{wetzler2014drattrim}, whose certificates have scaled to hundreds of terabytes~\cite{heule2016solving}.
+A \textsf{qcert-1} certificate is a JSONL strategy DAG for a claim ``player $T$ wins from root $r$ within $d$ plies.'' Each line is one deduplicated state with its certified rank; at states where $T$ moves it declares the strategy move. The verifier's obligations are purely local: the root is present at rank $\leq d$; at every $T$-node the declared move is legal and leads to a node of strictly smaller rank (or an immediate terminal win); at every opponent node \emph{all} legal replies are covered by nodes of strictly smaller rank; terminal states are wins for $T$. Rank strict decrease makes well-foundedness a syntactic property---no cycle can certify---and the ply bound becomes arithmetic on ranks (the obligations are listed as inference rules in Appendix~\ref{app:pseudo}). The format stores certified ranks rather than exact distances-to-mate: any consistent decreasing assignment is sound, which keeps emission cheap. A hardened lexical layer (UTF-8 without BOM, safe-integer grammar, gzip integrity binding) is shared by all verifiers; adversarial corpora of 10, 20, and 33 corruption families are rejected by the in-memory, streaming, and aggregate verifiers respectively. The local-obligation design deliberately mirrors clausal proof checking in SAT~\cite{wetzler2014drattrim}, whose certificates have scaled to hundreds of terabytes~\cite{heule2016solving}.
 
 \begin{figure}[t]
 \centering
@@ -368,6 +377,90 @@ The production aggregate over the 18 real parts has been accepted. Every part pa
 
 What must a skeptic still trust? (i) that \texttt{RULES.md} captures the intended game---checked socially, and against the public table on six solved variants; (ii) the verifier they choose to run---each is small, search-free, and available in three independent implementations (in-memory JS, streaming Python/SQLite, exhaustive C++), written by different parties, two of them clean-room; and (iii) ply arithmetic. Notably \emph{excluded} from the trusted base: both solvers, the transposition logic, the symmetry code, the pruning modules, and the extraction pipeline. The lower bound (no win within 33) is the one claim not yet certificate-backed; it rests on the dual-solver exhaustive refutations, and Section~\ref{sec:limits} sketches survival certificates as the designed remedy.
 
+\section{Limitations and Future Work}
+\label{sec:limits}
+
+\textbf{Not a machine-checked proof.} The result is a certificate-checked computational claim, not a formalized theorem. The trusted base (Section~\ref{sec:cert}) is small but informal: a rules document read by humans and four independent implementations. Formalizing \textsf{qcert-1} checking in a proof assistant, following the SAT community's path~\cite{tan2021cakelpr}, is the natural next step and the format was designed to make it cheap (local obligations, syntactic well-foundedness).
+
+\textbf{The lower bound is uncertified.} ``No win within 33'' rests on replicated exhaustive refutations by two solvers. The designed remedy is a \emph{survival certificate}: at every defender node, a move keeping the attacker from winning for $\geq k$ further plies, with the verifier enumerating all attacker moves---the same machinery with the quantifiers exchanged. Its cost is unmeasured (the DAG branches on the attacker's side); small-variant estimation comes first.
+
+\textbf{Shared lineage.} ``Independence'' in this paper decomposes as follows: the two solvers share no code, no state representation, and (mostly) no algorithms, but they do share the frozen specification documents and a single coordinated research process; they are independent implementations, not independent institutional replications. The verifiers share no code with either solver, and two of them were written from the specifications alone; all components nonetheless share the same rules reading. The clean-room engines mitigate but do not eliminate specification risk. The strongest external check available---agreement with the public table~\cite{slatton2026solving} on six fully solved variants and on the qualitative wall-count structure of the $3\times 9$ row---is consistent throughout.
+
+\textbf{Open frontier.} \varSpec{4}{7}{7} remains open: 38 first moves await refutation at ply 27 (or a win witness), with the manifest prepared and exact partial bounds already in place (Appendix~\ref{sec:fourseven}). Beyond it lie the remaining $4\times 7$ stocks and the $7\times 5$ geometry. On the methods side, the certified corpora themselves are new research material: 287.8 million certified states annotated with winning moves and strictly decreasing upper-bound ranks (certified moves need not be depth-optimal, and ranks are consistent bounds, not exact distances to mate) form a supervision set for learned ordering selectors; a small feasibility probe on this corpus is archived with the artifacts, and a proper study---dataset splits, leakage analysis, and full-depth regret evaluation against exact portfolios---is future work. One small theory item still awaits a clean write-up: the wall-stock Pareto dominance lemma already used by the lazy engine.
+
+\textbf{Artifact availability.} The complete artifact bundle (solver, replication line, certificate pipeline, verifiers, audit records, proof journals) is published at \url{https://github.com/napolocreed/quoridor_3x9} and archived at DOI \texttt{10.5281/zenodo.21763852}. The repository tree is byte-pinned by a SHA-256 manifest checked in CI and by a top-level \texttt{verify\_bundle.py} entry point; the multi-gigabyte certificate parts ship as release assets whose SHA-256 hashes are pinned inside the tree (certificate parts compress to practical sizes, gzip $\approx$7$\times$ on JSONL exports). The frontier-table maintainer has been contacted regarding the review format for updating the public record.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+The two open $3\times 9$ cells of the public Quoridor frontier are closed: first-player wins at 9 and 10 walls per player, the latter in exactly 35 plies. The 35-ply upper bound is backed by independently checkable strategy certificates; exactness additionally relies on replicated exhaustive refutations showing that no first-player win exists within 33 plies. The result comes with an unusually extensive evidence package for a classical board-game solving claim: conservative audits, deterministic node-count fingerprints reproduced across toolchains on representative classes, full replication by a structurally different solver, a theorem eliminating the one semantic loophole, and---new to this setting---a solver-independent strategy certificate, verified exhaustively per reply and accepted end to end for the initial position by a second independent verifier. Certificates change the economics of belief in such results: checking is cheaper than solving, delegable, and robust to every defect class that plagues search code. We expect the practice to transfer well beyond Quoridor.
+
+\section*{Acknowledgments and Disclosure}
+
+The computational research reported here was carried out by two AI systems working as coordinated but mutually auditing agents---GPT~5.6 (``sol''), which built the primary solver and audit apparatus, and Claude (Anthropic), which built the replication solver, the certificate pipeline, and the clean-room verifiers---under the direction of the human author, on consumer hardware. The project began as the author's informal comparison of the two systems on the same research question; when their independent results outgrew the author's ability to adjudicate between them, the comparison was restructured into the mutually auditing protocol this paper describes. Cross-review documents, coordination logs, and both codebases are part of the published artifacts. The human author assumes sole responsibility for the frozen rules specification, the stated theorems, the selection of experiments, the published artifacts, and the final scientific claims. The author thanks Grant Slatton for maintaining the public frontier table that motivated this work.
+
+
+\appendices
+
+\section{Full Proof of the No-Stalemate Theorem}
+\label{app:stalemateproof}
+
+This appendix gives the complete proofs of the lemma and theorem of Section~\ref{sec:semantics}, following the archived theorem document (\texttt{emitter/STALEMATE\_THEOREM.md}) verbatim in substance. Wall-connectivity is the graph on cells whose edges are the orthogonally adjacent pairs not blocked by a wall; pawns never block edges of this graph (the rules define wall legality on unblocked cell edges; pawns are not walls, a pawn-transparent reading adopted identically by every engine in this paper).
+
+\begin{proof}[Proof of the path invariant (Lemma 1)]
+By induction over the move sequence. \emph{Base:} the initial position has no walls; the board is one component containing all rows. \emph{Wall placement:} legality explicitly requires that, after placement, each pawn has a path from its current cell to its own goal row---precisely the invariant. \emph{Pawn move:} walls are unchanged, so components are unchanged; it suffices to show the moving pawn stays in its component. A \emph{step} traverses an unblocked edge, so origin and destination are in one component. A \emph{straight jump} over the opponent at $n$ to $z$ requires the edges $p$--$n$ and $n$--$z$ unblocked, so $p$ and $z$ are connected through $n$. A \emph{diagonal} to a perpendicular neighbor $z$ of $n$ requires the approach edge $p$--$n$ and the connecting edge $n$--$z$ unblocked, so again $p$ and $z$ are connected through $n$. The non-moving pawn does not move.
+\end{proof}
+
+Two reading notes. (a) The jump and diagonal cases assume the approach edge $p$--$n$ is unblocked; the rules' special-move clause (``when the opposing pawn occupies that adjacent cell'') refers to a cell reachable over an unblocked shared edge, and every implementation reads it that way. Under the alternative reading (special moves across a blocked approach edge) the theorem below survives a fortiori---more available moves only helps the mover---but the lemma's diagonal case needs the presupposition. (b) With two pawns, jump and diagonal destinations are never occupied: the only other pawn sits at $p$, in the approach direction.
+
+\begin{proof}[Proof of Theorem 1 (no stalemate, $H\geq 3$)]
+Call a state \emph{legal} when the two pawns occupy distinct cells and each pawn's cell lies in the same wall-connectivity component as a cell of its goal row---the exact enumeration domain of the exhaustive audits, with no reachability requirement; by the lemma, every reachable state is legal. Suppose for contradiction that in some legal non-terminal state the player to move---call them $A$, pawn at $p$, goal row $g_A$---has no legal pawn move. Write $B$ for the opponent, pawn at $n$, goal row $g_B$; $\{g_A,g_B\}=\{0,H-1\}$.
+
+\emph{Step 1: $p$ has at least one unblocked neighbor.} The state is non-terminal, so $p$ is not on row $g_A$. By legality, $p$'s component contains a cell of row $g_A$, hence a cell other than $p$, hence the component has at least two cells and $p$ has an unblocked edge.
+
+\emph{Step 2: every unblocked neighbor of $p$ is occupied by $B$.} An empty unblocked neighbor is always a legal step. There is only one opponent, so $p$ has exactly one unblocked neighbor, namely $B$'s cell $n$.
+
+\emph{Step 3: $n$'s only unblocked edge is $n$--$p$.} Since $A$ has no legal move: the straight jump fails, so the cell behind $n$ (in direction $p\to n$) is out of bounds or its edge from $n$ is blocked; by the rules, diagonals are then available, and both fail, so each perpendicular neighbor of $n$ is out of bounds or its edge from $n$ is blocked. The four potential edges at $n$ are: toward $p$ (unblocked, by Step~2), straight behind, and the two perpendiculars. Hence $n$'s unblocked edges are exactly $\{n\text{--}p\}$.
+
+\emph{Step 4: the component of $p$ is exactly $\{p,n\}$.} By Steps 2 and 3.
+
+\emph{Step 5: contradiction.} Applying legality to $A$: row $g_A$ intersects $\{p,n\}$; $p$ is not on $g_A$ (non-terminal), so $\mathrm{row}(n)=g_A$. Applying legality to $B$: row $g_B$ intersects $\{p,n\}$; $n$ is not on $g_B$ (non-terminal), so $\mathrm{row}(p)=g_B$. Thus $\{\mathrm{row}(p),\mathrm{row}(n)\}=\{0,H-1\}$. But $p$ and $n$ are orthogonally adjacent, so $|\mathrm{row}(p)-\mathrm{row}(n)|\leq 1$, forcing $H-1\leq 1$, i.e.\ $H\leq 2$: contradiction with $H\geq 3$.
+\end{proof}
+
+The theorem needs neither reachability nor stock consistency: it holds on the strict legal superset that the exhaustive audits enumerate (on \varSpec{4}{3}{3}: 63{,}184 legal non-terminal states versus 62{,}732 reachable---452 legal states are unreachable). It is also strictly stronger than ``no stalemate'': it guarantees a \emph{pawn} move even when the mover has walls in stock, so \texttt{stalemates\_seen}${}=0$ is a theorem for $H\geq 3$, not an empirical observation---though the counter stays in every audit as an implementation tripwire. Finally, the proof never uses the geometric wall-placement rules (no-cross, no-overlap), only connectivity, so it holds even for wall bitmasks that violate placement geometry but keep both pawns goal-connected. Sharpness at $H=2$ is witnessed by the reachable stalemate of Fig.~\ref{fig:stalemate}, which realizes exactly the two-cell prison of Step~4 with $\mathrm{row}(n)=g_A$ and $\mathrm{row}(p)=g_B$.
+
+\section{Bounded Recursion and Certificate Obligations}
+\label{app:pseudo}
+
+\subsection{The bounded predicate}
+
+Both engines decide $\mathrm{Win}(s,T,d)$ by the same recursion; they differ only in state representation, wall-legality decision, symmetry normalization, and transposition policy.
+
+\begin{enumerate}[leftmargin=*]
+\item If $s$ is terminal, return $[\text{winner}(s)=T]$.
+\item If $d=0$, return \textbf{false}.
+\item If the transposition table holds a monotone fact deciding the query---``$T$ wins within $d_1$'' with $d_1\leq d$, or ``$T$ does not win within $d_2$'' with $d_2\geq d$---return it.
+\item Let $L(s)$ be the legal moves of $s$ ($L(s)\neq\emptyset$ for pawn moves by Theorem~1, so the empty-conjunction branch is dead code for $H\geq 3$).
+\item If the player to move is $T$: result $\leftarrow \bigvee_{m\in L(s)}\mathrm{Win}(\mathrm{apply}(s,m),T,d-1)$; otherwise result $\leftarrow \bigwedge_{m\in L(s)}\mathrm{Win}(\mathrm{apply}(s,m),T,d-1)$.
+\item Store the monotone fact implied by the result at depth $d$; return it.
+\end{enumerate}
+
+One \emph{node} is one entry into this recursion (Section~\ref{sec:measurement}). Symmetry normalization maps $s$ to a canonical representative before steps 3 and 6; the conservative audits disable the admissible distance bound and the pawn-only endgame table, so the recursion above is exactly what they execute.
+
+\subsection{\textsf{qcert-1} verification obligations}
+
+A certificate for ``player $T$ wins from root $r$ within $d$ plies'' is a set of records $(s,\mathit{rank}_s,\mathit{move}_s)$, with $\mathit{move}_s$ present exactly when $T$ moves at $s$. The verifier accepts iff all of the following hold; every obligation is local to one record and its regenerated successors:
+
+\begin{enumerate}[leftmargin=*]
+\item \emph{Root:} $r$ is present with $\mathit{rank}_r\leq d$.
+\item \emph{$T$-node:} $\mathit{move}_s$ is legal in $s$ (regenerated from the rules engine), and $\mathrm{apply}(s,\mathit{move}_s)$ is either an immediate terminal win for $T$ or present with strictly smaller rank.
+\item \emph{Opponent node:} \emph{every} legal reply $m\in L(s)$ leads to a state that is an immediate terminal win for $T$ or present with strictly smaller rank.
+\item \emph{Terminal:} every terminal state in the certificate is a win for $T$.
+\item \emph{Well-foundedness:} ranks are nonnegative integers, so strict decrease along every certified line is a syntactic property---no cycle can certify---and the ply bound is arithmetic on ranks.
+\end{enumerate}
+
+Soundness is immediate by induction on $\mathit{rank}_s$: at every certified state, $T$ either wins immediately or forces play into certified states of strictly smaller rank, hence wins within $\mathit{rank}_s$ plies. The verifier never searches: it enumerates each record's obligations once, in any order.
+
 \section{Frontier Progress on $4\times 7$ Quoridor}
 \label{sec:fourseven}
 
@@ -388,7 +481,7 @@ Central opening refuted $\leq 27$ & 40/40 & 3{,}591{,}324{,}070 \\
 \end{tabular}
 \end{table}
 
-\section{Ordering Portfolios and Negative Results}
+\section{Ordering Portfolios, Race Endgames, and Negative Results}
 \label{sec:ordering}
 
 With certified branches available, move-ordering policies can be raced under a hard soundness constraint: same named branch, same verdict, fresh tables. Two findings and four audited negatives came out of this harness (Table~\ref{tab:ordering}).
@@ -424,27 +517,6 @@ Lazy \varSpec{4}{7}{7} $H(5,2)$ baseline & 223{,}188{,}594 & 47.3 \\
 \end{tabular}
 \end{table}
 
-\section{Limitations and Future Work}
-\label{sec:limits}
-
-\textbf{Not a machine-checked proof.} The result is a certificate-checked computational claim, not a formalized theorem. The trusted base (Section~\ref{sec:cert}) is small but informal: a rules document read by humans and four independent implementations. Formalizing \textsf{qcert-1} checking in a proof assistant, following the SAT community's path~\cite{tan2021cakelpr}, is the natural next step and the format was designed to make it cheap (local obligations, syntactic well-foundedness).
-
-\textbf{The lower bound is uncertified.} ``No win within 33'' rests on replicated exhaustive refutations by two solvers. The designed remedy is a \emph{survival certificate}: at every defender node, a move keeping the attacker from winning for $\geq k$ further plies, with the verifier enumerating all attacker moves---the same machinery with the quantifiers exchanged. Its cost is unmeasured (the DAG branches on the attacker's side); small-variant estimation comes first.
-
-\textbf{Shared lineage.} ``Independence'' in this paper decomposes as follows: the two solvers share no code, no state representation, and (mostly) no algorithms, but they do share the frozen specification documents and a single coordinated research process; they are independent implementations, not independent institutional replications. The verifiers share no code with either solver, and two of them were written from the specifications alone; all components nonetheless share the same rules reading. The clean-room engines mitigate but do not eliminate specification risk. The strongest external check available---agreement with the public table~\cite{slatton2026solving} on six fully solved variants and on the qualitative wall-count structure of the $3\times 9$ row---is consistent throughout.
-
-\textbf{Open frontier.} \varSpec{4}{7}{7} remains open: 38 first moves await refutation at ply 27 (or a win witness), with the manifest prepared. Beyond it lie the remaining $4\times 7$ stocks and the $7\times 5$ geometry. On the methods side, the certified corpora themselves are new research material: 287.8 million certified states annotated with winning moves and strictly decreasing upper-bound ranks (certified moves need not be depth-optimal, and ranks are consistent bounds, not exact distances to mate) form a supervision set for learned ordering selectors. A first feasibility probe supports this direction: on 5.4M sampled labeled states, a $\sim$90k-parameter MLP trained in minutes on CPU places the certified winning move in its top-3 for 97\% of states, with \emph{no} degradation on two reply classes held out entirely from training; wall placements concentrate the remaining difficulty (86--87\% top-3), and the labels come from certified play, so fidelity off the certified-line distribution---and hence any solver integration---must be evaluated as full-depth regret, which the horizon-reversal finding already constrains to races against exact portfolios. One small theory item still awaits a clean write-up: the wall-stock Pareto dominance lemma already used by the lazy engine.
-
-\textbf{Artifact availability.} The complete artifact bundle (solver, replication line, certificate pipeline, verifiers, audit records, proof journals) is published at \url{https://github.com/napolocreed/quoridor_3x9} and archived at DOI \texttt{10.5281/zenodo.21763852}. The repository tree is byte-pinned by a SHA-256 manifest checked in CI and by a top-level \texttt{verify\_bundle.py} entry point; the multi-gigabyte certificate parts ship as release assets whose SHA-256 hashes are pinned inside the tree (certificate parts compress to practical sizes, gzip $\approx$7$\times$ on JSONL exports). The frontier-table maintainer has been contacted regarding the review format for updating the public record.
-
-\section{Conclusion}
-\label{sec:conclusion}
-
-The two open $3\times 9$ cells of the public Quoridor frontier are closed: first-player wins at 9 and 10 walls per player, the latter in exactly 35 plies. The 35-ply upper bound is backed by independently checkable strategy certificates; exactness additionally relies on replicated exhaustive refutations showing that no first-player win exists within 33 plies. The result comes with an unusually extensive evidence package for a classical board-game solving claim: conservative audits, deterministic node-count fingerprints reproduced across toolchains on representative classes, full replication by a structurally different solver, a theorem eliminating the one semantic loophole, and---new to this setting---a solver-independent strategy certificate, verified exhaustively per reply and accepted end to end for the initial position by a second independent verifier. Certificates change the economics of belief in such results: checking is cheaper than solving, delegable, and robust to every defect class that plagues search code. We expect the practice to transfer well beyond Quoridor.
-
-\section*{Acknowledgments and Disclosure}
-
-The computational research reported here was carried out by two AI systems working as coordinated but mutually auditing agents---GPT~5.6 (``sol''), which built the primary solver and audit apparatus, and Claude (Anthropic), which built the replication solver, the certificate pipeline, and the clean-room verifiers---under the direction of the human author, on consumer hardware. The project began as the author's informal comparison of the two systems on the same research question; when their independent results outgrew the author's ability to adjudicate between them, the comparison was restructured into the mutually auditing protocol this paper describes. Cross-review documents, coordination logs, and both codebases are part of the published artifacts. The human author assumes sole responsibility for the frozen rules specification, the stated theorems, the selection of experiments, the published artifacts, and the final scientific claims. The author thanks Grant Slatton for maintaining the public frontier table that motivated this work.
 
 \label{ReferencesStart}
 \bibliographystyle{IEEEtran}
