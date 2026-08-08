@@ -11,7 +11,8 @@ identifiers:
     value: 10.5281/zenodo.21763852
     description: "Zenodo archive of the publication artifacts and paper preprint"
 year: 2026
-date-released: 2026-08-02
+version: "1.1"
+date-released: 2026-08-08
 license: MIT
 abstract: >-
   Publication artifacts for the paper "Solving 3x9 Quoridor with Independently

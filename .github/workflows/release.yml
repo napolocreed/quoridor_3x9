@@ -1,0 +1,228 @@
+name: release-and-archive
+
+# Manually dispatched. Creates the annotated tag + GitHub release with a
+# canonical byte-pinned tarball, then (if the ZENODO_TOKEN secret is set)
+# prepares a new version of the Zenodo deposit containing the tarball and
+# the 36 certificate-part release assets. By default the Zenodo version is
+# left as a DRAFT for human review; pass publish_zenodo=true to publish
+# directly (publishing mints a DOI and is irreversible).
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to create/use (annotated, at current main HEAD)"
+        default: "artifacts-v1.1"
+        required: true
+      version:
+        description: "Human version string for Zenodo metadata"
+        default: "1.1"
+        required: true
+      zenodo_record:
+        description: "Existing Zenodo record id to version"
+        default: "21763852"
+        required: true
+      publish_zenodo:
+        description: "Publish the Zenodo draft (true) or leave it for review (false)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify bundle integrity
+        run: sha256sum --quiet -c MANIFEST.sha256
+
+      - name: Create annotated tag (idempotent)
+        run: |
+          set -euo pipefail
+          TAG="${{ inputs.tag }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
+            echo "tag $TAG already exists on origin"
+            git fetch origin "refs/tags/$TAG:refs/tags/$TAG" --force
+          else
+            git tag -a "$TAG" -m "Artifacts $TAG: peer-review revision (manifest rebuilt + CI, tempered claims, appendices)"
+            git push origin "refs/tags/$TAG"
+          fi
+
+      - name: Build canonical tarball
+        id: tarball
+        run: |
+          set -euo pipefail
+          TAG="${{ inputs.tag }}"
+          NAME="quoridor_3x9-$TAG.tar.gz"
+          git archive --format=tar.gz --prefix="quoridor_3x9-$TAG/" -o "/tmp/$NAME" "$TAG"
+          SHA=$(sha256sum "/tmp/$NAME" | awk '{print $1}')
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          echo "sha256=$SHA" >> "$GITHUB_OUTPUT"
+          echo "commit=$(git rev-parse "$TAG^{commit}")" >> "$GITHUB_OUTPUT"
+          echo "Canonical tarball $NAME sha256=$SHA"
+
+      - name: Create GitHub release with tarball (idempotent)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG="${{ inputs.tag }}"
+          NAME="${{ steps.tarball.outputs.name }}"
+          SHA="${{ steps.tarball.outputs.sha256 }}"
+          COMMIT="${{ steps.tarball.outputs.commit }}"
+          {
+            echo "Peer-review revision of the publication bundle."
+            echo ""
+            echo "- Commit: \`$COMMIT\`"
+            echo "- Canonical tarball: \`$NAME\`, SHA-256 \`$SHA\`"
+            echo "  (built with \`git archive\` from the tag; file bytes inside satisfy \`MANIFEST.sha256\`)"
+            echo "- The 36 certificate parts remain on the \`artifacts-v1\` release; the SHA-256 pins of the"
+            echo "  gzipped qcert-1 parts live in-tree in \`emitter/aggregate/EXPORTS.jsonl\` / \`aggregate.json\`."
+          } > /tmp/notes.md
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --title "Artifacts ${{ inputs.version }}" --notes-file /tmp/notes.md
+          fi
+          gh release upload "$TAG" "/tmp/$NAME" --clobber
+
+      - name: Download certificate parts from artifacts-v1
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/assets
+          gh release download artifacts-v1 --dir /tmp/assets
+          echo "downloaded $(ls /tmp/assets | wc -l) assets"
+
+      - name: Verify qcert parts against in-tree pins
+        run: |
+          set -euo pipefail
+          python3 - <<'EOF'
+          import hashlib, json, os, sys
+          ok = True
+          with open('emitter/aggregate/EXPORTS.jsonl', encoding='utf-8') as f:
+              for line in f:
+                  if not line.strip():
+                      continue
+                  rec = json.loads(line)
+                  base = os.path.basename(rec['path'])
+                  path = os.path.join('/tmp/assets', base)
+                  h = hashlib.sha256()
+                  with open(path, 'rb') as g:
+                      for chunk in iter(lambda: g.read(1 << 20), b''):
+                          h.update(chunk)
+                  good = (h.hexdigest() == rec['sha256_gz'].lower()
+                          and os.path.getsize(path) == rec['bytes_gz'])
+                  print(('OK  ' if good else 'FAIL'), base)
+                  ok = ok and good
+          sys.exit(0 if ok else 1)
+          EOF
+
+      - name: Pin binary parts (first-time SHA-256 record)
+        run: |
+          set -euo pipefail
+          (cd /tmp/assets && sha256sum *.bin | sort -k2) | tee /tmp/BIN_SHA256SUMS.txt
+
+      - name: Zenodo new version (draft unless publish_zenodo)
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${ZENODO_TOKEN:-}" ]; then
+            echo "ZENODO_TOKEN secret not set -- skipping the Zenodo step." | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          AUTH="Authorization: Bearer $ZENODO_TOKEN"
+          API="https://zenodo.org/api"
+          RID="${{ inputs.zenodo_record }}"
+          NAME="${{ steps.tarball.outputs.name }}"
+
+          echo "::group::create new-version draft"
+          NV=$(curl -fsS -X POST "$API/deposit/depositions/$RID/actions/newversion" -H "$AUTH")
+          DRAFT_URL=$(echo "$NV" | python3 -c "import json,sys;print(json.load(sys.stdin)['links']['latest_draft'])")
+          echo "draft: $DRAFT_URL"
+          DRAFT=$(curl -fsS "$DRAFT_URL" -H "$AUTH")
+          BUCKET=$(echo "$DRAFT" | python3 -c "import json,sys;print(json.load(sys.stdin)['links']['bucket'])")
+          echo "::endgroup::"
+
+          echo "::group::remove files inherited from the previous version"
+          echo "$DRAFT" | python3 -c "import json,sys;[print(f['id']) for f in json.load(sys.stdin).get('files',[])]" | \
+          while read -r fid; do
+            curl -fsS -X DELETE "$DRAFT_URL/files/$fid" -H "$AUTH" || true
+          done
+          echo "::endgroup::"
+
+          echo "::group::upload canonical tarball + 36 certificate parts"
+          curl -fsS --retry 3 --retry-delay 5 -H "$AUTH" --upload-file "/tmp/$NAME" "$BUCKET/$NAME" -o /dev/null
+          for f in /tmp/assets/*; do
+            base=$(basename "$f")
+            echo "uploading $base"
+            curl -fsS --retry 3 --retry-delay 5 -H "$AUTH" --upload-file "$f" "$BUCKET/$base" -o /dev/null
+          done
+          echo "::endgroup::"
+
+          echo "::group::update metadata"
+          DRAFT_URL="$DRAFT_URL" VERSION="${{ inputs.version }}" TAG="${{ inputs.tag }}" \
+          COMMIT="${{ steps.tarball.outputs.commit }}" TARBALL="$NAME" \
+          TARBALL_SHA="${{ steps.tarball.outputs.sha256 }}" \
+          python3 - <<'EOF' > /tmp/meta.json
+          import datetime, json, os, sys, urllib.request
+          req = urllib.request.Request(os.environ["DRAFT_URL"],
+              headers={"Authorization": "Bearer " + os.environ["ZENODO_TOKEN"]})
+          meta = json.load(urllib.request.urlopen(req))["metadata"]
+          ver, tag = os.environ["VERSION"], os.environ["TAG"]
+          commit, name, sha = os.environ["COMMIT"], os.environ["TARBALL"], os.environ["TARBALL_SHA"]
+          meta["title"] = ("Solving 3x9 Quoridor with Independently Verifiable "
+                           "Winning-Strategy Certificates - artifacts")
+          meta["version"] = ver
+          meta["publication_date"] = datetime.date.today().isoformat()
+          prov = (f"<p><strong>Version {ver}</strong> &mdash; peer-review revision. "
+                  f"Git tag <code>{tag}</code>, commit <code>{commit}</code>. "
+                  f"Canonical tarball <code>{name}</code>, SHA-256 <code>{sha}</code>. "
+                  f"This deposit is self-contained: it includes the repository tarball and the 36 "
+                  f"certificate parts (18 gzipped qcert-1 parts, pinned in-tree in "
+                  f"<code>emitter/aggregate/EXPORTS.jsonl</code>, and 18 binary strategy parts). "
+                  f"To verify: unpack the tarball, place the qcert parts under "
+                  f"<code>emitter/aggregate/parts/</code>, and run "
+                  f"<code>python3 verify_bundle.py</code>.</p>")
+          meta["description"] = prov + meta.get("description", "")
+          json.dump({"metadata": meta}, sys.stdout)
+          EOF
+          curl -fsS -X PUT "$DRAFT_URL" -H "$AUTH" -H "Content-Type: application/json" \
+            --data-binary @/tmp/meta.json -o /dev/null
+          echo "::endgroup::"
+
+          DRAFT_ID="${DRAFT_URL##*/}"
+          if [ "${{ inputs.publish_zenodo }}" = "true" ]; then
+            PUB=$(curl -fsS -X POST "$DRAFT_URL/actions/publish" -H "$AUTH")
+            DOI=$(echo "$PUB" | python3 -c "import json,sys;print(json.load(sys.stdin).get('doi',''))")
+            CONCEPT=$(echo "$PUB" | python3 -c "import json,sys;print(json.load(sys.stdin).get('conceptdoi',''))")
+            {
+              echo "## Zenodo: PUBLISHED"
+              echo "- Version DOI: $DOI"
+              echo "- Concept DOI: $CONCEPT"
+            } >> "$GITHUB_STEP_SUMMARY"
+          else
+            {
+              echo "## Zenodo: DRAFT prepared (not published)"
+              echo "- Review and publish at: https://zenodo.org/uploads/$DRAFT_ID"
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Job summary
+        run: |
+          {
+            echo "## Release ${{ inputs.tag }}"
+            echo "- Commit: \`${{ steps.tarball.outputs.commit }}\`"
+            echo "- Tarball: \`${{ steps.tarball.outputs.name }}\` — SHA-256 \`${{ steps.tarball.outputs.sha256 }}\`"
+            echo ""
+            echo "### Binary-part SHA-256 pins"
+            echo '```'
+            cat /tmp/BIN_SHA256SUMS.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
