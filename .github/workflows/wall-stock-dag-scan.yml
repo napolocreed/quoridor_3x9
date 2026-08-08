@@ -1,0 +1,76 @@
+name: wall-stock-dag-scan
+
+on:
+  push:
+    branches: [analysis/wall-stock-dag-scan]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Exhaustively scan qcert DAG wall stocks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY' > /tmp/assets.tsv
+          import json, urllib.request
+          req=urllib.request.Request(
+              'https://api.github.com/repos/napolocreed/quoridor_3x9/releases/tags/artifacts-v1',
+              headers={'Accept':'application/vnd.github+json','User-Agent':'qcert-wall-stock-scan'})
+          with urllib.request.urlopen(req) as r: rel=json.load(r)
+          wanted=['H00','H10','H20','H30','H40','H50','H60','H70','P00','P11',
+                  'V00','V10','V20','V30','V40','V50','V60','V70']
+          byname={a['name']:a for a in rel['assets']}
+          for tag in wanted:
+              name=('certparts-H00.bin' if False else f'{tag}.qcert1.jsonl.gz')
+              a=byname[name]
+              digest=a.get('digest','')
+              assert digest.startswith('sha256:'), (name,digest)
+              print(tag,a['browser_download_url'],digest.split(':',1)[1],a['size'],sep='\t')
+          PY
+
+          cat > /tmp/scan.py <<'PY'
+          import sys, json
+          tag=sys.argv[1]
+          mins=[99,99]
+          counts9=[0,0]
+          counts10=[0,0]
+          witnesses=[None,None]
+          records=0
+          for raw in sys.stdin.buffer:
+              # qexport.cpp fixes the exact compact field spelling/order.
+              if b'"type":"node"' not in raw: continue
+              records += 1
+              for i,k in enumerate((b'"r1":',b'"r2":')):
+                  p=raw.find(k)
+                  if p < 0: raise SystemExit(f'{tag}: missing {k!r}')
+                  p += len(k)
+                  q=p
+                  while q < len(raw) and 48 <= raw[q] <= 57: q += 1
+                  v=int(raw[p:q])
+                  if v < mins[i]: mins[i]=v
+                  if v <= 1:
+                      counts9[i]+=1
+                      if witnesses[i] is None:
+                          witnesses[i]=raw.decode('utf-8').rstrip()
+                  if v == 0: counts10[i]+=1
+          print('WALLSTOCK '+json.dumps({
+              'tag':tag,'records':records,
+              'min_r1':mins[0],'min_r2':mins[1],
+              'max_used_p1':10-mins[0],'max_used_p2':10-mins[1],
+              'nodes_p1_used_ge9':counts9[0],'nodes_p2_used_ge9':counts9[1],
+              'nodes_p1_used_10':counts10[0],'nodes_p2_used_10':counts10[1],
+              'witness_p1_ge9':witnesses[0],'witness_p2_ge9':witnesses[1]
+          },separators=(',',':')))
+          PY
+
+          while IFS=$'\t' read -r tag url sha size; do
+            echo "FETCH tag=$tag bytes=$size"
+            curl --fail --location --retry 4 --retry-all-errors --silent --show-error "$url" -o "/tmp/$tag.gz"
+            actual=$(sha256sum "/tmp/$tag.gz" | awk '{print $1}')
+            test "$actual" = "$sha" || { echo "HASH_MISMATCH $tag expected=$sha actual=$actual"; exit 4; }
+            echo "HASH_OK tag=$tag sha256=$sha"
+            gzip -dc "/tmp/$tag.gz" | python3 /tmp/scan.py "$tag"
+            rm -f "/tmp/$tag.gz"
+          done < /tmp/assets.tsv
