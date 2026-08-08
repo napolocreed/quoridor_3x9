@@ -1,0 +1,6 @@
+# This repository is a byte-pinned evidence bundle: MANIFEST.sha256 hashes the
+# exact committed bytes of every tracked file. Disable all end-of-line
+# conversion so a checkout is byte-identical on every platform and
+# `sha256sum -c MANIFEST.sha256` passes everywhere (including Windows with
+# core.autocrlf=true, which would otherwise rewrite text files to CRLF).
+* -text

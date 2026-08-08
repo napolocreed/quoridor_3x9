@@ -1,0 +1,21 @@
+name: verify-bundle
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Byte-strict integrity check of the published tree against the
+      # pinned manifest, exactly as a skeptical reader would run it.
+      - name: sha256sum -c MANIFEST.sha256
+        run: sha256sum --quiet -c MANIFEST.sha256
+
+      # Full bundle check: manifest, certificate registries cross-check,
+      # release assets (absent in CI -> skipped), fast fixture suite.
+      - name: verify_bundle.py
+        run: python3 verify_bundle.py

@@ -28,8 +28,8 @@ code); this physical separation is the paper's methodology, preserved here.
 
 | Paper claim | Where to look |
 |---|---|
-| Upper bound 35 (primary audit, 9.31G nodes) | `judge/results/`, `judge/runlogs/`, `judge/RESULTS.md` |
-| Lower bound 33-refutations (primary, 3.55G nodes) | `judge/results/`, `judge/runlogs/` |
+| Upper bound 35 (primary audit, 9.31G nodes) | `judge/results/3x9_w10/`, `judge/RESULTS.md` |
+| Lower bound 33-refutations (primary, 3.55G nodes) | `judge/results/3x9_w10/audit/lower_bound_33/`, `judge/RESULTS.md` |
 | Replication (both bounds, separate architecture) | `emitter/replication/AGGREGATE_upper_pc.json`, `AGGREGATE_lower.json`, `lower_*.json`, `PIPELINE.log`, `LOWER.log` |
 | 18 certificate parts, exhaustive clean-room check (612,890,536 expansions, 0 violations, 1,262.6 s) | `emitter/replication/EXHAUSTIVE.log`, `AGGREGATE_exhaustive.json`; verifier: `emitter/qverify.cpp` |
 | Cross-architecture part acceptance (H10, 9,836,857 nodes) | `judge/results/validation/qcert/H10_sqlite_verification_2026-08-01.json` |
@@ -65,6 +65,10 @@ Everything below is single-machine, no network. Toolchain used: g++ ≥ 13
 (`-O3 -std=c++20`), Python ≥ 3.10, Node ≥ 20.
 
 ```bash
+# 0. Bundle integrity: byte-strict manifest check, certificate-registry
+#    cross-check, release-asset hashes (for any parts present), fast fixtures.
+#    Run in CI on every push (.github/workflows/verify.yml).
+python3 verify_bundle.py
 # 1. Rules self-test + one branch proof (minutes)
 g++ -O3 -std=c++20 -o qsolve emitter/qsolve.cpp
 ./qsolve --mode selftest --games 200 --plies 200
@@ -96,10 +100,30 @@ it. Never mix coordinates from both trees without converting.
 ## Provenance and integrity
 
 - This bundle is a **copy** assembled on 2026-08-02/03; the working trees
-  remain canonical and untouched. `MANIFEST.sha256` covers every file here.
-- `judge/` carries sol's own `SHA256SUMS` and was copied verbatim (minus
-  compiled `build/`, `bin/`); the frozen cross-verifier
-  `reference/qcert_verify_sqlite.py` matches the receipt-pinned SHA-256
+  remain canonical and untouched.
+- `MANIFEST.sha256` covers every tracked file of this repository (except
+  itself) and hashes the **exact committed bytes**. A `.gitattributes` with
+  `* -text` disables all end-of-line conversion, so any `git clone` — on any
+  OS — satisfies `sha256sum -c MANIFEST.sha256`. The manifest is regenerated
+  from `git ls-files` at release time and checked in CI on every push;
+  `python3 verify_bundle.py` is the one-command entry point (manifest +
+  registry cross-checks + release-asset hashes + fast fixtures).
+- Full run logs of the primary 4×7 exploration campaign
+  (`judge/runlogs/4x7_w7/`) remain in the canonical working tree and are not
+  part of this bundle; the machine-readable audit records they summarize are
+  under `judge/results/4x7_w7/`.
+- Pinned identity of this bundle: Zenodo archive DOI
+  [10.5281/zenodo.21763852](https://doi.org/10.5281/zenodo.21763852);
+  the corresponding Git commit SHA and release tag are recorded on the
+  Zenodo deposit and on the GitHub release page. The multi-gigabyte
+  certificate parts are separately hashed release assets, pinned in-tree by
+  `emitter/aggregate/EXPORTS.jsonl` and `aggregate.json`.
+- `judge/` was copied verbatim (minus compiled `build/`, `bin/` and the
+  `runlogs/` noted above). Its inner `SHA256SUMS` is a historical record of
+  sol's original working tree, kept for provenance — it is **not** the
+  integrity manifest of this bundle (only `MANIFEST.sha256` is). The frozen
+  cross-verifier `reference/qcert_verify_sqlite.py` matches the
+  receipt-pinned SHA-256
   `d8addf93a09a7f01693ebb09490801346a1368450ddf3b15c340c9fc39bdfa93`.
 - The research was carried out by two mutually auditing AI systems under
   the direction of the human author; the coordination notes in both trees
