@@ -1,0 +1,42 @@
+name: wall-stock-fast-witness
+
+on:
+  push:
+    branches: [analysis/wall-stock-dag-scan]
+
+jobs:
+  witness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Find first certified ninth-or-tenth-wall witness
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY' > /tmp/assets.tsv
+          import json, urllib.request
+          req=urllib.request.Request('https://api.github.com/repos/napolocreed/quoridor_3x9/releases/tags/artifacts-v1',headers={'Accept':'application/vnd.github+json','User-Agent':'qcert-wall-stock-fast'})
+          with urllib.request.urlopen(req) as r: rel=json.load(r)
+          order=['H00','H10','H20','H30','H40','H50','H60','H70','V00','V10','V20','V30','V40','V50','V60','V70','P00','P11']
+          a={x['name']:x for x in rel['assets']}
+          for tag in order:
+              x=a[f'{tag}.qcert1.jsonl.gz']; d=x['digest'].split(':',1)[1]
+              print(tag,x['browser_download_url'],d,x['size'],sep='\t')
+          PY
+          while IFS=$'\t' read -r tag url sha size; do
+            echo "FETCH tag=$tag bytes=$size"
+            curl --fail --location --retry 4 --retry-all-errors --silent --show-error "$url" -o "/tmp/$tag.gz"
+            actual=$(sha256sum "/tmp/$tag.gz" | awk '{print $1}')
+            test "$actual" = "$sha" || { echo "HASH_MISMATCH tag=$tag expected=$sha actual=$actual"; exit 4; }
+            echo "HASH_OK tag=$tag sha256=$sha"
+            # qexport.cpp serializes compact node records with r1/r2 followed by commas.
+            witness=$(zgrep -m1 -E '"type":"node".*("r1":[01],|"r2":[01],)' "/tmp/$tag.gz" || true)
+            if [[ -n "$witness" ]]; then
+              echo "FOUND_WALL_GT8 tag=$tag"
+              echo "WITNESS_JSON=$witness"
+              exit 0
+            fi
+            echo "NO_WALL_GT8 tag=$tag"
+            rm -f "/tmp/$tag.gz"
+          done < /tmp/assets.tsv
+          echo "NO_WALL_GT8_ANYWHERE"
